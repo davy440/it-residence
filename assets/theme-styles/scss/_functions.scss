@@ -1,0 +1,36 @@
+// Easing Functions
+
+@mixin transition ($property...) {
+	@for $i from 0 to length($property) {
+		transition: $property;
+		-webkit-transition: $property;
+		-moz-transition: $property;
+		-ms-transition: $property;
+		-o-transition: $property;
+	}
+}
+
+@mixin transform( $property... ) {
+    transform: $property;
+	-webkit-transform: $property;
+	-moz-transform: $property;
+	-ms-transform: $property;
+	-o-transform: $property;
+}
+
+@mixin line-clamp( $lines ) {
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+@mixin darken( $amount ) {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0 , $amount);
+}

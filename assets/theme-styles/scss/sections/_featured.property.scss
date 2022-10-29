@@ -1,0 +1,54 @@
+// Styling for Featured Property Section
+
+#itre-featured-property {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    height: 500px;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+    }
+    .feat-prop-info-wrapper {
+        width: 100%;
+    }
+    .itre-feat-prop-info {
+        background-color: white;
+        padding: 2em;
+        border-radius: 10px 10px 0 0;
+        .feat-prop-price {
+            color: var(--accent);
+        }
+        .itre-prop-excerpt {
+            color: #555555;
+            @include line-clamp(3);
+        }
+        .feat-prop-link a {
+            margin-top: 0.4em;
+            display: inline-block;
+            @extend %bold;
+            text-transform: uppercase;
+            &:after {
+                content: "\f178";
+                font-family: "FontAwesome";
+                margin-left: 8px;
+            }
+        }
+        .itre_prop_features {
+            padding: 0.4em 0;
+			i {
+				color: var(--accent);
+			}
+			> span {
+				margin-right: 0.6em;
+				span {
+					margin: auto 0.25em;
+				}
+			}
+        }
+    }
+}

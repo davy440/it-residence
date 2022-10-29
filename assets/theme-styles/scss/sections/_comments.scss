@@ -1,0 +1,84 @@
+/**
+ *	Styling for the comment section of the theme
+ */
+
+// The Respond Section
+#respond {
+	label {
+		display:inline;
+		@extend %heading-font;
+	}
+	textarea {
+		padding: .5em;
+        background-color: #f5f5f5;
+        border-radius: var(--border-radius);
+	}
+	input[type="submit"] {
+		@extend %btn;
+		background-color: var(--dark);
+	}
+}
+
+// The Comments area
+
+#comments {
+	margin-top: 2em;
+    a.url, p a {
+        @extend %underline;
+    }
+	.comments-title {
+		margin-bottom: 1em;
+	}
+    .comment-list {
+        padding-left: 0;
+    }
+	.comment-list, ul.children {
+		margin: 0;
+		list-style: none;
+	}
+	ol.comment-list {
+		overflow: hidden;
+	}
+	.comment-body {
+		margin-bottom: 0.8em;
+        padding-right: 1em;
+		a {
+			text-decoration: underline;
+		}
+	}
+	ul.children {
+		padding-left: 0em;
+	}
+	.comment {
+		border: solid 1px #eee;
+        border-radius: var(--border-radius);
+		padding: 1em 0.3em 1em 1em;
+		margin-bottom: 1em;
+		.comment-author, .comment-meta {
+
+		}
+		.vcard {
+			margin-right: .75em;
+			a {
+				color: var(--accent);
+			}
+			img {
+				border-radius: 50%;
+				margin-right: .75em;
+			}
+		}
+		.comment-meta {
+			a {
+				color: rgba(0,0,0,0.5);
+				font-size: .75em;
+				letter-spacing: .05em;
+				margin-right: .75em;
+			}
+		}
+		.reply {
+			a {
+				@extend %btn;
+			}
+		}
+	}
+}

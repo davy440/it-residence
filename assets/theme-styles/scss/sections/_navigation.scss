@@ -1,0 +1,196 @@
+// Navigation Styling
+
+.nav-wrapper {
+    display: none;
+    @media (min-width: 1024px) {
+        display: block;
+    }
+}
+
+.main-navigation {
+	width: auto;
+	@extend %heading-font;
+	a {
+		color: var(--accent);
+		padding: 0.5em 1em;
+	}
+	@media (min-width: 992px) {
+		ul#primary-menu {
+			& > li {
+				margin: 0;
+				float: left;
+				&.menu-item-has-children > a, &.page_item_has_children > a {
+					&:after {
+						position: relative;
+						content: "\f107";
+						font-family: "FontAwesome";
+						padding-left: 10px;
+                        line-height: 1;
+					}
+				}
+			}
+			> li:hover {
+				background-color: rgba(0,0,0,0.05);
+			}
+			ul {
+				flex-direction: column;
+				opacity: 0;
+				text-transform: none;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+				background-color: var(--accent);
+				@include transform(translateY(-15px));
+				@include transition(opacity 300ms $standard, transform 300ms $decelerate);
+				font-weight: 400;
+                a {
+                    color: var(--subnav-link);
+                    &:hover {
+                        background-color: rgba(255,255,255,0.05);
+                        @include transform(none);
+                    }
+                }
+				li {
+					float: none;
+					display: block;
+					position: relative;
+					margin: 0;
+					&.menu-item-has-children  > a:after, &.page_item_has_children  > a:after {
+						position: relative;
+						content: "\f105";
+						font-family: "FontAwesome";
+						float: right;
+					}
+					&:hover > ul, &:focus-within > ul {
+						left: 100%;
+						@include transform(translateY(0px));
+					}
+				}
+			}
+			li:hover > ul, li:focus-within > ul {
+				opacity: 1;
+				left: auto;
+				@include transform( translateY(0px) );
+			}
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+    .itre-cta-wrapper {
+        .itre-cta:not(.cta-nav) {
+            display: none;
+        }
+    }
+}
+
+button.mobile-nav-btn {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    svg {
+        width: 32px;
+        height: 32px;
+    }
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+
+button#close-menu {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    margin: 16px 0 0 16px;
+    color: white;
+    background-color: var(--accent);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:focus {
+        outline: none;
+        box-shadow: $shadow2;
+    }
+
+}
+
+#menu {
+	z-index: 999;
+	text-align: left;
+	overflow-y: auto;
+	background-color: var(--dark);
+    .itre-cta {
+        position: relative;
+        &:hover, &:focus {
+            box-shadow: $shadow2;
+        }
+        margin: 15px;
+    }
+	.go-to-top {
+		background: none;
+		float: left;
+		border: 0;
+		i {
+			color: white;
+	  	}
+	}
+	.go-to-bottom {
+		background: none;
+		float: right;
+		border: 0;
+		i {
+			color: white;
+		}
+	}
+	ul {
+		margin-left: 0px;
+		padding: 0px;
+		width: 100%;
+	    li {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			position: relative;
+			&:before {
+				display: none;
+			}
+		    a {
+		        display: block;
+		        color: white;
+		        padding: 0.5em 0.8em;
+		        width: 100%;
+		        overflow: hidden;
+		        white-space: nowrap;
+		        text-overflow: ellipsis;
+		    }
+	    }
+	    li.menu-item-has-children {
+	        display: block;
+	        span.dropdown-arrow {
+	            position: absolute;
+	            height: 44px;
+	            width: 44px;
+	            top: 0;
+	            right: 0;
+	            display: flex;
+	            justify-content: center;
+	            align-content: center;
+	            background-color: var(--accent);
+                box-shadow: $shadow1;
+                border-radius: 4px;
+	            cursor: pointer;
+	            i {
+	                margin: auto;
+	                color: white;
+	                @extend %bold;
+	                font-size: 20px;
+	            }
+	        }
+	        ul {
+		        background: rgba(255,255,255, 0.05);
+
+	        }
+	    }
+	}
+}

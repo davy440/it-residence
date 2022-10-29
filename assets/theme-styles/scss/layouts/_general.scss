@@ -1,0 +1,51 @@
+// General Styling for Blog Layouts
+
+// body:not(.single):not(.page) {
+//     #primary article {
+//         margin-bottom: 3em;
+//         footer {
+//             @extend .entry-meta;
+//             a {
+//                 margin: auto 0.2em;
+//             }
+//         }
+//     }
+// }
+
+.entry-title {
+    a {
+        color: var(--body-text);
+    }
+}
+
+.entry-content {
+    word-wrap: wrap;
+}
+
+.entry-meta, footer.entry-footer, .comment-meta {
+    > * {
+        display: inline-block;
+        margin-right: 0.5em;
+    }
+    color: var(--accent);
+    margin: 0.8em auto;
+    a {
+        margin-right: 0.25em;
+    }
+    span {
+        margin-right: 0.8em;
+    }
+    i {
+        display: inline-block;
+         font-size: 1.3em;
+         position: relative;
+         top: 1px;
+         margin-right: 5px;
+    }
+    a:not(.post-edit-link) {
+        color: var(--link);
+        &:hover {
+            color: var(--link-hvr);
+        }
+    }
+}

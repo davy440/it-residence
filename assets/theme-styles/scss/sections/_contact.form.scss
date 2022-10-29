@@ -1,0 +1,13 @@
+//Contact Form Styling
+
+.wpcf7 {
+    label, span:not(.wpcf7-list-item):not(.wpcf7-list-item-label) {
+        width: 100%;
+        > input:not([type="checkbox"]):not([type="radio"]), > select {
+            width: 100%;
+        }
+    }
+    input[type="submit"] {
+        @extend %btn;
+    }
+}

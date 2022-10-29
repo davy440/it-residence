@@ -1,0 +1,76 @@
+// Styling for Featured Locations Section
+
+#itre-featured-locations {
+    @media (max-width: 767px) {
+        .feat-locations-wrapper .itre-location-wrapper:nth-child(2n+1) {
+            .itre-location-item .row {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        .feat-locations-wrapper .itre-location-wrapper:nth-child(-n+2) {
+            .itre-location-item .row {
+                flex-direction: row-reverse;
+            }
+            h3 {
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: -20px;
+                    top: 25%;
+                    border-right: solid 10px var(--accent);
+                    border-left: solid 10px transparent;
+                    border-top: solid 10px transparent;
+                    border-bottom: solid 10px transparent;
+                }
+            }
+        }
+    }
+    
+    .feat-locations-wrapper {
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        .itre-location-wrapper {
+            h3 {
+                padding: 0 0.8em;
+                position: relative;
+                @media (max-width: 767px) {
+                    font-size: 0.9em;
+                }
+                a {
+                    color: white;
+                }
+            }
+            @media (max-width: 767px) {
+                &:nth-child(2n) {
+                    h3 {
+                        text-align: right;
+                    }
+                }
+            }
+            @media (min-width: 768px) {
+                &:nth-child(n+3) {
+                    h3 {
+                        text-align: right;
+                        position: relative;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            right: -20px;
+                            top: 25%;
+                            border-left: solid 10px var(--accent);
+                            border-right: solid 10px transparent;
+                            border-top: solid 10px transparent;
+                            border-bottom: solid 10px transparent;
+                        }
+                    }
+                }
+            }
+        }
+        .itre-location-item {
+            background-color: var(--accent);
+        }
+    }
+}

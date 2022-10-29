@@ -1,0 +1,213 @@
+// Styling of the theme
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.8em;
+    -webkit-font-smoothing: antialiased;
+    @extend %regular;
+    color: var(--body-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-font);
+    @extend %bold;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+	color: var(--accent);
+    text-decoration: none;
+    @include transition(all 150ms $standard);
+    .entry-content & {
+        text-decoration: underline;
+    }
+}
+
+a:visited {
+	text-decoration: underline;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+%btn {
+    display: inline-block;
+    background-color: var(--accent);
+    padding: 0.8rem 1rem 0.65rem;
+    text-transform: uppercase;
+    @extend %bold;
+    line-height: 1;
+    color: white;
+    border-radius: 5px;
+    &:hover, &:focus {
+        outline: none;
+        @include transform(scale(1.07));
+    }
+}
+
+%underline {
+    @include transition(all 150ms $standard);
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Forms
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0;
+	border-radius: 0;
+	background-color: var(--dark);
+	color: white;
+	padding: 0.4em 1em 0.25em;
+    text-transform: uppercase;
+    @extend %bold;
+    letter-spacing: 0.05em;
+    @include transition(all 150ms ease-out);
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    @include transform(scale(1.07));
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+    @include transform(scale(1.07));
+    outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+select,
+textarea {
+	color: #666;
+	border-radius: 0px;
+	padding: 0.7em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+textarea {
+	width: 100%;
+}
+
+.section {
+    margin-bottom: 4em;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 0;
+}
+
+.section-sub {
+    text-align: center;
+    color: var(--excerpt);
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1.5em;
+    @media (min-width: 992px) {
+        width: 65%;
+    }
+}
+
+.section-top {
+    margin-bottom: 1.2em;
+}
+
+#content {
+    position: relative;
+    z-index: 1;
+    body:not(.page-template-template-property-front) {
+        padding-top: 2em;
+        &.box {
+            background-color: white;
+        }
+    }
+}
+
+header.page-header {
+    text-align: center;
+}
+
+//Styling for "Show All" button for blog section in front page
+#itre-front-blog {
+    .itre-front-blog-cta {
+        text-align: center;
+        a {
+            @extend %btn;
+        }
+    }
+}
+
+// Go to Top Button
+#itre-back-to-top {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    right: 3em;
+    bottom: 3em;
+    z-index: 9;
+    color: var(--accent);
+    background-color: rgba(255,255,255,0.7);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    opacity: 0;
+    i {
+        padding: 1em 1.25em 1.2em;
+    }
+    &.show {
+		display: flex;
+		animation: backToTop 300ms forwards;
+	}
+}

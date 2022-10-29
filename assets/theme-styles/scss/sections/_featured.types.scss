@@ -1,0 +1,38 @@
+//Featured Types Section
+#itre-featured-types {
+    .section-sub {
+        margin: 0;
+    }
+    .itre-prop-type-wrapper {
+        margin-bottom: 1.6em;
+        text-align: center;
+        @media (min-width: 992px) {
+            margin-bottom: 0;
+        }
+    }
+    .itre-prop-type-item {
+        position: relative;
+        display: inline-block;
+    }
+    img {
+        border-radius: var(--border-radius);
+    }
+    h3 {
+        position: absolute;
+        bottom: 2em;
+        left: -10px;
+        color: white;
+        background-color: var(--accent);
+        padding: 0.2em 0.35em;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            border-top: solid 5px var(--dark);
+            border-left: solid 5px transparent;
+            border-bottom: solid 5px transparent;
+            border-right: solid 5px var(--dark);
+        }
+    }
+}

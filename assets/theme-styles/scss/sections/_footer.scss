@@ -1,0 +1,26 @@
+// Footer Styling
+
+#footer-sidebar {
+    background-color: var(--dark);
+    padding-top: 3em;
+    color: white;
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+    caption {
+        color: white;
+    }
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+}
+
+#colophon {
+    background-color: var(--dark);
+    color: white;
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+}

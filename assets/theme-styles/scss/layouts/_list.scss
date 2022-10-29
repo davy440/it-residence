@@ -1,0 +1,29 @@
+// Styling for List Layout
+
+article.list {
+    .entry-meta {
+        > * {
+            margin-left: 0.2em;
+            margin-right: 1.4em;
+        }
+    }
+    a img {
+        border-radius: var(--border-radius);
+    }
+    .entry-content {
+        margin-top: 0;
+    }
+    .itre-read-more {
+        margin-top: auto;
+        a {
+            @extend %btn;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    .itre-list-content-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}

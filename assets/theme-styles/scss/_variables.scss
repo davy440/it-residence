@@ -1,0 +1,51 @@
+// Variables to be used in the Theme
+
+:root {
+    --title-font: "League Spartan", sans-serif;
+    --body-font: "League Spartan", sans-serif;
+    --title-weight: 700;
+    --body-weight: 400;
+    --border-radius: 10px;
+    --body-text: #000000;
+    --excerpt: #999999;
+    --accent: #2e6d87;
+    --dark: #08445d;
+    --masthead-bg: white;
+    --link: #999999;
+    --link-hvr: #555555;
+    --nav-bg: #2e6d87;
+    --nav-link: #2e6d87;
+    --subnav-link: white;
+    --footer-bg: #08445d;
+    --footer-link: white;
+    --footer-text: white;
+}
+
+$standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+$accelerate: cubic-bezier(0.4, 0.0, 1, 1);
+$decelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
+
+$shadow1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$shadow1-hover: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+$shadow2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$shadow3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$shadow4: 0 14px 28px rgba(0,0,0,0.20), 0 10px 10px rgba(0,0,0,0.10);
+$shadow5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+$radius: 10px;
+
+%heading-font {
+	font-family: var(--title-font);
+}
+
+%body-font {
+	font-family: var(--body-font);
+}
+
+%regular {
+    font-weight: var(--body-weight);
+}
+
+%bold {
+	font-weight: var(--title-weight);
+}
