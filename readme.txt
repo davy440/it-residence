@@ -77,9 +77,6 @@ Create a Real Estate website and showcase your business magnificently with our f
 = v1.4.3 = September 5, 2022 =
 * Fixed the header image issue on Property Listings Front Page
 
-= 1.4.4 = July 13, 2023 =
-* Code clean up and bug fixes
-
 
 == Credits ==
 
