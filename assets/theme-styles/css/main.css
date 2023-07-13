@@ -27,7 +27,7 @@ body, body:not(.single-property) article.type-property .listing-wrapper h2, arti
   font-weight: var(--body-weight);
 }
 
-h1, h2, h3, h4, h5, h6, button,
+button,
 input[type=button],
 input[type=reset],
 input[type=submit], #itre-front-blog .itre-front-blog-cta a, .itre-cta, body:not(.home) #masthead .site-title a, #menu ul li.menu-item-has-children span.dropdown-arrow i, #respond input[type=submit], #comments .comment .reply a, #itre-featured-property .itre-feat-prop-info .feat-prop-link a, .wpcf7 input[type=submit], .itre-pagination a, article.type-post[class^=col-] .itre-read-more a, article.type-page[class^=col-] .itre-read-more a, article.list .itre-read-more a {
@@ -35,18 +35,14 @@ input[type=submit], #itre-front-blog .itre-front-blog-cta a, .itre-cta, body:not
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
   font-family: var(--body-font);
-  line-height: 1.8em;
+  font-size: 1.125rem;
   -webkit-font-smoothing: antialiased;
   color: var(--body-text);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--title-font);
 }
 
 /* Links
@@ -1327,3 +1323,5 @@ article.list .itre-list-content-wrapper {
   display: flex;
   flex-direction: column;
 }
+
+/*# sourceMappingURL=main.css.map */

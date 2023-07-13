@@ -290,7 +290,6 @@ function itre_get_blog_excerpt( $post = null, $length = 30 ) {
 	}
 
 	$output	=	apply_filters('itre_excerpt', $output);
-
 	echo esc_html($output);
 }
  add_action('itre_blog_excerpt', 'itre_get_blog_excerpt', 10, 1);
@@ -301,12 +300,23 @@ function itre_get_blog_excerpt( $post = null, $length = 30 ) {
 function itre_single_property_map() {
 
 	if ( post_type_exists( "property" ) && is_singular("property") && !empty( get_post_meta( get_the_ID(), "maps", true ) ) ) {
-
 	    	echo '<div id="property-map"></div>';
-
 	}
 }
 add_action('itre_footer', 'itre_single_property_map', 10);
+
+function itre_localize_map_data( $post ) {
+	if ( is_object($post)) {
+		$id = $post->ID;
+	} else {
+		$id = $post;
+	}
+
+	$data = get_post_meta($id);
+	$map_keys = ['for', 'price', 'area', 'bedrooms', 'bathrooms', 'address', 'lat', 'long', 'maps', 'zoom', 'controls', 'labels'];
+	$data = array_filter($data, function ($key ) use ( $map_keys ) { return in_array( $key, $map_keys ); }, ARRAY_FILTER_USE_KEY );
+	wp_localize_script( 'itre-property-map-js', 'itre', $data );
+}
 
 /**
  *	Function for footer Sidebars

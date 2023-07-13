@@ -41,4 +41,3 @@ window.initMap = function() {
 
 // Append the 'script' element to 'head'
 document.head.appendChild(script);
-//30.766061911318726, 76.74533284372761

@@ -42,7 +42,7 @@ function itre_get_fonts( $amount = 50 ) {
     {
         return $google_fonts;
     } else {
-        return array_slice($google_fonts, 0, $amount);
+        return array_slice($google_fonts, 0, absint( $amount ) );
     }
 
 }

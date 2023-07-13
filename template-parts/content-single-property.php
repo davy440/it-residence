@@ -5,6 +5,8 @@
  * @package IT_Residence
  */
 $itre_stored_meta = get_post_meta( get_the_ID() );
+
+itre_localize_map_data( get_the_ID() );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -33,12 +35,12 @@ $itre_stored_meta = get_post_meta( get_the_ID() );
 
         //Bedrooms
         if ( !empty( $itre_stored_meta[ 'bedrooms' ][0] ) ) {
-            printf( '<span class="itre_bed"><i class="fa fa-bed" aria-hidden="true"></i><span class="itre_bed_count">%u</span></span>', $itre_stored_meta[ 'bedrooms' ][0] );
+            printf( '<span class="itre_bed"><i class="fa fa-bed" aria-hidden="true"></i><span class="itre_bed_count">%u</span></span>', intval( $itre_stored_meta[ 'bedrooms' ][0] ) );
         }
 
         //Bathrooms
         if ( !empty( $itre_stored_meta[ 'bathrooms' ][0] ) ) {
-            printf( '<span class="itre_shower"><i class="fa fa-shower" aria-hidden="true"></i><span class="itre_bed_count">%u</span></span>', $itre_stored_meta[ 'bathrooms' ][0] );
+            printf( '<span class="itre_shower"><i class="fa fa-shower" aria-hidden="true"></i><span class="itre_bed_count">%u</span></span>', intval( $itre_stored_meta[ 'bathrooms' ][0] ) );
         }
 
         //Date of Property

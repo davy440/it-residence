@@ -44,7 +44,6 @@ $itre_stored_meta = get_post_meta( get_the_ID() );
 			 $price = new NumberFormatter( $locale = 'en_US', NumberFormatter::CURRENCY );
 			 $price->setTextAttribute( NumberFormatter::CURRENCY_CODE, 'USD');
 			 $price->setAttribute( NumberFormatter::MAX_FRACTION_DIGITS, 0);
-
 			 printf('<div class="prop-price"><span>%s</span></div>', $price->format($itre_stored_meta['price'][0]));
 			 ?>
 		 </a>

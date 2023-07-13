@@ -1,20 +1,15 @@
 // Styling of the theme
 
 html {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 body {
     font-family: var(--body-font);
-    line-height: 1.8em;
+    font-size: 1.125rem;
     -webkit-font-smoothing: antialiased;
     @extend %regular;
     color: var(--body-text);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--title-font);
-    @extend %bold;
 }
 
 /* Links
