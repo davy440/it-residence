@@ -68,19 +68,17 @@ function itre_scripts() {
 
 	wp_enqueue_script( 'itre-bigslide', esc_url(get_template_directory_uri() . '/assets/js/min/bigSlide.min.js'), array('jquery'), ITRE_VERSION );
 
-	wp_enqueue_script( 'video-bg-js', esc_url(get_template_directory_uri() . '/assets/js/min/jquery.youtube-background.min.js'), array('jquery'), ITRE_VERSION );
-
 	wp_enqueue_script( 'itre-navigation', esc_url(get_template_directory_uri() . '/assets/js/min/navigation.min.js'), array(), ITRE_VERSION );
 
 	if (class_exists('IT_Listings') && is_singular('property') ) {
 		wp_enqueue_script( 'itre-property-map-js', esc_url(get_template_directory_uri() . '/assets/js/min/property-map.min.js'), array(), ITRE_VERSION, true );
 	}
 
-	if ( class_exists('IT_Listings') && !empty(get_theme_mod('itlst_tests_enable')) ) {
-		wp_enqueue_script( 'owl-js', esc_url(get_template_directory_uri() . '/assets/js/min/owl.min.js'), array('jquery'), ITRE_VERSION );
+	if ( class_exists('IT_Listings') && !empty(get_theme_mod('itlst_tests_enable') ) ) {
+		wp_enqueue_script( 'owl-js', esc_url(get_template_directory_uri() . '/assets/js/min/owl.min.js'), array('jquery'), ITRE_VERSION, true );
 	}
 
-	wp_enqueue_script( 'itre-custom-js', esc_url( get_template_directory_uri() . '/assets/js/min/custom.min.js'), array('jquery'), ITRE_VERSION );
+	wp_enqueue_script( 'itre-custom-js', esc_url( get_template_directory_uri() . '/assets/js/min/custom.min.js'), array('jquery'), ITRE_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
