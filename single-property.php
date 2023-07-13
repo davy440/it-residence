@@ -6,7 +6,7 @@
  *
  * @since 1.0.0
  */
-get_header( null, array( 'header' => 'default' ) );
+get_header();
 ?>
 
 <main id="primary" class="property-content container" role="main">

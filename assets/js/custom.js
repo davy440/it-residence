@@ -1,31 +1,33 @@
 // Custom JS for Theme
 jQuery(document).ready(function() {
 
-    jQuery('.header-slider-wrapper').owlCarousel({
-		items: 1,
-		autoplay: true
-	});
+    
+    const testSlider = () => {
 
-    jQuery('.testimonials-wrapper').owlCarousel({
-		items: 2,
-		autoplay: true,
-        dots: true,
-        loop: true,
-        responsive:
-        {
-			0: {
-				items: 1
-			},
-			768: {
-				items: 2
-			}
-		}
-	});
+        const testimonials = document.querySelector('.testimonials-wrapper');
 
-	jQuery('[data-vbg]').youtube_background({
-		'mobile':true,
-		'fit-box':true
-	});
+        if (testimonials === null) {
+            return;
+        }
+
+        jQuery('.testimonials-wrapper').owlCarousel({
+            items: 2,
+            autoplay: true,
+            dots: true,
+            loop: true,
+            responsive:
+            {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                }
+            }
+        });
+    }
+
+    testSlider();
 
     // Navigation
 	var clickedBtn;

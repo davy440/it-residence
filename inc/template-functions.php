@@ -37,10 +37,8 @@ function itre_pingback_header() {
 add_action( 'wp_head', 'itre_pingback_header' );
 
 
-function itre_get_header( $header = 'default' ) {
-
+function itre_get_header() {
 	require_once get_template_directory() . '/framework/sections/header/header-default.php';
-
 }
 
 
@@ -299,7 +297,7 @@ function itre_get_blog_excerpt( $post = null, $length = 30 ) {
  */
 function itre_single_property_map() {
 
-	if ( post_type_exists( "property" ) && is_singular("property") && !empty( get_post_meta( get_the_ID(), "maps", true ) ) ) {
+	if ( post_type_exists( "property" ) && is_singular('property') && !empty( get_post_meta( get_the_ID(), "maps", true ) ) ) {
 	    	echo '<div id="property-map"></div>';
 	}
 }
@@ -315,7 +313,11 @@ function itre_localize_map_data( $post ) {
 	$data = get_post_meta($id);
 	$map_keys = ['for', 'price', 'area', 'bedrooms', 'bathrooms', 'address', 'lat', 'long', 'maps', 'zoom', 'controls', 'labels'];
 	$data = array_filter($data, function ($key ) use ( $map_keys ) { return in_array( $key, $map_keys ); }, ARRAY_FILTER_USE_KEY );
-	wp_localize_script( 'itre-property-map-js', 'itre', $data );
+	
+	if (!empty($data['maps'][0])) {
+		wp_localize_script( 'itre-property-map-js', 'itre', $data );
+	}
+	
 }
 
 /**

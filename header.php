@@ -26,8 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'it-residence' ); ?></a>
 
 	<?php
-		$header = !empty($args['header']) ? $args['header'] : 'default';
-		itre_get_header($header);
+		itre_get_header();
 
 		do_action('itre_after_header');
 

@@ -7,7 +7,6 @@
  */
 
  $header = is_front_page() ? get_theme_mod('itre_front_header_layout', 'default') : 'default';
-
 get_header(null, ['header' => $header]);
 ?>
 

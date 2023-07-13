@@ -9,7 +9,7 @@
 
  $sidebar_align = get_theme_mod( 'itre_single_sidebar_layout', 'right' );
 
-get_header(null, array('header' => 'default'));
+get_header();
 
 if ( $sidebar_align == 'left' ) {
 	itre_get_sidebar('single');

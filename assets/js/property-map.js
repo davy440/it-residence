@@ -1,11 +1,17 @@
 //Handling the Property Map using the Google Maps JS API
+(function() {
+
+const mapContainer  =   document.getElementById('property-map');
+if (mapContainer === null) {
+    return;
+}
+
 var script = document.createElement('script');
 script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyComHwJLpxWl91z0jqIvCOMuXYtaiv3UPI&callback=initMap';
 script.async = true;
 
 // Attach your callback function to the `window` object
 window.initMap = function() {
-    const mapContainer  =   document.getElementById('property-map');
 
     let mapProp = {
         center: new google.maps.LatLng(  itre.lat[0], itre.long[0] ),
@@ -41,3 +47,5 @@ window.initMap = function() {
 
 // Append the 'script' element to 'head'
 document.head.appendChild(script);
+
+})();

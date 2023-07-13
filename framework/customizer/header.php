@@ -200,36 +200,5 @@ function itre_header_customize_register( $wp_customize ) {
 	        )
 	    )
     );
-
-    $s = [];
-
-    for ($i = 1; $i <= 8; $i++) {
-        $s[$i - 1] = $wp_customize->get_control( 'itre_header_slider_img_' . $i );
-    }
-    array_push( $s, $wp_customize->get_control( 'itre_header_video_url' ) );
-
-    $header_controls = array_filter( $s );
-    foreach ( $header_controls as $control ) {
-        $control->active_callback = function( $control ) {
-            $setting = $control->manager->get_setting( 'itre_front_header_layout' );
-
-            if (  $setting->value() === 'slider' ) {
-                if ( $control->id !== "itre_header_video_url" ) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-
-            if ( $setting->value() === 'video') {
-                if ( $control->id == "itre_header_video_url" ) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-
-        };
-    }
 }
 add_action('customize_register', 'itre_header_customize_register');

@@ -259,18 +259,15 @@
 
              <?php
              for ($i = 1; $i <= 4; $i++ ) {
-
                  $term   = get_term_by( 'id', get_theme_mod( 'itlst_feat_prop_' . $i, ''), 'property-type' );
 
                  if ( empty( $term ) ) {
                      continue;
                  }
 
-                 $img    = wp_get_attachment_image( attachment_url_to_postid( get_theme_mod( 'itlst_feat_type_img_' . $i , '' ) ), 'itre_feat_thumb' );
-
-                 $img = !empty( $img ) ? $img : sprintf( '<img src="%s" />', esc_url( get_template_directory_uri() . '/assets/images/ph_types.png' ) );
-
-                 $term_url = get_term_link( $term );
+                 $img		= wp_get_attachment_image( attachment_url_to_postid( get_theme_mod( 'itlst_feat_type_img_' . $i , '' ) ), 'itre_feat_thumb' );
+                 $img		= !empty($img) ? $img : sprintf( '<img src="%s" alt="%s"/>', esc_url( get_template_directory_uri() . '/assets/images/ph_types.png' ), esc_html( $term->name ) );
+                 $term_url	= get_term_link( $term );
 
                  ?>
                  <div class="itre-prop-type-wrapper col-md-6 col-lg-3">
@@ -278,7 +275,6 @@
                      <?php
 
                          printf( '<a href="%s">%s</a>', $term_url, $img );
-
                          printf( '<h3 class="itre-prop-type-name">%s</h3>', esc_html( $term->name ) );
                      ?>
                  </div>
@@ -364,7 +360,7 @@
   */
  function itre_testimonials() {
 
-     if ( !is_front_page() || empty(get_theme_mod('itlst_agents_enable', '') ) ) {
+     if ( !is_front_page() || empty(get_theme_mod('itlst_tests_enable', '') ) ) {
          return;
      }
      ?>
