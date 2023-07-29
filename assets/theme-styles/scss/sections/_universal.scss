@@ -206,3 +206,11 @@ header.page-header {
 		animation: backToTop 300ms forwards;
 	}
 }
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.is-visible {
+    display: block !important;
+}

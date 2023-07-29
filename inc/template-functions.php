@@ -58,9 +58,7 @@ function itre_get_top_bar() {
 				$nav_width = empty( get_theme_mod('itre_cta_enable', '') ) ? 'col-md-9' : 'col-lg-7';
 			?>
 			<div class="nav-wrapper <?php echo esc_attr($nav_width) ?>">
-				<?php
-					get_template_part('framework/sections/header/modules/navigation');
-				?>
+				<?php get_template_part('framework/sections/header/modules/navigation'); ?>
 			</div>
 
 			<?php if ( !empty( get_theme_mod('itre_cta_enable', '') ) ) : ?>
@@ -72,7 +70,7 @@ function itre_get_top_bar() {
 			<?php endif; ?>
 
 			<div class="mobile-btn-wrapper col-auto <?php if ( !get_theme_mod("itre_cta_enable", "")) echo "ms-auto" ?>">
-				<button href="#menu" class="menu-link mobile-nav-btn col-auto"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 27.62"><title>Untitled-1</title><rect width="32" height="4"/><rect y="11.81" width="32" height="4"/><rect y="23.62" width="32" height="4"/></svg></button>
+				<button href="#menu" class="menu-link mobile-nav-btn col-auto" aria-controls="menu" aria-expanded="false" aria-haspopup="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="34.43" viewBox="0 0 48 34.43"><title>nav</title><rect width="48" height="3"/><rect y="15.72" width="48" height="3"/><rect y="31.43" width="48" height="3"/></svg></button>
 			</div>
 
 		</div>

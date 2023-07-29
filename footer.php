@@ -27,10 +27,10 @@ do_action('itre_content_wrapper_end', $layout);
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
-<nav id="menu" class="panel" role="navigation">
+<nav id="menu" class="panel" aria-hidden="true" aria-label="<?php _e('Mobile Menu', 'it-residence'); ?>">
 	<div id="panel-top-bar">
 		<button class="go-to-bottom"></button>
-		<button id="close-menu" class="menu-link"><i class="fa fa-times" aria-hidden="true"></i></button>
+		<button id="close-menu" class="menu-link"><i class="fa fa-times"></i></button>
 	</div>
 
 	<?php if ( !empty( get_theme_mod('itre_cta_enable', '') ) ) : ?>
@@ -42,7 +42,7 @@ do_action('itre_content_wrapper_end', $layout);
 	<?php endif; ?>
 
 	<?php wp_nav_menu( apply_filters( 'itre_mobile_nav_args', array(
-			'menu_id'	=> 'menu-mobile',
+			'menu_id'	=> 'mobile-menu',
 			'container'		=> 'ul',
 			'theme_location' => 'menu-2',
 			'walker'         => has_nav_menu('menu-2') ? new itre_Mobile_Menu : '',

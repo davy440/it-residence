@@ -108,6 +108,8 @@ button#close-menu {
     display: flex;
     justify-content: center;
     align-items: center;
+
+	&:hover,
     &:focus {
         outline: none;
         box-shadow: $shadow2;
@@ -116,10 +118,17 @@ button#close-menu {
 }
 
 #menu {
+	position: fixed;
+	top: 0;
+	width: 60%;
+	height: 100%;
+	right: 0;
 	z-index: 999;
 	text-align: left;
 	overflow-y: auto;
 	background-color: var(--dark);
+	@include transform(translateX(100%));
+	@include transition(transform 300ms ease-out);
     .itre-cta {
         position: relative;
         &:hover, &:focus {
@@ -188,9 +197,20 @@ button#close-menu {
 	            }
 	        }
 	        ul {
+				display: none;
 		        background: rgba(255,255,255, 0.05);
 
 	        }
 	    }
 	}
+
+	&.expanded {
+		@include transform(translateX(0%));
+	}
+
+	.admin-bar & {
+		margin-top: 46px;
+	}
 }
+
+
