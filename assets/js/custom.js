@@ -1,6 +1,5 @@
 // Custom JS for Theme
 jQuery(document).ready(function() {
-
     
     const testSlider = () => {
 
@@ -28,52 +27,6 @@ jQuery(document).ready(function() {
     }
 
     testSlider();
-
-    // // Navigation
-	// var clickedBtn;
-	// jQuery('.menu-link').bigSlide({
-	// 	easyClose	: true,
-	// 	width		: '25em',
-	// 	side		: 'right',
-	// 	beforeOpen	: function() {
-	// 		jQuery('.menu-overlay').show();
-	// 	},
-	// 	afterOpen	: function(e) {
-	// 			    	jQuery('#close-menu').focus();
-	// 			    	clickedBtn = jQuery(e.target).parent();
-	// 		    	},
-	// 	afterClose: function(e) {
-	// 			    	clickedBtn.focus()
-	// 		    }
-    // });
-
-  	// jQuery('.go-to-top').on('focus', function() {
-	// 	jQuery('#close-menu').focus();
-	// 	jQuery('.menu-overlay').hide();
-	// });
-
-	// jQuery('.go-to-bottom').on('focus', function() {
-	// 	jQuery('ul#menu-mobile li:last-child > a').focus();
-	// });
-
-	// var parentElement =	jQuery('.panel li.menu-item-has-children'),
-    //   		dropdown  =	jQuery('.panel li.menu-item-has-children span');
-
-	// parentElement.children('ul').hide();
-	// dropdown.on({
-	// 	'click': function(e) {
-	// 		e.target.style.transform == 'rotate(0deg)' ? 'rotate(180deg)' : 'rotate(0deg)';
-	// 		jQuery(this).siblings('ul').slideToggle().toggleClass('expanded');
-	// 		e.stopPropagation();
-	// 	},
-	// 	'keydown': function(e) {
-	// 		if( e.keyCode == 32 || e.keyCode == 13 ) {
-	// 			e.preventDefault();
-	// 			jQuery(this).siblings('ul').slideToggle().toggleClass('expanded');
-	// 			e.stopPropagation();
-	// 		}
-	// 	}
-	// });
 
     const toggleNavMenu = (item) => {
         item.classList.toggle('is-visible');
