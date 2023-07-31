@@ -71,4 +71,10 @@ Just Install the Theme from the WordPress Repository.
 * v1.4.3
 	Fixed the header image issue on Property Listings Front Page
 
+* v1.4.4
+	Code clean up and bug fixes
+
+* v1.4.5
+	Improved accessibility and bug fixes
+
 Good luck!
