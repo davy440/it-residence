@@ -3,6 +3,7 @@
  */
 
 ( function() {
+	console.log(window);
 	wp.customize.bind('ready', function() {
 
 		var weights = [ '300', 'regular', '500', '600', '700', '800', '900'];

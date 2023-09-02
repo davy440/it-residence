@@ -1,17 +1,5 @@
 // General Styling for Blog Layouts
 
-// body:not(.single):not(.page) {
-//     #primary article {
-//         margin-bottom: 3em;
-//         footer {
-//             @extend .entry-meta;
-//             a {
-//                 margin: auto 0.2em;
-//             }
-//         }
-//     }
-// }
-
 .entry-title {
     a {
         color: var(--body-text);

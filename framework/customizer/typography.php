@@ -39,7 +39,7 @@ function itre_custom_fonts_customize_register( $wp_customize ) {
     $wp_customize->add_control(
 	    new itre_Google_Font_Dropdown_Custom_Control (
 		    $wp_customize,
-		    'itre_heading',
+		    'itre_heading_font',
 		    array(
 			    'label'		=>	esc_html__('Heading Font', 'it-residence'),
 			    'description'	=>	__('Font for headings, metadata, pagination and other areas', 'it-residence'),

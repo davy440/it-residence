@@ -4,9 +4,9 @@ Contributors: indithemes
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, portfolio, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-colors, custom-header, theme-options, editor-style, footer-widgets, block-styles, full-width-template
 
 Requires at least: 4.5
-Tested up to: 5.9
-Requires PHP: 5.6
-Stable tag: 1.4.5
+Tested up to: 6.3
+Requires PHP: 7.4
+Stable tag: 1.5.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -82,6 +82,12 @@ Create a Real Estate website and showcase your business magnificently with our f
 
 = 1.4.5 = July 30, 2023 =
 * Improved accessibility and bug fixes
+
+= 1.5 September 1, 2023 =
+* Improved Typography Options
+
+= 1.5.1 September 2, 2023 =
+* Removed templates folder
 
 
 == Credits ==

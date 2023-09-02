@@ -47,11 +47,8 @@ function itre_get_top_bar() {
 	<div class="container-fluid">
 		<div class="d-flex align-items-center">
 
-
 			<div class="branding-wrapper col-7 col-sm-5 col-lg-3">
-				<?php
-					get_template_part('framework/sections/header/modules/site', 'branding');
-				?>
+				<?php get_template_part('framework/sections/header/modules/site', 'branding'); ?>
 			</div>
 
 			<?php

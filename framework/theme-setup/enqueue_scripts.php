@@ -2,53 +2,44 @@
 /**
  * Enqueue scripts and styles.
  */
-
  function itre_enqueue_fonts() {
+	$fonts = ITRE_Google_Fonts::itre_get_font_settings();
+	$filePaths = glob(get_template_directory() . '/assets/cache/fontFiles/*.woff2');
+	$fileURI = get_template_directory_uri() . '/assets/cache/fontFiles/';
+	$fontFace = '';
 
-	$heading_font 	= 'League Spartan';
-	$heading_weight = 700;
-	$heading_cat	= 'sans-serif';
-	$body_font 		= 'League Spartan';
-	$body_weight 	= 400;
-	$body_cat		= 'sans-serif';
-
-	if ( !empty( get_theme_mod('itre_gfonts_heading') ) ) {
-		$heading_font = get_theme_mod( 'itre_gfonts_heading', 'Lato' );
-		$heading_font = str_replace( ' ', '+', $heading_font );
+	foreach($filePaths as $path) {
+		if (strpos($path, 'heading')) {
+			$uri['heading'] = $fileURI . basename( $path );
+		}
+	
+		if (strpos($path, 'body')) {
+			$uri['body'] = $fileURI . basename( $path );
+		}
 	}
 
-	if ( !empty( get_theme_mod('itre_gweights_heading') ) ) {
-		$heading_weight = get_theme_mod( 'itre_gweights_heading', 700 );
+	foreach($fonts as $key => $value) {
+		$fontFamily = $value['family'];
+		$fontWeight = $value['weight'];
+		$fontURI = $uri[$key];
+		$fontCat = $value['cat'];
+
+		$fontFace .= '@font-face {';
+		$fontFace .= "font-family: ${fontFamily};";
+		$fontFace .= "font-weight: ${fontWeight};";
+		$fontFace .= "src: url(${fontURI}) format('woff2');";
+		$fontFace .= "font-display: swap;";
+		$fontFace .= "}";
 	}
+	$filePath = get_template_directory() . '/assets/cache/fontFiles/fonts.css';
 
-	if (!empty( get_theme_mod('itre_gfonts_body' ) ) ) {
-		$body_font = get_theme_mod('itre_gfonts_body', 'Lato');
-		$body_font = str_replace( ' ', '+', $body_font );
-	}
+	$c = fopen( $filePath, 'w+' );
+	fwrite( $c, $fontFace );
+	fclose( $c );
 
-	if (!empty( get_theme_mod('itre_gweights_body' ) ) ) {
-		$body_weight = get_theme_mod('itre_gweights_body', 400);
-	}
+	$fileURI = get_template_directory_uri() . '/assets/cache/fontFiles/fonts.css';
 
-	$fontCall = '';
-	$fontCall .= 'https://fonts.googleapis.com/css?family=';
-	$fontCall .= $body_font;
-	$fontCall .= ':' . $body_weight;
-
-	if ( $heading_font !== $body_font ) {
-		$fontCall .= '|' . $heading_font;
-		$fontCall .= ':' . $heading_weight;
-	}
-
-	// At this point, both heading and body fonts are same
-	if ( $heading_weight !== $body_weight ) {
-		$fontCall .= ',' . $heading_weight;
-	}
-
-	$fontCall .= '&display=swap';
-
-	wp_enqueue_style( 'itre-fonts', esc_url( $fontCall ), array(), NULL );
-
+	wp_enqueue_style('itre-fonts', esc_url( $fileURI ), ITRE_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'itre_enqueue_fonts' );
 

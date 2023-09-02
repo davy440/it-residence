@@ -77,4 +77,10 @@ Just Install the Theme from the WordPress Repository.
 * v1.4.5
 	Improved accessibility and bug fixes
 
+* v1.5
+	Improved typography options
+* v1.5.1
+	Removed templates folder
+
+
 Good luck!

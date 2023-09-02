@@ -133,7 +133,7 @@ if ( class_exists('WP_Customize_Control') ) {
 
 	    public function __construct( $manager, $id, $args = array(), $options = array() )
 	    {
-	        $this->fonts 		=	itre_get_fonts();
+	        $this->fonts 		=	ITRE_Google_Fonts::itre_get_fonts( 50 );
 
 	        parent::__construct( $manager, $id, $args );
 	    }
@@ -162,9 +162,13 @@ if ( class_exists('WP_Customize_Control') ) {
 
                 <select id="<?php echo $this->input_attrs['font_id'] ?>" <?php $this->link('font'); ?>>
                     <?php
+					echo '<optgroup label="Default Fonts"><option value="League Spartan"' . selected($this->value('font'), "League Spartan", false) . '>League Spartan</option></optgroup>';
+
+						echo '<optgroup label="Other Fonts">';
                         foreach ( $this->fonts as $k => $v ) {
                             printf( '<option value="%2$s" %1$s>%2$s</option>', selected($this->value('font'), $k, false), $k );
                         }
+						echo '</optgroup>';
                     ?>
                 </select>
             </label>
@@ -178,13 +182,36 @@ if ( class_exists('WP_Customize_Control') ) {
 
 		   <?php
 			$font_weights = ['300', 'regular', '500', '600', '700', '800', '900'];
-
-			$this->weightValue = array_intersect( $this->fonts[ $this->value('font') ]['variants'], $font_weights );
+			
+			// By any chance if the fetched fonts don't contain the selected font, revert to default font
+			// $fonts = $this->fonts;
+			if ( !in_array( $this->value('font'), array_keys( $this->fonts ) ) ) {
+				$selectedFont = $this->value('font');
+				$selectedFont = str_replace(' ', '+', $selectedFont);
+				$url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyA9-9K8wV9KWKWY84Sp5TLSS7p9GguLRh4&family=${selectedFont}&capability=WOFF2";
+				$content = wp_remote_get( $url, array( 'sslverify' => false ) );
+				$fileDir = get_template_directory() . '/assets/cache/fontFiles/';
+				$contentBody = json_decode($content['body'])->items;
+			}
+			
+			// $font = in_array( $selectedFont, array_keys( $fonts ) ) ? $this->value( 'font' ) : 'League Spartan';
+			if (!empty($this->fonts[$this->value['font']])) {
+				$this->weightValue = array_intersect( $this->fonts[ $this->value('font')]['variants'], $font_weights );
+			} else {
+				// In this case, our font is not in the list. This could be due to updating
+				// after a long time and the selected font is out of the fetched fonts list.
+				// Since the fonts are fetched on the basis of popularity, there's a chance that
+				// overtime, the the font got behind. Here we make a remote request to Google Fonts API to
+				// get the font info.
+				
+				$this->weightValue = ['400', '700'];
+			}
+			
 			?>
 			<select id="<?php echo $this->input_attrs['weight_id'] ?>" <?php $this->link('weight'); ?>>
                 <?php
                     foreach ( $this->weightValue as $weight ) {
-
+						
 	                    if ( $weight == 'regular' ) {
 		                    $weight = '400';
 	                    }

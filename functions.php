@@ -9,7 +9,7 @@
 
 if ( ! defined( 'ITRE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ITRE_VERSION', '1.4.5' );
+	define( 'ITRE_VERSION', '1.5.1' );
 }
 
 /**
@@ -100,6 +100,9 @@ function itre_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	add_theme_support( 'block-templates' );
+	add_theme_support( 'block-template-parts' );
 
 	add_image_size('itre_prop_thumb', 600, 420, true);
 	add_image_size( 'related_logo', 400, 150, true );
