@@ -82,5 +82,8 @@ Just Install the Theme from the WordPress Repository.
 * v1.5.1
 	Removed templates folder
 
+* v1.5.2
+	Typography Control Class bug fix
+
 
 Good luck!

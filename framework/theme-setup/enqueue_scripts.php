@@ -1,6 +1,8 @@
 <?php
 /**
- * Enqueue scripts and styles.
+ * Enqueue fonts. The woff2 files are added using @font-face file via fonts.css file.
+ *
+ * @return  void
  */
  function itre_enqueue_fonts() {
 	$fonts = ITRE_Google_Fonts::itre_get_font_settings();
@@ -29,6 +31,7 @@
 		$fontFace .= "font-weight: ${fontWeight};";
 		$fontFace .= "src: url(${fontURI}) format('woff2');";
 		$fontFace .= "font-display: swap;";
+		$fontFace .= "font-stretch: normal;";
 		$fontFace .= "}";
 	}
 	$filePath = get_template_directory() . '/assets/cache/fontFiles/fonts.css';

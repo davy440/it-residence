@@ -184,7 +184,6 @@ if ( class_exists('WP_Customize_Control') ) {
 			$font_weights = ['300', 'regular', '500', '600', '700', '800', '900'];
 			
 			// By any chance if the fetched fonts don't contain the selected font, revert to default font
-			// $fonts = $this->fonts;
 			if ( !in_array( $this->value('font'), array_keys( $this->fonts ) ) ) {
 				$selectedFont = $this->value('font');
 				$selectedFont = str_replace(' ', '+', $selectedFont);
@@ -193,9 +192,8 @@ if ( class_exists('WP_Customize_Control') ) {
 				$fileDir = get_template_directory() . '/assets/cache/fontFiles/';
 				$contentBody = json_decode($content['body'])->items;
 			}
-			
-			// $font = in_array( $selectedFont, array_keys( $fonts ) ) ? $this->value( 'font' ) : 'League Spartan';
-			if (!empty($this->fonts[$this->value['font']])) {
+
+			if (!empty($this->fonts[$this->value('font')])) {
 				$this->weightValue = array_intersect( $this->fonts[ $this->value('font')]['variants'], $font_weights );
 			} else {
 				// In this case, our font is not in the list. This could be due to updating

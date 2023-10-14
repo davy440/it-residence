@@ -11,8 +11,8 @@
      $title_font['weight']  = get_theme_mod('itre_gweights_heading', '700');
      $title_font['cat']     = get_theme_mod('itre_gcat_heading', 'sans-serif');
      $body_font['font']    = get_theme_mod('itre_gfonts_body', 'League Spartan');
-     $body_font['weight']  = get_theme_mod('itre_gfonts_body', '400');
-     $body_font['cat']     = get_theme_mod('itre_gfonts_body', 'sans-serif');
+     $body_font['weight']  = get_theme_mod('itre_gfweights_body', '400');
+     $body_font['cat']     = get_theme_mod('itre_cat_body', 'sans-serif');
 
      $header_pos    =   get_theme_mod('itre_header_bg_pos', 'center');
      $primary_width     = 100 - get_theme_mod('itre_sidebar_width', '25') . '%';
