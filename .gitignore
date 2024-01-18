@@ -38,9 +38,6 @@ wp-config.php
 # htaccess
 /.htaccess
 
-# Grunt Configuration file
-Gruntfile.js
-
 # All plugins
 #
 # Note: If you wish to whitelist plugins,
