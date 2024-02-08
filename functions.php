@@ -9,7 +9,7 @@
 
 if ( ! defined( 'ITRE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ITRE_VERSION', '1.5.2' );
+	define( 'ITRE_VERSION', '2.0' );
 }
 
 /**
@@ -147,15 +147,9 @@ require get_template_directory() . '/framework/metabox/display-options.php';
 /**
  *	Including Properties
  */
- function itre_property_functions() {
-
-	 if (!is_plugin_active("it-listings/it-listings.php")) {
-		 return;
-	 }
-
-	 require get_template_directory() . '/inc/property-functions.php';
- }
- add_action('init', 'itre_property_functions');
+if (class_exists('IT_Listings') || class_exists('IT_Listings_Pro')) {
+	require get_template_directory() . '/inc/property-functions.php';
+}
 
 /**
  * Implement the Custom Header feature.

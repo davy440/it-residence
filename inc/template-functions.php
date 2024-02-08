@@ -18,8 +18,8 @@ function itre_body_classes( $classes ) {
 	}
 
 	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'sidebar-blog' ) ) {
-		$classes[] = 'no-sidebar';
+	if ( is_home() && is_active_sidebar( 'sidebar-blog' ) && !empty(get_theme_mod('itre_blog_sidebar_enable', '') ) ) {
+		$classes[] = 'has-sidebar';
 	}
 
 	return $classes;
@@ -61,7 +61,7 @@ function itre_get_top_bar() {
 			<?php if ( !empty( get_theme_mod('itre_cta_enable', '') ) ) : ?>
 				<div class="itre-cta-wrapper col-auto ms-auto">
 					<?php
-						printf("<a class='itre-cta' href='%s'>%s</a>", esc_url( get_page_link( get_theme_mod( 'itre_cta_id' ) ) ), esc_html( get_theme_mod( 'itre_cta_text', 'Add Listing' ) ) );
+						printf("<a class='itre-cta' href='%s'>%s</a>", esc_url( get_theme_mod( 'itre_cta_id' ) ), esc_html( get_theme_mod( 'itre_cta_text', 'Add Listing' ) ) );
 					?>
 				</div>
 			<?php endif; ?>
@@ -199,7 +199,7 @@ if ( !function_exists('itre_get_sidebar') ) {
 		    case "single":
 		   		if( is_single() &&
 		   		get_theme_mod('itre_single_sidebar_enable', 1) !== "" ) {
-					get_sidebar('null', ['page' => 'blog']);
+					get_sidebar(null, ['page' => 'blog']);
 				}
 			break;
 			case "search":
@@ -292,7 +292,9 @@ function itre_get_blog_excerpt( $post = null, $length = 30 ) {
  */
 function itre_single_property_map() {
 
-	if ( post_type_exists( "property" ) && is_singular('property') && !empty( get_post_meta( get_the_ID(), "maps", true ) ) ) {
+	$data = get_post_meta( get_the_ID() );
+	$is_map = !empty($data['lat'][0]) && !empty($data['long'][0]) && !empty($data['maps'][0]);
+	if ( post_type_exists( "property" ) && is_singular('property') && !empty($is_map) ) {
 	    	echo '<div id="property-map"></div>';
 	}
 }
@@ -308,7 +310,7 @@ function itre_localize_map_data( $post ) {
 	$data = get_post_meta($id);
 	$map_keys = ['for', 'price', 'area', 'bedrooms', 'bathrooms', 'address', 'lat', 'long', 'maps', 'zoom', 'controls', 'labels'];
 	$data = array_filter($data, function ($key ) use ( $map_keys ) { return in_array( $key, $map_keys ); }, ARRAY_FILTER_USE_KEY );
-	
+
 	if (!empty($data['maps'][0])) {
 		wp_localize_script( 'itre-property-map-js', 'itre', $data );
 	}
@@ -477,11 +479,11 @@ function itre_get_related_properties() {
 
 //Function for Author Box in Single Post
 function itre_about_author( $post ) { ?>
-	<div id="author_box" class="row g-0">
-		<div class="author_avatar col-2">
+	<div id="author_box" class="row">
+		<div class="author_avatar col-1">
 			<?php echo get_avatar( intval($post->post_author), 128 ); ?>
 		</div>
-		<div class="author_info col-10">
+		<div class="author_info col-11">
 			<h4 class="author_name title-font">
 				<?php echo esc_html( get_the_author_meta( 'display_name', intval($post->post_author) ) ); ?>
 			</h4>
@@ -518,3 +520,11 @@ function itre_get_theme_uri() {
 	return untrailingslashit( get_template_directory_uri() );
 }
 add_filter('itre_color_picker_alpha_url', 'itre_get_theme_uri');
+
+function itre_theme_update_notice() {
+	$class = 'notice notice-warning is-dismissable';
+	$message = __('After updating to IT Residence v2.0, you might experience site layout breaking. This is due to theme being revamped to introduce Block Editor.', 'it-residence');
+
+	printf('<div class="%s"><p>%s  <a href="%s" target="_blank">Here is a guide</a> to help you fix your site.</p></div>', esc_attr( $class ), esc_html( $message ), 'https://indithemes.com/restore-it-residence-wordpress-theme' );
+}
+add_action('admin_notices', 'itre_theme_update_notice');

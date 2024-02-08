@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package IT News Grid
+ * @package IT Residence
  */
 if ( ! is_active_sidebar( 'sidebar-' . $args['page'] ) ) {
 	return;

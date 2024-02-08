@@ -65,6 +65,10 @@ function itre_scripts() {
 	if (class_exists('IT_Listings') && is_singular('property') ) {
 		wp_enqueue_script( 'itre-property-map-js', esc_url(get_template_directory_uri() . '/assets/js/min/property-map.min.js'), array(), ITRE_VERSION, true );
 	}
+	
+	if (class_exists('IT_Lisings') || class_exists('IT_Listings_Pro')) {
+		wp_enqueue_script( 'itre-property-js', esc_url(get_template_directory_uri() . '/assets/js/min/property.min.js'), array(), ITRE_VERSION, true );
+	}
 
 	wp_enqueue_script( 'owl-js', esc_url(get_template_directory_uri() . '/assets/js/min/owl.min.js'), array('jquery'), ITRE_VERSION, true );
 

@@ -186,12 +186,13 @@ endif;
 
 
 function itre_get_property_price( $data ) {
+	$currency['locale'] =	'en_US';
+	$currency['code']	=	'USD';
+    $price = new NumberFormatter( $locale = $currency['locale'], NumberFormatter::CURRENCY );
+    $price->setTextAttribute( NumberFormatter::CURRENCY_CODE, $currency['code']);
+    $price->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 0);
 
-    $price = new NumberFormatter( $locale = 'en_US', NumberFormatter::CURRENCY );
-    $price->setTextAttribute( NumberFormatter::CURRENCY_CODE, 'USD');
-    $price->setAttribute( NumberFormatter::MAX_FRACTION_DIGITS, 0);
-
-    $price_string = sprintf('<i class="fa fa-usd" aria-hidden="true"></i><span class="prop-price"><span>%s</span></span>', $price->format($data));
+    $price_string = sprintf('<span class="prop-price"><span>%s</span></span>', $price->format( $data ) );
 
     echo $price_string;
 

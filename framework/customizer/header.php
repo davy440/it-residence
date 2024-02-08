@@ -93,7 +93,7 @@ function itre_header_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'itre_cta_id', array(
             'label'     =>  __('Page CTA Button links to', 'it-residence'),
-            'type'      =>  'dropdown-pages',
+            'type'      =>  'url',
             'section'   =>  'itre_header_options',
         )
     );

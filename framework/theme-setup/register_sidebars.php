@@ -88,6 +88,5 @@
  			'after_title'   => '</span></h4>',
  		)
  	);
-
  }
  add_action( 'widgets_init', 'itre_widgets_init' );

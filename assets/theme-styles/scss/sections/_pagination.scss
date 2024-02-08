@@ -1,64 +1,38 @@
-/**
- *	Styling for the Pagination
- */
+// Styling for Pagination
 
-.itre-pagination {
-	width: 100%;
-	font-size: 1.2em;
-	padding-top: 2em;
-	color: var(--accent);
-	.nav-links {
+.itre-pagination .nav-links {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    > * {
         display: flex;
         align-items: center;
-        justify-content: center;
-		& > * {
-			display: inline-block;
-		}
-	}
-	& > * {
-		display: inline-block;
-	}
-	a {
-		color: var(--accent);
-        @extend %bold;
-        text-align: center;
-	}
-	a {
-		display: inline-block;
-		position: relative;
-		margin: 0;
-		color: var(--accent);
-		width: 50px;
-		z-index: 1;
-		&:hover {
-			&:before {
-				@include transform(scale(1.1));
-			}
-		}
-		&:active {
-			&:before {
-				@include transform(scale(1.04));
-			}
-		}
-	}
-	span.current {
-		display: flex;
-        justify-content: center;
-        align-items: center;
-		position: relative;
-		z-index: 1;
-        width: 48px;
-        height: 48px;
-        color: white;
-        &:before {
-            content: "";
-            position: absolute;
-            background-color: var(--accent);
-            border-radius: 50%;
-            height: 100%;
-            width: 100%;
-            bottom: 2px;
-            z-index: -1;
+        
+        &:not(:last-child) {
+            margin-right: 1.25rem;
         }
-	}
+    }
+
+    a.page-numbers:not(.next):not(.prev) {
+        background-color: var(--accent);
+        overflow: hidden;
+        border-radius: 0.25rem;
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            width: 2.75rem;
+            height: 2.75rem;
+        }
+
+        &:hover {
+            filter: brightness(110%);
+        }
+    }
 }

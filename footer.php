@@ -9,8 +9,7 @@
  * @package IT_Residence
  */
 
-$layout = get_theme_mod( 'itre_site_layout', 'box' );
-do_action('itre_content_wrapper_end', $layout);
+ printf('</div>');
 ?>
 
 <?php do_action('itre_footer'); ?>
@@ -21,7 +20,7 @@ do_action('itre_content_wrapper_end', $layout);
 		<div class="site-info">
 			<?php printf(esc_html__('Theme Designed by %s', 'it-residence'), '<a href="https://indithemes.com">IndiThemes</a>'); ?>
 			<span class="sep"> | </span>
-				<?php echo ( get_theme_mod('itre_footer_text') == '' ) ? ('Copyright &copy; '.date_i18n( esc_html__( 'Y', 'it-residence' ) ).' ' . esc_html( get_bloginfo('name') ) . esc_html__('. All Rights Reserved.','it-residence')) : esc_html(get_theme_mod('itre_footer_text')); ?>
+				<?php echo 'Copyright &copy; '.date_i18n( esc_html__( 'Y', 'it-residence' ) ).' ' . esc_html( get_bloginfo('name') ) . esc_html__('. All Rights Reserved.','it-residence'); ?>
 		</div><!-- .site-info -->
 	</div>
 </footer><!-- #colophon -->

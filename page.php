@@ -21,7 +21,7 @@ if ( $sidebar_align == 'left' ) {
 }
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
 
 		<?php
 		while ( have_posts() ) :

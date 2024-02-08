@@ -60,15 +60,9 @@
 			display: none;
 		}
 		.wp-block-search__inside-wrapper {
-			border: solid 4px #eee;
-			button.wp-block-search__button {
-				background: none;
-				border: 0;
-				padding: 0;
-				svg {
-					height: 32px;
-					width: 32px;
-				}
+			
+			input[type="search"] {
+				background-color: #f5f5f5;
 			}
 		}
 	}

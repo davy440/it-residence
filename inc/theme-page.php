@@ -11,11 +11,8 @@ add_action('admin_menu', 'itre_admin_theme_page');
 function itre_theme_info() {
     ?>
     <div id="itre-admin-theme-info">
-        <h1>
-            <?php echo __('Theme Info', 'it-residence'); ?>
-        </h1>
         <h2>
-            <?php echo __('Check Out IT Residence Theme Demo', 'it-residence'); ?>
+            <?php echo __('IT Residence Theme Demo', 'it-residence'); ?>
         </h2>
         <div class="itre-theme-demos">
 
@@ -24,12 +21,77 @@ function itre_theme_info() {
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/demos/1.jpeg'); ?>" alt="<?php echo __('IT Residence Demo', 'it-residence') ?>">
                 </a>
             </figure>
-
         </div>
 
         <div class="theme-pro">
             <h2><?php _e('Want to do your website a favour? Get IT  Residence Pro', 'it-residence'); ?></h2>
-            <p><?php _e('The Pro version offers a multitude of features which could take your Real Estate Business to the next level!', 'it-residence') ?></p>
+            <p><?php _e('The Pro version offers features and upgrades that would make your platform stand out!', 'it-residence') ?></p>
+
+            <table class="compare">
+            <tbody>
+            <tr>
+            <th></th>
+            <th>IT Residence</th>
+            <th>IT Residence Pro</th>
+            </tr>
+            <tr>
+            <th>Blog Layouts</th>
+            <td>3</td>
+            <td>5</td>
+            </tr>
+            <tr>
+            <th>Header Layouts</th>
+            <td>3</td>
+            <td>9*</td>
+            </tr>
+            <tr>
+            <th>Front Page Sections</th>
+            <td>3</td>
+            <td>7</td>
+            </tr>
+            <tr>
+            <th>Property Maps</th>
+            <td>Few Options</td>
+            <td>More Options</td>
+            </tr>
+            <tr>
+            <th>Property Archive Layouts</th>
+            <td>1</td>
+            <td>5</td>
+            </tr>
+            <tr>
+            <th>Typography</th>
+            <td>No</td>
+            <td>Yes</td>
+            </tr>
+            <tr>
+            <th>Agents Section</th>
+            <td>No</td>
+            <td>Yes</td>
+            </tr>
+            <tr>
+            <th>SEO</th>
+            <td>Yes</td>
+            <td>Yes</td>
+            </tr>
+            <tr>
+            <th>Colors</th>
+            <td>Basic</td>
+            <td>Advanced</td>
+            </tr>
+            <tr>
+            <th>Speed Optimization</th>
+            <td>Basic</td>
+            <td>Advanced</td>
+            </tr>
+            <tr>
+            <th>Dedicated Support</th>
+            <td>Basic</td>
+            <td>Priority</td>
+            </tr>
+            </tbody>
+            </table>
+            
             <figure class="pro-thumb">
                 <a href="http://demo.indithemes.com/it-residence-pro" target="_blank" rel="external">
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/pro.png'); ?>" alt="<?php echo __('IT Residence Demo', 'it-residence') ?>">
@@ -40,7 +102,7 @@ function itre_theme_info() {
                     <?php _e('Visit Demo', 'it-residence'); ?>
                 </a>
                 <a class="itre-pro-btn button button-primary" href="https://indithemes.com/product/it-residence-pro/" target="_blank">
-                    <?php _e('Get Now', 'it-residence'); ?>
+                    <?php _e('Get IT Residence Pro', 'it-residence'); ?>
                 </a>
             </div>
         </div>
@@ -48,7 +110,7 @@ function itre_theme_info() {
         <br>
         <br>
         <p>
-            <?php printf('<h3>For Support, Suggestions and Queries, please use the %s. <b>We are here for you!</b></h3>', '<a href="https://indithemes.com/contact-us/" target="_blank" rel="help">form here</a>');
+            <?php printf('<h3>For Support, Suggestions and Queries, please use %s or mail us at support@indithemes.com. <b>We are here for you!</b></h3>', '<a href="https://indithemes.com/contact-us/" target="_blank" rel="help">this form</a>');
             ?>
         </p>
         <p>

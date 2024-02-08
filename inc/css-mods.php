@@ -51,21 +51,6 @@
             $css .= 'body.blog #secondary {width: ' . $secondary_width . ';}';
         }
 
-        if (is_single() && is_active_sidebar('sidebar-blog') && get_theme_mod('itre_single_sidebar_enable', 1) !== '' ) {
-            $css .= 'body.single-post #primary {width: ' . $primary_width . ';}';
-            $css .= 'body.single-post #secondary {width: ' . $secondary_width . ';}';
-        }
-
-        if (is_search() && is_active_sidebar('sidebar-blog') && get_theme_mod('itre_search_sidebar_enable', 1) !== '' ) {
-            $css .= 'body.search #primary {width: ' . $primary_width . ';}';
-            $css .= 'body.search #secondary {width: ' . $secondary_width . ';}';
-        }
-
-        if (is_archive() && !(is_post_type_archive('property') || is_tax('location') || is_tax('property-type')) && is_active_sidebar('sidebar-blog') && get_theme_mod('itre_archive_sidebar_enable', 1) !== '' ) {
-            $css .= 'body.archive #primary {width: ' . $primary_width . ';}';
-            $css .= 'body.archive #secondary {width: ' . $secondary_width . ';}';
-        }
-
         if ((is_post_type_archive('property') || is_tax('location') || is_tax('property-type')) && is_active_sidebar('sidebar-property') && get_theme_mod('itre_property_sidebar_enable', 1) !== "" ) {
             $css .= 'body.post-type-archive-property #primary, body.tax-location  #primary, body.tax-property-type #primary {width: ' . $primary_width . ';}';
             $css .= 'body.post-type-archive-property #secondary, body.tax-location  #secondary, body.tax-property-type #secondary {width: ' . $secondary_width . ';}';

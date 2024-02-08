@@ -6,11 +6,11 @@
 
 #masthead {
     background-color: white;
-    margin-bottom: 2em;
+
     & > * {
         position: relative;
-        padding-top: 0.65em;
-        padding-bottom: 0.65em;
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
     }
     .site-title, .site-description {
         margin-bottom: 0;

@@ -56,6 +56,10 @@
                     "color": "#ffffff"
                 }
             ]
+        },
+        "layout": {
+            "contentSize": "1320px",
+            "wideSize": "1920px"
         }
     }
 }

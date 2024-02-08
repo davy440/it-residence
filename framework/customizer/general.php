@@ -38,27 +38,6 @@ function itre_general_customize_register( $wp_customize ) {
         )
     );
 
-    $wp_customize->add_setting(
-	    'itre_site_layout', array(
-		    'default'			=>	'box',
-		    'sanitize_callback'	=>	'itre_sanitize_select'
-	    )
-    );
-
-    $wp_customize->add_control(
-	    'itre_site_layout', array(
-		    'label'		=>	__('Site Layout', 'it-residence'),
-		    'type'		=>	'select',
-		    'section'	=>	'itre_general_options',
-		    'priority'	=>	10,
-		    'choices'	=>	array(
-			    'box'	=>	__('Box Layout', 'it-residence'),
-			    'full'	=>	__('Full Width Layout', 'it-residence'),
-				'full_s'=>	__('Full Screen Layout', 'it-residence')
-		    )
-	    )
-    );
-
 	$wp_customize->add_setting(
 	    'itre_back_to_top', array(
 		    'default'	=>	1,

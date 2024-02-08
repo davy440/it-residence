@@ -6,17 +6,10 @@
  *
  * @package IT_Residence
  */
-
- $sidebar_align = get_theme_mod( 'itre_single_sidebar_layout', 'right' );
-
 get_header();
-
-if ( $sidebar_align == 'left' ) {
-	itre_get_sidebar('single');
-}
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
 
 		<?php
 		while ( have_posts() ) :
@@ -50,10 +43,5 @@ if ( $sidebar_align == 'left' ) {
 		?>
 
 	</main><!-- #main -->
-
-
 <?php
-if ( $sidebar_align == 'right' ) {
-	itre_get_sidebar('single');
-}
 get_footer();

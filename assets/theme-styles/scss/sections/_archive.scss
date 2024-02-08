@@ -1,0 +1,20 @@
+// Styling for Archives
+
+body.archive {
+
+    &.post-type-archive-property,
+    &.tax-location,
+    &.tax-property-type {
+        
+        .itre-property-archive-wrapper {
+            display: grid;
+            column-gap: 1.5rem;
+            row-gap: 2rem;
+            max-width: 48rem;
+
+            @media (min-width: 48rem) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}

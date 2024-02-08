@@ -1,5 +1,6 @@
 article.type-post, article.type-page {
-    margin-bottom: 1.8em;
+    margin-bottom: 3rem;
+    
     &[class^='col-'] {
         .listing-wrapper {
             flex-direction: column;

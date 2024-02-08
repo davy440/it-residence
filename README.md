@@ -85,5 +85,11 @@ Just Install the Theme from the WordPress Repository.
 * v1.5.2
 	Typography Control Class bug fix
 
+* v2.0
+	Major Update - Introduced Blocks
+
+* 2.1
+	Improved compatibility and removed bugs
+
 
 Good luck!

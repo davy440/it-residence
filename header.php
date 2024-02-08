@@ -24,12 +24,8 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'it-residence' ); ?></a>
-
 	<?php
 		itre_get_header();
-
 		do_action('itre_after_header');
-
-		$layout = get_theme_mod( 'itre_site_layout', 'box' );
-		do_action('itre_content_wrapper_start', $layout);
 	?>
+	<div id="content">

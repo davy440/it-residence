@@ -7,13 +7,7 @@
  * @package IT_Residence
  */
 
- $sidebar_align = get_theme_mod( 'itre_property_sidebar_layout', 'right' );
-
 get_header();
-
-if ( $sidebar_align == 'left' ) {
-	itre_get_sidebar('property');
-}
 ?>
 
 	<main id="primary" class="site-main">
@@ -27,30 +21,32 @@ if ( $sidebar_align == 'left' ) {
 				?>
 			</header><!-- .page-header -->
 
-            <div class="row">
-
+			<div class="itre-property-archive-wrapper container">
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part('template-parts/content', 'property', get_theme_mod('itre_property_layout', 'col3') );
+					/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					
+					get_template_part('template-parts/content', 'property', 'archive');
 
-			endwhile;
+				endwhile;
             ?>
-            </div>
+			</div>
             <?php
 
-            the_posts_pagination( apply_filters( 'itre_posts_pagination_args', array(
-				'class'	=>	'itre-pagination',
-				'prev_text'	=> '<i class="fa fa-angle-left"></i>',
-				'next_text'	=> '<i class="fa fa-angle-right"></i>'
-			) ) );
+			the_posts_pagination(  array(
+				'class'					=>	'itre-pagination',
+				'before_page_number'	=>	'<span>',
+				'after_page_number'		=>	'</span>',
+				'prev_text'				=> '<span class="arrow-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></span>',
+				'next_text'				=> '<span class="arrow-next"><i class="fa fa-angle-right" aria-hidden="true"></i></span></i>'
+			) );
 
 		else :
 
@@ -62,7 +58,4 @@ if ( $sidebar_align == 'left' ) {
 	</main><!-- #main -->
 
 <?php
-if ( $sidebar_align == 'right' ) {
-	itre_get_sidebar('property');
-}
 get_footer();

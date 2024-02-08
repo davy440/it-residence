@@ -6,17 +6,10 @@
  *
  * @package IT_Residence
  */
-
- $sidebar_align = get_theme_mod( 'itre_search_sidebar_layout', 'right' );
-
 get_header();
-
-if ( $sidebar_align == 'left' ) {
-	itre_get_sidebar('search');
-}
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main container">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -48,11 +41,13 @@ if ( $sidebar_align == 'left' ) {
             </div>
 
             <?php
-            the_posts_pagination( apply_filters( 'itre_posts_pagination_args', array(
-				'class'	=>	'itre-pagination',
-				'prev_text'	=> '<i class="fa fa-angle-left"></i>',
-				'next_text'	=> '<i class="fa fa-angle-right"></i>'
-			) ) );
+            the_posts_pagination( array(
+				'class'					=>	'itre-pagination',
+				'before_page_number'	=>	'<span>',
+				'after_page_number'		=>	'</span>',
+				'prev_text'				=> '<span class="arrow-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></span>',
+				'next_text'				=> '<span class="arrow-next"><i class="fa fa-angle-right" aria-hidden="true"></i></span></i>'
+			) );
 
 		else :
 
@@ -64,7 +59,4 @@ if ( $sidebar_align == 'left' ) {
 	</main><!-- #main -->
 
 <?php
-if ( $sidebar_align == 'right' ) {
-	itre_get_sidebar('search');
-}
 get_footer();

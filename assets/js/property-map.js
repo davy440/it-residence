@@ -6,6 +6,12 @@ if (mapContainer === null) {
     return;
 }
 
+const { lat, long, zoom, controls, labels } = itre;
+
+if (!lat[0] || !long[0]) {
+    return;
+}
+
 var script = document.createElement('script');
 script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyComHwJLpxWl91z0jqIvCOMuXYtaiv3UPI&callback=initMap';
 script.async = true;
@@ -14,14 +20,14 @@ script.async = true;
 window.initMap = function() {
 
     let mapProp = {
-        center: new google.maps.LatLng(  itre.lat[0], itre.long[0] ),
+        center: new google.maps.LatLng(  parseFloat(lat[0]), parseFloat(long[0]) ),
         minZoom: 4,
-        zoom: parseInt(itre.zoom[0]),
+        zoom: parseInt(zoom[0]),
         maxZoom: 16,
-        disableDefaultUI: !itre.controls[0]
+        disableDefaultUI: !controls[0]
     }
 
-    if ( itre.labels[0] !== "") {
+    if ( labels[0] !== "") {
         mapProp.styles = [
             {
                 "featureType": "poi",
@@ -37,7 +43,7 @@ window.initMap = function() {
     let map = new google.maps.Map(mapContainer, mapProp);
 
     let markerProps = {
-        position: new google.maps.LatLng(  itre.lat[0], itre.long[0] ),
+        position: new google.maps.LatLng( parseFloat(lat[0]), parseFloat(long[0]) ),
         map: map
     }
 
