@@ -88,8 +88,14 @@ Just Install the Theme from the WordPress Repository.
 * v2.0
 	Major Update - Introduced Blocks
 
-* 2.1
+* v2.1
 	Improved compatibility and removed bugs
+
+* v2.2
+	Changed PHP requirement to fix theme review issue
+
+* v2.2.1
+	index.php layout fix
 
 
 Good luck!

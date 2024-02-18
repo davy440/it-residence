@@ -6,7 +6,8 @@ function itre_add_starter_content() {
 
     $content = array(
         'options'   =>  array(
-            'show_on_front'    =>   'posts',
+            'show_on_front'    =>   'page',
+            'page_on_front'    =>   '{{home}}',
             'blogdescription'  =>  esc_html_x('Your Favourite Real Estate WordPress Theme', 'Theme Starter Content', 'it-residence'),
         ),
         'attachments'   =>  array(
@@ -42,7 +43,7 @@ function itre_add_starter_content() {
         ),
         'theme_mods'    =>  array(
             'itre_hero_title'           =>  esc_html_x('Your Dreams, Our Commitment', 'Theme Starter Content', 'it-residence'),
-            'itre_hero_desc'            =>  esc_html_x('Free Real Estate WordPress Theme', 'Theme Starter Content', 'it-residence'),
+            'itre_hero_desc'            =>  esc_html_x('The Most Elegant Real Estate WordPress Theme', 'Theme Starter Content', 'it-residence'),
             'itre_blog_sidebar_enable'  =>  '',
             'itre_blog_layout'          =>  'col3'
         )

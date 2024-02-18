@@ -21,7 +21,7 @@ if ( $sidebar_align == 'left' ) {
 }
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main container">
 
 		<?php
 		if ( have_posts() ) :
@@ -66,7 +66,7 @@ if ( $sidebar_align == 'left' ) {
 
 		else :
 
-			get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'templπEate-parts/content', 'none' );
 
 		endif;
 		?>
