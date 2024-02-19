@@ -101,6 +101,9 @@ Create a Real Estate website and showcase your business magnificently with our f
 = 2.2 February 8, 2024 =
 * Changed PHP requirement to fix theme review issue
 
+= 2.2.1 February 18, 2024 =
+* index.php layout fix
+
 
 == Credits ==
 
