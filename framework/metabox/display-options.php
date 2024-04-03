@@ -14,6 +14,7 @@ function itre_meta_callback( $post ) {
     wp_nonce_field( basename( __FILE__ ), 'itre_nonce' );
 
     $defaults = array(
+		'hide-title'		=>	[''],
         'enable-sidebar'    =>  ['yes'],
         'align-sidebar'     =>  ['right'],
         'page-head'         =>  ['default'],
@@ -25,11 +26,19 @@ function itre_meta_callback( $post ) {
     <p>
 	    <div class="itre-row-content">
 
-		    <label>
-                <strong><?php _e( 'Enable the Sidebar', 'it-residence' ) ?></strong>
-	            <input type="checkbox" name="enable-sidebar" id="enable-sidebar" value="yes" <?php if ( isset( $itre_stored_meta['enable-sidebar'] ) ) checked( $itre_stored_meta['enable-sidebar'][0], 'yes' ); ?> />
-	        </label>
-	        <br />
+			<p>
+				<label>
+					<input type="checkbox" name="hide-title" id="hide-title" value="" <?php if ( isset($itre_stored_meta['hide-title'] ) ) checked( $itre_stored_meta['hide-title'][0], '1' ); ?> />
+					<strong><?php _e('Disable Title', 'it-residence'); ?></strong>
+				</label>
+			</p>
+
+			<p>
+				<label>
+					<input type="checkbox" name="enable-sidebar" id="enable-sidebar" value="yes" <?php if ( isset( $itre_stored_meta['enable-sidebar'] ) ) checked( $itre_stored_meta['enable-sidebar'][0], 'yes' ); ?> />
+					<strong><?php _e( 'Enable the Sidebar', 'it-residence' ) ?></strong>
+				</label>
+			</p>
 
             <div class="page-sidebar-align">
 	            <h4> <?php _e('Sidebar Alignment', 'it-residence'); ?></h4>
@@ -85,6 +94,13 @@ function itre_meta_save( $post_id ) {
     }
 
     // Checks for input and saves
+	if ( array_key_exists('hide-title', $_POST) ) {
+	    update_post_meta( $post_id, 'hide-title', '1' );
+	}
+    else {
+	    update_post_meta( $post_id, 'hide-title', '' );
+	}
+	
 	if ( array_key_exists('enable-sidebar', $_POST) ) {
 	    update_post_meta( $post_id, 'enable-sidebar', 'yes' );
 	}
