@@ -62,13 +62,14 @@ input[type="reset"],
 input[type="submit"] {
 	border: 0;
 	border-radius: 0;
-	background-color: var(--dark);
+	background-color: var(--accent);
 	color: white;
 	padding: 0.4em 1em 0.25em;
     text-transform: uppercase;
     @extend %bold;
     letter-spacing: 0.05em;
     @include transition(all 150ms ease-out);
+    filter: brightness(85%) contrast(150%);
 }
 
 button:hover,
@@ -151,7 +152,7 @@ textarea {
     width: 100%;
     margin: 0 auto;
     line-height: 1.5em;
-    @media (min-width: 992px) {
+    @media (min-width: 62rem) {
         width: 65%;
     }
 }

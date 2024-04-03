@@ -2,11 +2,12 @@
 
 article.classic {
     text-align: center;
+    
     .post-thumbnail img {
-        margin: 0.8em auto;
+        margin: 0.75rem auto;
         border-radius: var(--border-radius);
     }
     .entry-content {
-        margin-top: 0.5em;
+        margin-top: 0.5rem;
     }
 }

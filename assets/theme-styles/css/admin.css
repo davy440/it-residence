@@ -1,3 +1,23 @@
+:root {
+  --title-font: "League Spartan", sans-serif;
+  --body-font: "League Spartan", sans-serif;
+  --title-weight: 700;
+  --body-weight: 400;
+  --border-radius: 10px;
+  --body-text: black;
+  --excerpt: #999999;
+  --accent: #2e6d87;
+  --dark: #08445d;
+  --masthead-bg: white;
+  --link: #999999;
+  --link-hvr: #555555;
+  --nav-bg: #2e6d87;
+  --subnav-link: white;
+  --footer-bg: #08445d;
+  --footer-link: white;
+  --footer-text: white;
+}
+
 .image_radio_button_control .radio-button-label > input {
   display: none;
 }
@@ -172,7 +192,7 @@ button.def-btn {
     width: 50%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 62rem) {
   .itre-theme-demos figure {
     width: 33.33%;
   }
@@ -223,6 +243,9 @@ table.compare tr:first-child {
   color: white;
 }
 
+.theme-pro__content {
+  width: auto;
+}
 .theme-pro figure {
   margin: 0;
 }
@@ -237,21 +260,17 @@ table.compare tr:first-child {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 .theme-pro .upsell-links {
-  margin-top: 1.625rem;
+  margin-top: 0.6875rem;
 }
 .theme-pro .upsell-links a {
-  font-size: 1.25rem !important;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem !important;
+  border-radius: 4px;
+}
+.theme-pro .upsell-links a:first-child {
   margin-right: 0.375rem;
 }
-.theme-pro .upsell-links a:last-child {
-  margin-right: 0;
-}
-.theme-pro .upsell-links a.itre-pro-btn {
-  background-color: #2e6d87;
-}
-.theme-pro .upsell-links a.itre-pro-btn:hover {
-  background-color: #285e74;
-}
+
 li#menu-appearance ul > li a[href="themes.php?page=itre_options"] {
   color: #3b9dc5;
   font-weight: 700;
@@ -259,6 +278,119 @@ li#menu-appearance ul > li a[href="themes.php?page=itre_options"] {
 li#menu-appearance ul > li a[href="themes.php?page=itre_options"]:hover, li#menu-appearance ul > li a[href="themes.php?page=itre_options"]:active, li#menu-appearance ul > li a[href="themes.php?page=itre_options"].current {
   color: #3b9dc5;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+#itre-admin-theme-info {
+  margin-top: 2rem;
+}
+#itre-admin-theme-info h1 {
+  border-bottom: solid 1px #aaaaaa;
+  padding: 1rem;
+}
+
+.itre-support-plugins-form table {
+  border-collapse: collapse;
+}
+.itre-support-plugins-form th {
+  min-width: 12.5rem;
+  text-align: left;
+}
+.itre-support-plugins-form td {
+  width: 7.25rem;
+}
+.itre-support-plugins-form td > * {
+  float: right;
+}
+.itre-support-plugins-form tr {
+  display: block;
+  padding: 1.25rem;
+}
+.itre-support-plugins-form tr:nth-child(even) {
+  background-color: white;
+}
+.itre-support-plugins-form tr:nth-child(odd) {
+  background-color: rgba(45, 115, 173, 0.05);
+}
+.itre-support-plugins-form button.button-primary {
+  display: flex;
+  align-items: center;
+}
+
+.itre-support-plugins__links button,
+.itre-support-plugins__links a {
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+}
+.itre-support-plugins__links button:not(:last-child),
+.itre-support-plugins__links a:not(:last-child) {
+  margin-right: 0.75rem;
+}
+.itre-support-plugins__links--demos {
+  background-color: var(--accent);
+  color: white;
+}
+.itre-support-plugins__links--demos:hover, .itre-support-plugins__links--demos:focus {
+  color: white;
+  background-color: var(--dark);
+}
+.itre-support-plugins__links--nothanks {
+  background-color: #dddddd;
+  color: #666666;
+}
+.itre-support-plugins__links--nothanks:hover, .itre-support-plugins__links--nothanks:focus {
+  background-color: #cccccc;
+}
+
+.loader {
+  width: 1rem;
+  height: 1rem;
+  animation: svgRotate 2000ms linear infinite;
+  margin-left: 0.5rem;
+}
+
+.sep {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 3rem 0;
+  box-shadow: 0px 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.activated {
+  line-height: 1.75rem;
+  display: flex;
+  align-items: center;
+  border: solid 1px transparent;
+}
+.activated:before {
+  content: "\f147";
+  font-family: "Dashicons";
+  color: #59ce15;
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  line-height: 0;
+}
+
+@keyframes svgRotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+  }
 }
 
 /*# sourceMappingURL=admin.css.map */

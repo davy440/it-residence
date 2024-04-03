@@ -24,8 +24,8 @@ get_header();
 			if ( get_theme_mod( 'itre_single_navigation_enable', '1' ) ) {
 				the_post_navigation(
 					array(
-						'prev_text' => '<div class="nav-subtitle">' . esc_html__( 'Previous', 'it-residence' ) . '</div> <span class="nav-title"><strong>%title</strong></span>',
-						'next_text' => '<div class="nav-subtitle">' . esc_html__( 'Next', 'it-residence' ) . '</div> <span class="nav-title"><strong>%title</strong></span>',
+						'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous', 'it-residence' ) . '</span><br><span class="nav-title"><strong>%title</strong></span>',
+						'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next', 'it-residence' ) . '</span><br><span class="nav-title"><strong>%title</strong></span>',
 					)
 				);
 			}

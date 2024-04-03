@@ -97,5 +97,26 @@ Just Install the Theme from the WordPress Repository.
 * v2.2.1
 	index.php layout fix
 
+* v2.2.2
+	Updated Starter Content
+
+* v2.3
+	Added Removed tgmpa plugin
+	Added plugin install functionality natively
+
+* v2.4
+	Added Importer
+
+* v2.4.2
+	Bug Fixes and layout improvements
+
+* v2.4.3
+	Made Theme Child Theme Compatible
+
+* v2.4.4
+	Fixed Color Alpha Control
+	Header Layout Fix
+	Minor Bug fixes
+
 
 Good luck!

@@ -6,7 +6,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 6.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 2.2.1
+Stable tag: 2.4.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -103,6 +103,27 @@ Create a Real Estate website and showcase your business magnificently with our f
 
 = 2.2.1 February 18, 2024 =
 * index.php layout fix
+
+= 2.2.2 February 19, 2024 =
+* Updated Starter Content
+
+= 2.3 February 24, 2024 =
+* Added Removed tgmpa plugin
+* Added plugin install functionality natively
+
+= 2.4 March 12, 2024 =
+* Added Importer
+
+= 2.4.2 March 24, 2024 =
+* Bug Fixes and layout improvements
+
+= 2.4.3 March 25, 2024 =
+* Made Child Theme Ready
+
+= 2.4.4 April 3, 2024 =
+* Fixed Color Alpha Control
+* Header Layout Fix
+* Minor Bug fixes
 
 
 == Credits ==

@@ -121,7 +121,7 @@
         foreach($fonts as $key => $value) {
             $font_slug = str_replace(' ', '-', strtolower($value['family']));
             $weight = $value['weight'];
-            $file = $fileDir . "font-${key}-${font_slug}-${weight}.woff2";
+            $file = $fileDir . "font-{$key}-{$font_slug}-{$weight}.woff2";
     
             // If the setting has changed, get the new file
             if ( !file_exists( $file ) ) {

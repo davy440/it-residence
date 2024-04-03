@@ -185,15 +185,16 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 endif;
 
 
-function itre_get_property_price( $data ) {
-	$currency['locale'] =	'en_US';
-	$currency['code']	=	'USD';
-    $price = new NumberFormatter( $locale = $currency['locale'], NumberFormatter::CURRENCY );
-    $price->setTextAttribute( NumberFormatter::CURRENCY_CODE, $currency['code']);
-    $price->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 0);
+if ( ! function_exists( 'itre_get_property_price' ) ) {
+	function itre_get_property_price( $data ) {
+		$currency['locale'] =	'en_US';
+		$currency['code']	=	'USD';
+		$price = new NumberFormatter( $locale = $currency['locale'], NumberFormatter::CURRENCY );
+		$price->setTextAttribute( NumberFormatter::CURRENCY_CODE, $currency['code']);
+		$price->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 0);
 
-    $price_string = sprintf('<span class="prop-price"><span>%s</span></span>', $price->format( $data ) );
+		$price_string = sprintf('<span class="prop-price"><span>%s</span></span>', $price->format( $data ) );
 
-    echo $price_string;
-
+		echo $price_string;
+	}
 }

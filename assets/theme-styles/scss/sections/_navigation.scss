@@ -2,7 +2,7 @@
 
 .nav-wrapper {
     display: none;
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
         display: block;
     }
 }
@@ -10,17 +10,21 @@
 .main-navigation {
 	width: auto;
 	@extend %heading-font;
+
 	a {
-		color: var(--accent);
-		padding: 0.5em 1em;
+		color: var(--body-text);
+		padding: 0.5rem 1rem;
 	}
 	
-	@media (min-width: 992px) {
+	@media (min-width: 62rem) {
+
 		ul#primary-menu {
 			& > li {
 				margin: 0;
 				float: left;
+
 				&.menu-item-has-children > a, &.page_item_has_children > a {
+
 					&:after {
 						position: relative;
 						content: "\f107";
@@ -42,8 +46,10 @@
 				@include transform(translateY(-15px));
 				@include transition(opacity 300ms $standard, transform 300ms $decelerate);
 				font-weight: 400;
+
                 a {
-                    color: var(--subnav-link);
+                    color: white;
+					
                     &:hover {
                         background-color: rgba(255,255,255,0.05);
                         @include transform(none);
@@ -95,20 +101,19 @@ button.mobile-nav-btn {
         width: 32px;
         height: 32px;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
         display: none;
     }
 }
 
 button#close-menu {
-    background-color: transparent;
+    background-color: var(--accent);
     border: 0;
     padding: 0;
-    height: 40px;
-    width: 40px;
-    margin: 16px 0 0 16px;
+    height: 2.75rem;
+    width: 2.75rem;
+    margin: 1rem 0 0 1rem;
     color: white;
-    background-color: var(--accent);
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -131,56 +136,73 @@ button#close-menu {
 	z-index: 999;
 	text-align: left;
 	overflow-y: auto;
-	background-color: var(--dark);
+	background-color: var(--accent);
 	@include transform(translateX(100%));
 	@include transition(transform 300ms ease-out);
+
     .itre-cta {
         position: relative;
-        &:hover, &:focus {
+		margin: 1rem;
+		background-color: var(--accent);
+		filter: brightness(85%) contrast(150%);
+
+        &:hover,
+		&:focus {
             box-shadow: $shadow2;
         }
-        margin: 15px;
     }
+
 	.go-to-top {
 		background: none;
 		float: left;
 		border: 0;
+
 		i {
 			color: white;
 	  	}
 	}
+
 	.go-to-bottom {
 		background: none;
 		float: right;
 		border: 0;
+
 		i {
 			color: white;
 		}
 	}
+
 	ul {
 		margin-left: 0px;
 		padding: 0px;
 		width: 100%;
+
 	    li {
 			list-style: none;
 			padding: 0;
 			margin: 0;
 			position: relative;
+
 			&:before {
 				display: none;
 			}
+
 		    a {
 		        display: block;
 		        color: white;
-		        padding: 0.5em 0.8em;
+		        padding: 0.5rem 0.75rem;
 		        width: 100%;
 		        overflow: hidden;
 		        white-space: nowrap;
 		        text-overflow: ellipsis;
+				margin-top: 0.125rem;
+				margin-bottom: 0.125rem;
 		    }
 	    }
+
 	    li.menu-item-has-children {
 	        display: block;
+
 	        span.dropdown-arrow {
 	            position: absolute;
 	            height: 44px;
@@ -191,20 +213,21 @@ button#close-menu {
 	            justify-content: center;
 	            align-content: center;
 	            background-color: var(--accent);
-                box-shadow: $shadow1;
-                border-radius: 4px;
+				filter: brightness(85%) contrast(150%);
+                // box-shadow: $shadow1;
+                border-radius: 0.25rem;
 	            cursor: pointer;
 	            i {
 	                margin: auto;
 	                color: white;
 	                @extend %bold;
-	                font-size: 20px;
+	                font-size: 1.25rem;
 	            }
 	        }
+
 	        ul {
 				display: none;
 		        background: rgba(255,255,255, 0.05);
-
 	        }
 	    }
 	}

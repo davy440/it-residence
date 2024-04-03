@@ -1,38 +1,40 @@
 <?php
-class itre_Mobile_Menu extends Walker_Nav_Menu {
+if ( class_exists('Walker_Nav_Menu') ) {
+    class itre_Mobile_Menu extends Walker_Nav_Menu {
 
 
-	function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-		global $wp_query;
-		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+        function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+            global $wp_query;
+            $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
-		$class_names = $value = '';
+            $class_names = $value = '';
 
-        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+            $classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
-        $class_names = join( ' ', apply_filters( 'itre_nav_menu_css_class', array_filter( $classes ), $item ) );
-        $class_names = ' class="' . esc_attr( $class_names ) . '"';
+            $class_names = join( ' ', apply_filters( 'itre_nav_menu_css_class', array_filter( $classes ), $item ) );
+            $class_names = ' class="' . esc_attr( $class_names ) . '"';
 
-        $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+            $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
 
-		if ( $args->walker->has_children ) {
-			$dropDown = '<span class="dropdown-arrow" tabindex="0"><i class="fa fa-angle-down"></i></span>';
-		} else {
-			$dropDown = '';
-		}
+            if ( $args->walker->has_children ) {
+                $dropDown = '<span class="dropdown-arrow" tabindex="0"><i class="fa fa-angle-down"></i></span>';
+            } else {
+                $dropDown = '';
+            }
 
-        $fontIcon = ! empty( $item->attr_title ) ? ' <i class="fa ' . esc_attr( $item->attr_title ) .'">' : '';
-        $attributes = ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
-        $attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) .'"' : '';
-        $attributes .= ! empty( $item->url ) ? ' href="' . esc_url( $item->url ) .'"' : '';
+            $fontIcon = ! empty( $item->attr_title ) ? ' <i class="fa ' . esc_attr( $item->attr_title ) .'">' : '';
+            $attributes = ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
+            $attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) .'"' : '';
+            $attributes .= ! empty( $item->url ) ? ' href="' . esc_url( $item->url ) .'"' : '';
 
-        $item_output = $args->before;
-        $item_output .= '<a'. $attributes .'>'.$fontIcon.'</i>';
-        $item_output .= $args->link_before . apply_filters( 'itre_title', $item->title, $item->ID ) . $args->link_after;
-        $item_output .= '</a>';
-        $item_output .= $dropDown;
-        $item_output .= $args->after;
+            $item_output = $args->before;
+            $item_output .= '<a'. $attributes .'>'.$fontIcon.'</i>';
+            $item_output .= $args->link_before . apply_filters( 'itre_title', $item->title, $item->ID ) . $args->link_after;
+            $item_output .= '</a>';
+            $item_output .= $dropDown;
+            $item_output .= $args->after;
 
-        $output .= apply_filters( 'itre_walker_nav_menu_start_el', $item_output, $item, $depth, $args, $id );
-	}
+            $output .= apply_filters( 'itre_walker_nav_menu_start_el', $item_output, $item, $depth, $args, $id );
+        }
+    }
 }

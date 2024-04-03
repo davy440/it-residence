@@ -2,27 +2,6 @@
 
 body.single {
 
-    #content {
-        // padding-right: 0.9375rem;
-        // padding-left: 0.9375rem;
-
-        // @media (min-width: 64rem) {
-        //     display: flex;
-        //     justify-content: space-between;
-        // }
-
-        // @media (min-width: 48rem) {
-
-        //     > *:first-child {
-        //         margin-left: -0.9375rem;
-        //     }
-    
-        //     > *:last-child {
-        //         margin-right: -0.9375rem;
-        //     }
-        // }
-    }
-
     #primary {
         width: 100%;
     }
@@ -33,23 +12,28 @@ body.single {
             @extend %underline;
         }
     }
+
     .post-navigation {
-        line-height: 1.5em;
-        .nav-subtitle {
-            color: var(--link);
-        }
+        line-height: 1.5rem;
         position: relative;
+
+        .nav-subtitle {
+            color: #999999;
+        }
     }
     #itre_related_posts_wrapper {
+
         h3 {
-            margin-top: 0.2em;
-            font-size: 1.4rem;
+            margin-top: 0.625rem;
+            font-size: 1.5rem;
+
             a {
-                color: black;
+                color: var(--body-text);
                 @include line-clamp(2);
             }
         }
         .entry-meta {
+
             > * {
                 display: inline-block;
                 width: auto;
@@ -57,12 +41,15 @@ body.single {
         }
     }
     #author_box {
-        border-top: solid 1px black;
-        padding-top: 1rem;
-        margin-bottom: 1em;
+        border: solid 1px #eeeeee;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 1rem;
+
         .author_bio {
-            line-height: 1.2rem;
+            line-height: 1.25rem;
         }
+
         img {
             display: inline-block;
             border-radius: 50%;

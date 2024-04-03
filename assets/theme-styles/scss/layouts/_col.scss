@@ -1,15 +1,17 @@
 article.type-post, article.type-page {
     margin-bottom: 3rem;
     
-    &[class^='col-'] {
+    &[class^="col-"] {
+        
         .listing-wrapper {
             flex-direction: column;
-            background-color: white;
-            margin-bottom: 1.6em;
+            background-color: transparent;
+            margin-bottom: 1.5rem;
         }
+
         h2 {
-            font-size: 1.5em;
-            margin: 0.35em auto;
+            font-size: 1.5rem;
+            margin: 0.3125rem auto;
             @extend %regular;
             a {
                 color: black;
@@ -23,35 +25,36 @@ article.type-post, article.type-page {
             overflow: hidden;
             height: 100%;
             > *:not(.itre-col-thumb) {
-                padding: 0 0.6em;
+                padding: 0 0.625rem;
             }
         }
         .entry-content {
+            margin-top: 0;
+            margin-bottom: 1.75rem;
             @include line-clamp(3);
         }
         .entry-meta {
+
             > * {
+
                 &:first-child {
                     margin-left: 0;
                 }
             }
         }
-        .entry-content {
-            margin-top: 0;
-            margin-bottom: 0.6em;
-        }
+
         .itre-read-more {
             margin-top: auto;
             margin-bottom: 1em;
             a {
                 text-transform: uppercase;
-                margin: 0.4em auto 1em;
+                margin: 0.5rem auto 1rem;
                 @extend %bold;
             }
         }
         &.col-md-6 {
             h2 {
-                font-size: 1.5em;
+                font-size: 1.5rem;
             }
         }
     }

@@ -41,6 +41,7 @@ function itre_header_customize_register( $wp_customize ) {
         new itre_Range_Value_Control(
             $wp_customize, 'itre_header_height', array(
 	            'label'         =>	esc_html__( 'Header Height', 'it-residence' ),
+                'description'   =>  esc_html__('Set Header Height of Front Page', 'it-residence'),
             	'type'          => 'itre-range-value',
             	'section'       => 'itre_header_options',
             	'settings'      => 'itre_header_height',
@@ -85,14 +86,14 @@ function itre_header_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting(
         'itre_cta_id', array(
-            'default'   =>  0,
-            'sanitize_callback' =>  'itre_sanitize_dropdown_pages'
+            'default'   =>  '#',
+            'sanitize_callback' =>  'esc_url_raw'
         )
     );
 
     $wp_customize->add_control(
         'itre_cta_id', array(
-            'label'     =>  __('Page CTA Button links to', 'it-residence'),
+            'label'     =>  __('CTA URL', 'it-residence'),
             'type'      =>  'url',
             'section'   =>  'itre_header_options',
         )
