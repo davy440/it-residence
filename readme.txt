@@ -6,7 +6,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 6.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 2.4.4
+Stable tag: 2.4.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -124,6 +124,9 @@ Create a Real Estate website and showcase your business magnificently with our f
 * Fixed Color Alpha Control
 * Header Layout Fix
 * Minor Bug fixes
+
+= 2.4.5 April 3, 2024 =
+* Page title Toggle Control Added
 
 
 == Credits ==

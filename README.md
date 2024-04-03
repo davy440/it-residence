@@ -118,5 +118,8 @@ Just Install the Theme from the WordPress Repository.
 	Header Layout Fix
 	Minor Bug fixes
 
+* v2.4.5
+	Page title Toggle Control Added
+
 
 Good luck!
