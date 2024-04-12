@@ -242,6 +242,11 @@ if ( class_exists('WP_Customize_Control') ) {
 
     class itre_Custom_Link_Control extends WP_Customize_Control {
 
+		/**
+		 * Type
+		 *
+		 * @var string
+		 */
 	    public $type = "itre-link";
 
 	    public function render_content() {
@@ -282,7 +287,6 @@ if ( class_exists('WP_Customize_Color_Control') ) {
     			untrailingslashit( content_url() ),
     			get_template_directory()
     		);
-			var_dump($control_root_url);
 
     		/**
     		 * Filters the URL for the scripts.
@@ -298,7 +302,7 @@ if ( class_exists('WP_Customize_Color_Control') ) {
     			$control_root_url . '/assets/js/color-alpha.js',
     			// We're including wp-color-picker for localized strings, nothing more.
     			[ 'customize-controls', 'wp-element', 'jquery', 'customize-base', 'wp-color-picker' ], // phpcs:ignore Generic.Arrays.DisallowShortArraySyntax
-    			'1.1',
+    			ITRE_VERSION,
     			true
     		);
     	}

@@ -221,6 +221,19 @@ button.def-btn {
   padding: 1em 0 !important;
 }
 
+@media (min-width: 48rem) {
+  .itre-support {
+    display: flex;
+    align-items: center;
+  }
+  .itre-support img {
+    max-width: 6.25rem;
+  }
+}
+.itre-support__content {
+  font-size: 1.125rem;
+}
+
 table.compare {
   width: 100%;
   max-width: 60rem;
@@ -304,12 +317,8 @@ li#menu-appearance ul > li a[href="themes.php?page=itre_options"]:hover, li#menu
 .itre-support-plugins-form tr {
   display: block;
   padding: 1.25rem;
-}
-.itre-support-plugins-form tr:nth-child(even) {
-  background-color: white;
-}
-.itre-support-plugins-form tr:nth-child(odd) {
-  background-color: rgba(45, 115, 173, 0.05);
+  border: solid 1px #eeeeee;
+  margin: -1px 0;
 }
 .itre-support-plugins-form button.button-primary {
   display: flex;
@@ -374,6 +383,28 @@ li#menu-appearance ul > li a[href="themes.php?page=itre_options"]:hover, li#menu
   margin-right: 0.5rem;
   font-size: 2rem;
   line-height: 0;
+}
+
+.itre-notice {
+  font-family: var(--body-font);
+  font-size: 1.125rem;
+  padding-bottom: 1.25rem;
+}
+.itre-notice p, .itre-notice button {
+  font-size: 1.125rem !important;
+}
+.itre-notice h2 {
+  font-size: 2rem;
+  font-family: var(--title-font);
+}
+.itre-notice h3 {
+  font-size: 1.5rem;
+  font-family: var(--title-font);
+  font-weight: 400;
+}
+.itre-notice ul {
+  list-style: disc;
+  margin-left: 2rem;
 }
 
 @keyframes svgRotate {

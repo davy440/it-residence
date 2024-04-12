@@ -9,19 +9,8 @@
 
 if ( ! defined( 'ITRE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ITRE_VERSION', '2.4.5' );
+	define( 'ITRE_VERSION', '2.4.6' );
 }
-
-if ( !function_exists('itre_activation_redirect') ) {
-	function itre_activation_redirect() {
-
-		global $pagenow;
-		if ( 'themes.php' == $pagenow && is_admin() && isset($_GET['activated']) && $_GET['activated'] == true) {
-			wp_redirect( esc_url_raw( add_query_arg( 'page', 'itre_options', admin_url('themes.php') ) ) );
-		}
-	}
-}
-add_action('admin_init', 'itre_activation_redirect');
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -190,6 +179,14 @@ require get_template_directory() . '/inc/css-mods.php';
  *	Theme Starter Content
  */
 require get_template_directory() . '/inc/starter-content.php';
+
+require get_template_directory() . '/inc/notice.php';
+
+/**
+ * Require Library to hide notice permanently
+ * https://github.com/w3guy/persist-admin-notices-dismissal/tree/master
+ */
+require get_template_directory() . '/inc/persist-admin-notices-dismissal.php';
 
 /**
  *	Theme Page

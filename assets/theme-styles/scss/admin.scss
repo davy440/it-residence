@@ -158,6 +158,7 @@ button.def-btn {
         }
     }
 }
+
 .itre-theme-demos {
     display: flex;
     flex-wrap: wrap;
@@ -203,6 +204,22 @@ button.def-btn {
 	text-align: center;
 	font-weight: 700;
 	padding: 1em 0 !important;
+}
+
+.itre-support {
+
+    @media (min-width: 48rem) {
+        display: flex;
+        align-items: center;
+
+        img {
+            max-width: 6.25rem;
+        }
+    }
+
+    &__content {
+        font-size: 1.125rem;
+    }
 }
 
 table.compare {
@@ -300,6 +317,7 @@ li#menu-appearance {
     
     table {
         border-collapse: collapse;
+
     }
 
     th {
@@ -318,14 +336,8 @@ li#menu-appearance {
     tr {
         display: block;
         padding: 1.25rem;
-        
-        &:nth-child(even) {
-            background-color: white;
-        }
-
-        &:nth-child(odd) {
-            background-color: rgba(#2d73ad, 0.05);
-        }
+        border: solid 1px #eeeeee;
+        margin: -1px 0;
     }
 
     button.button-primary {
@@ -404,6 +416,33 @@ li#menu-appearance {
         margin-right: 0.5rem;
         font-size: 2rem;
         line-height: 0;
+    }
+}
+
+// Notice
+.itre-notice {
+    font-family: var(--body-font);
+    font-size: 1.125rem;
+    padding-bottom: 1.25rem;
+
+    p, button {
+        font-size: 1.125rem !important;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        font-family: var(--title-font);
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+        font-family: var(--title-font);
+        font-weight: 400;
+    }
+    
+    ul {
+        list-style: disc;
+        margin-left: 2rem;
     }
 }
 

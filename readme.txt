@@ -6,7 +6,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 6.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 2.4.5
+Stable tag: 2.4.6.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -15,7 +15,7 @@ IT Residence is distributed under the terms of the GNU GPL
 
 == Description ==
 
-Create a Real Estate website and showcase your business magnificently with our free WordPress Real Estate Theme IT Residence. This theme offers a many features to showcase your properties in style. Customers can filter properties as per your requirement. Also, you can categorise your properties as per locations and types. Our theme offers seamless Google Maps integration so that you can mark your property on the map and present it effectively. IT residence is also a powerful blog theme with multiple blog layouts. IT Residence is one of the best Real Estate WordPress Themes and you are sure to love it! You can check out the theme in action at demo.indithenes.com/it-residence
+Create a Real Estate website and showcase your business magnificently with our free WordPress Real Estate Theme IT Residence. This theme offers a many features to showcase your properties in style. Customers can filter properties as per your requirement. Also, you can categorise your properties as per locations and types. Our theme offers seamless Google Maps integration so that you can mark your property on the map and present it effectively. IT residence is also a powerful blog theme with multiple blog layouts. IT Residence is one of the best Real Estate WordPress Themes and you are sure to love it! You can check out the theme in action at [demo.indithemes.com/it-residence](https://demo.indithemes.com/it-residence)
 
 == Installation ==
 
@@ -127,6 +127,13 @@ Create a Real Estate website and showcase your business magnificently with our f
 
 = 2.4.5 April 3, 2024 =
 * Page title Toggle Control Added
+
+= 2.4.6 April 8, 2024 =
+* Removed Activation Redirection
+* Added Notice
+
+= 2.4.6.1 April 8, 2024 =
+* Fixed missing text-domain
 
 
 == Credits ==

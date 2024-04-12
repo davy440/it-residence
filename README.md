@@ -121,5 +121,12 @@ Just Install the Theme from the WordPress Repository.
 * v2.4.5
 	Page title Toggle Control Added
 
+* v2.4.6
+	Removed Activation Redirection
+	Added Notice
+
+* v2.4.6.1
+	Fixed missing text-domain
+
 
 Good luck!

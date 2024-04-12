@@ -12,37 +12,14 @@ function itre_theme_info() {
     ?>
     <div id="itre-admin-theme-info">
         <h1 class="itre-theme-page-title"><?php _e('IT Residence Options', 'it-residence'); ?></h1>
-        <div class="itre-support-plugins">
-            <p><strong>To set up the theme, you'll need to install the following plugins -</strong></p>
-            <form class="itre-support-plugins-form" method="post">
-                <table class="itre-support-plugins-table">
-                    <tr>
-                        <th>Contact Form 7</th>
-                        <td><?php echo ITRE_Plugin_Upgrader::itre_button_label('contact-form-7'); ?></td>
-                    </tr>
-                    <tr>
-                        <th>IT Listings</th>
-                        <td><?php echo ITRE_Plugin_Upgrader::itre_button_label('it-listings'); ?></td>
-                    </tr>
-                    <input class="process" type="hidden" name="process" value="" />
-                    <input class="plugin" type="hidden" name="plugin" value="" />
-                </table>
-            </form>
+        <div class="itre-support">
             <?php
-                if (is_plugin_active('it-listings/it-listings.php') && is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
-                    $url = admin_url('themes.php');
-                    $url = add_query_arg('page', 'demo-importer', $url);
-                    
-                    printf('<div class="itre-demo-import">');
-                    echo '<p>Plugins Installed! You are ready to start with your website! Create something awesome!</p>';
-                    echo '<p>You can also import content from our pre-made demos.</p>';
-                    printf( '<div class="itre-support-plugins__links"><a href="%s" class="itre-support-plugins__links--demos">Import Demo</a><button class="itre-support-plugins__links--nothanks">No Thanks!</button></div>', esc_url( $url ) );
-                    printf('</div>');
-                    
-                }
+                $img = get_template_directory_uri() . '/assets/images/technical-support.png';
+                printf('<figure class="itre-support__image"><img src="%s" alt="Customer Support"/></figure>', esc_url($img));
+                printf('<p class="itre-support__content">For Support, Suggestions and Queries, please use %s or mail us at support@indithemes.com.<br><b>We are looking forward to hearing from you!</b></p>', '<a href="https://indithemes.com/contact-us/" target="_blank" rel="help">this form</a>');
             ?>
+            
         </div>
-
         <div class="sep"></div>
 
         <div class="theme-pro">
@@ -133,10 +110,6 @@ function itre_theme_info() {
 
         <br>
         <br>
-        <p>
-            <?php printf('<h3>For Support, Suggestions and Queries, please use %s or mail us at support@indithemes.com. <b>We are here for you!</b></h3>', '<a href="https://indithemes.com/contact-us/" target="_blank" rel="help">this form</a>');
-            ?>
-        </p>
         <p>
             <?php printf('Using IT Residence and loving it? Consider leaving it a %s review at %s. It really means a lot!', '<span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span>', '<a href="https://wordpress.org/themes/it-residence" rel="external" target="_blank">WordPress</a>');
             ?>
