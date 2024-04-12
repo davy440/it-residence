@@ -26,7 +26,12 @@ class ITRE_Plugin_Upgrader {
         wp_die();
     }
 
-    public function itre_enqueue_upgrader_script() {
+    public function itre_enqueue_upgrader_script( $hook ) {
+        
+        if ( $hook !== "themes.php" ) {
+            return;
+        }
+
         wp_enqueue_script('itre-plugins-install-js', esc_url( get_template_directory_uri() . '/assets/js/min/plugins-install.min.js' ), array(), ITRE_VERSION, true );
         $data = array(
             'action'            =>  'install_plugin',

@@ -35,7 +35,7 @@
 	<?php if ( !empty( get_theme_mod('itre_cta_enable', '') ) ) : ?>
 		<div class="itre-cta-wrapper">
 			<?php
-				printf("<a class='itre-cta cta-nav' href='%s'>%s</a>", esc_url( get_page_link( get_theme_mod( 'itre_cta_id' ) ) ), esc_html( get_theme_mod( 'itre_cta_text', 'Add Listing' ) ) );
+				printf("<a class='itre-cta cta-nav' href='%s'>%s</a>", esc_url( get_theme_mod( 'itre_cta_id' ) ), esc_html( get_theme_mod( 'itre_cta_text', 'Add Listing' ) ) );
 			?>
 		</div>
 	<?php endif; ?>

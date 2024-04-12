@@ -2,7 +2,6 @@
 	//shorthand for ready event.
 	$(
 		function () {
-			console.log(window);
 			$( 'div[data-dismissible] button.notice-dismiss, div[data-dismissible] .dismiss-this' ).on("click",
 				function (event) {
 					event.preventDefault();

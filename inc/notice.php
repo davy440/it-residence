@@ -7,7 +7,7 @@
 function itre_admin_notice() { 
 
     global $pagenow;
-    if ( $pagenow == 'themes.php' && isset($_GET) && $_GET['page'] == 'demo-importer') {
+    if ( $pagenow == 'themes.php' && isset($_GET['page']) && $_GET['page'] == 'demo-importer') {
         return;
     }
 
@@ -16,7 +16,7 @@ function itre_admin_notice() {
 	}
     ?>
 	
-	<div data-dismissible="disable-done-notice-forever" class="itre-notice notice notice-info is-dismissible">
+	<div data-dismissable="disable-done-notice-forever" class="itre-notice notice notice-info is-dismissible">
         <h2><?php _e('Cheers to you! 👏👏👏', 'it-residence'); ?></h2>
         <h3><?php _e('You hust installed IT Residence Theme. Thankyou for that!', 'it-residence'); ?></h3>
 		<p><?php _e('We highly recommend you install the following plugins to make full use of IT Residence.', 'it-residence'); ?></p>

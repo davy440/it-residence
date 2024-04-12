@@ -1026,6 +1026,7 @@ body.single-property .entry-meta a {
 body.single-property #property-map {
   height: 500px;
   width: 100%;
+  margin-bottom: -2rem;
 }
 
 .wpcf7 label, .wpcf7 span:not(.wpcf7-list-item):not(.wpcf7-list-item-label) {

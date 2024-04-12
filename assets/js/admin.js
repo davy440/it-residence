@@ -10,7 +10,6 @@
         }
 
         const dismissBtn = notice.querySelector('.notice-dismiss');
-        console.log(dismissBtn);
     }
     
     
