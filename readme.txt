@@ -135,6 +135,10 @@ Create a Real Estate website and showcase your business magnificently with our f
 = 2.4.6.1 April 8, 2024 =
 * Fixed missing text-domain
 
+= 2.4.7 April 12, 2024 =
+* Fixed error in footer.php
+* Fixed margin for property map
+
 
 == Credits ==
 

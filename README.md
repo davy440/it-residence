@@ -128,5 +128,9 @@ Just Install the Theme from the WordPress Repository.
 * v2.4.6.1
 	Fixed missing text-domain
 
+* v2.4.7
+	Fixed error in footer.php
+	Fixed margin for property map
+
 
 Good luck!
