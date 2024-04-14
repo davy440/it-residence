@@ -152,12 +152,21 @@ jQuery(document).ready(function() {
     }
 
     // Lightbox feature for Gallery block
-    const lightbox = GLightbox({
-        selector: '.is-style-lightbox a',
-        touchNavigation: true,
-        keyboardNavigation: true,
-        width: "auto",
-        height: "auto",
-        draggable: false,
-    });
+    const Lightbox = () => {
+        const selector = document.querySelector('.is-style-lightbox a');
+
+        if (!selector) {
+            return;
+        }
+        
+        const lightbox = GLightbox({
+            selector: '.is-style-lightbox a',
+            touchNavigation: true,
+            keyboardNavigation: true,
+            width: "auto",
+            height: "auto",
+            draggable: false,
+        });
+    }
+    Lightbox();
 });

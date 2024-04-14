@@ -132,5 +132,8 @@ Just Install the Theme from the WordPress Repository.
 	Fixed error in footer.php
 	Fixed margin for property map
 
+* v2.4.8
+	Added Styles and Fixed Bugs
+
 
 Good luck!

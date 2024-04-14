@@ -139,6 +139,9 @@ Create a Real Estate website and showcase your business magnificently with our f
 * Fixed error in footer.php
 * Fixed margin for property map
 
+= 2.4.8 April 14, 2024 =
+* Added Styles and fixed bugs
+
 
 == Credits ==
 

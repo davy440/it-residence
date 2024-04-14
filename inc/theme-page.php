@@ -18,31 +18,30 @@ function itre_theme_info() {
                 printf('<figure class="itre-support__image"><img src="%s" alt="Customer Support"/></figure>', esc_url($img));
                 printf('<p class="itre-support__content">For Support, Suggestions and Queries, please use %s or mail us at support@indithemes.com.<br><b>We are looking forward to hearing from you!</b></p>', '<a href="https://indithemes.com/contact-us/" target="_blank" rel="help">this form</a>');
             ?>
-            
         </div>
 
         <div class="sep"></div>
 
-            <div class="itre-demo-imports">
-                <h2><?php _e('Install Demos', 'it-residence'); ?></h2>
-                <p><?php _e('To get started, you can import content from our pre-made templates.', 'it-residence') ?></p>
-                <?php if ( class_exists('IT_Listings') ) {
-                    $importer_url = admin_url('themes.php');
-                    $importer_url = add_query_arg( 'page', 'demo-importer', $importer_url );
-                    printf( '<a href="%s" class="button-primary" title="Import Demo">Import Demo</a>', esc_url( $importer_url ) );
-                } else {
-                    ?>
-                    <p><?php _e('In order to get access to our Demo Templates, install the <a href="https://www.wordpress.org/plugins/it-listings">IT Listings</a> plugin. With the plugin, you get access to many features to use the to its full potential including -', 'it-residence'); ?></p>
-                    <ul>
-                    <li><?php _e('Dedciated Front Page Template', 'it-residence'); ?></li>
-                    <li><?php _e('Custom Blocks', 'it-residence'); ?></li>
-                    <li><?php _e('Testimonials Support', 'it-residence'); ?></li>
-                    <li><?php _e('Starter Demo Import', 'it-residence'); ?></li>
-                    </ul>
-                    <?php
-                }
+        <div class="itre-demo-imports">
+            <h2><?php _e('Install Demos', 'it-residence'); ?></h2>
+            <p><?php _e('To get started, you can import content from our pre-made templates.', 'it-residence') ?></p>
+            <?php if ( class_exists('IT_Listings') ) {
+                $importer_url = admin_url('themes.php');
+                $importer_url = add_query_arg( 'page', 'demo-importer', $importer_url );
+                printf( '<a href="%s" class="button-primary" title="Import Demo">Import Demo</a>', esc_url( $importer_url ) );
+            } else {
                 ?>
-            </div>
+                <p><?php _e('In order to get access to our Demo Templates, install the <a href="https://www.wordpress.org/plugins/it-listings">IT Listings</a> plugin. With the plugin, you get access to many features to use the to its full potential including -', 'it-residence'); ?></p>
+                <ul>
+                <li><?php _e('Dedciated Front Page Template', 'it-residence'); ?></li>
+                <li><?php _e('Custom Blocks', 'it-residence'); ?></li>
+                <li><?php _e('Testimonials Support', 'it-residence'); ?></li>
+                <li><?php _e('Starter Demo Import', 'it-residence'); ?></li>
+                </ul>
+                <?php
+            }
+            ?>
+        </div>
 
         <div class="sep"></div>
 
