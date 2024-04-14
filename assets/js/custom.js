@@ -154,10 +154,10 @@ jQuery(document).ready(function() {
     // Lightbox feature for Gallery block
     const lightbox = GLightbox({
         selector: '.is-style-lightbox a',
-        height: 'auto',
-        touchNavigation: false,
-        keyboardNavigation: false,
-        width: 'auto',
+        touchNavigation: true,
+        keyboardNavigation: true,
+        width: "auto",
+        height: "auto",
         draggable: false,
     });
 });
