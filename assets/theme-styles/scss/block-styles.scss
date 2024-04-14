@@ -3,8 +3,8 @@
 .is-style-widget-title {
     position: relative;
     margin-top: 0;
-    margin-bottom: .6em;
-    padding-bottom: 0.4em;
+    margin-bottom: .625rem;
+    padding-bottom: 0.5rem;
     font-size: 1.5rem;
 
     &:before {
@@ -24,6 +24,22 @@
         left: 40px;
         width: 40px;
         background-color: #ddd;
+    }
+}
+
+.is-style-section-title {
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.75rem;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: rgba(0,0,0,0.1);
     }
 }
 

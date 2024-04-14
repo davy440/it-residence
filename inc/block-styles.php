@@ -17,6 +17,16 @@ if ( !function_exists('itre_block_style') ) {
             )
         );
 
+        // Section Title
+        register_block_style(
+            'core/heading',
+            array(
+                'name'			=>	'section-title',
+                'label'			=>	__('Section Title', 'it-residence'),
+                'style-handle'  =>  'itre-block-style'
+            )
+        );
+
         // Property Table
         register_block_style(
             'core/table',
