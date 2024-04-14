@@ -6,6 +6,7 @@
     margin-bottom: .6em;
     padding-bottom: 0.4em;
     font-size: 1.5rem;
+
     &:before {
         content: "";
         position: absolute;
@@ -15,6 +16,7 @@
         background-color: var(--accent);
     }
     &:after {
+
         content: "";
         position: absolute;
         bottom: 0;
@@ -26,25 +28,65 @@
 }
 
 .is-style-prop-table {
-    th,td {
-        padding: 0.25em 0.6em;
+
+    th,
+    td {
+        padding: 0.25em 0.625rem;
     }
+
     table {
+
         thead {
             background-color: var(--accent);
             color: var(--footer-text);
         }
+
         tbody {
+
             tr {
+
                 &:nth-child(2n+1) {
                     background-color: #f5f5f5;
                 }
             }
         }
+
         tfoot {
+
             td {
-                padding: 0.5em 0.6em;
+                padding: 0.5rem 0.6em;
             }
+        }
+    }
+}
+
+.is-style-two-col-list {
+    grid-template-columns: 1fr 1fr;
+}
+
+.is-style-three-col-list {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.is-style-two-col-list,
+.is-style-three-col-list {
+    display: grid;
+    column-gap: 1.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.625rem;
+
+        &:before {
+            content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj48dGl0bGU+QXNzZXQgMTwvdGl0bGU+PHBhdGggZD0iTTEwLDBBMTAsMTAsMCwxLDAsMjAsMTAsMTAsMTAsMCwwLDAsMTAsMFptMCwxOGE4LDgsMCwxLDEsOC04QTgsOCwwLDAsMSwxMCwxOFpNMTQuNTksNS41OCw4LDEyLjE3LDUuNDEsOS41OSw0LDExbDQsNCw4LThaIiBmaWxsPSIjMGNiYzJkIi8+PC9zdmc+");
+            margin-right: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 }

@@ -132,7 +132,6 @@
                 foreach ($items as $item ) {
                     if ( $item->family == $value['family']) {
                         $woff2_files = $item->files;
-    
                         $woff2_file = $value['weight'] === 400 ? $woff2_files->regular : $woff2_files->{$value['weight']};
                         break;
                     }

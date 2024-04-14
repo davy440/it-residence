@@ -218,7 +218,7 @@ require get_template_directory() . '/inc/block-styles.php';
  */
 require get_template_directory() . '/framework/customizer/customizer.php';
 
-include_once get_template_directory() . '/inc/class-plugins-install.php';
+require get_template_directory() . '/inc/class-plugins-install.php';
 
 /**
  * Load Jetpack compatibility file.

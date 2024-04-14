@@ -13,7 +13,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           style: 'expanded',
-          update: true,
+          update: true
         },
         files: [
           {
@@ -28,7 +28,8 @@ module.exports = function (grunt) {
     },
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        sourceMap: false
       },
       min: {
         files: [
@@ -43,6 +44,9 @@ module.exports = function (grunt) {
       }
     },
     cssmin: {
+      options: {
+        sourceMap: false
+      },
       target: {
         files: [
           {

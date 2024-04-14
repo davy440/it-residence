@@ -4,10 +4,13 @@
  */
 
 if ( !function_exists('itre_enqueue_admin_scripts') ) {
-    function itre_enqueue_admin_scripts() {
-        wp_enqueue_style( 'itre-admin-fonts', esc_url(get_template_directory_uri() . '/assets/cache/fontFiles/fonts.css'), array(), ITRE_VERSION );
+    function itre_enqueue_admin_scripts( $hook ) {
+
+        if ( $hook === 'appearance_page_itre_options' ) {
+            wp_enqueue_style( 'itre-admin-fonts', esc_url(get_template_directory_uri() . '/assets/cache/fontFiles/fonts.css'), array(), ITRE_VERSION );
+        }
+
         wp_enqueue_style( 'itre-theme-admin-css', esc_url( get_template_directory_uri() . '/assets/theme-styles/css/admin.css' ), array(), ITRE_VERSION );
-        wp_enqueue_script( 'itre-theme-admin-css', esc_url( get_template_directory_uri() . '/assets/js/min/admin.min.js' ), array(), ITRE_VERSION, true );
     }
 }
 add_action('admin_enqueue_scripts', 'itre_enqueue_admin_scripts');

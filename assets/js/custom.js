@@ -150,4 +150,14 @@ jQuery(document).ready(function() {
           jQuery('html').animate({scrollTop:0}, 300, 'linear');
         });
     }
+
+    // Lightbox feature for Gallery block
+    const lightbox = GLightbox({
+        selector: '.is-style-lightbox a',
+        height: 'auto',
+        touchNavigation: false,
+        keyboardNavigation: false,
+        width: 'auto',
+        draggable: false,
+    });
 });

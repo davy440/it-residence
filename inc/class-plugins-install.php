@@ -28,10 +28,12 @@ class ITRE_Plugin_Upgrader {
 
     public function itre_enqueue_upgrader_script( $hook ) {
         
-        if ( $hook !== "themes.php" ) {
+        global $pagenow;
+        
+        if ( $pagenow !== "themes.php" ) {
             return;
         }
-
+        
         wp_enqueue_script('itre-plugins-install-js', esc_url( get_template_directory_uri() . '/assets/js/min/plugins-install.min.js' ), array(), ITRE_VERSION, true );
         $data = array(
             'action'            =>  'install_plugin',
@@ -113,7 +115,7 @@ class ITRE_Plugin_Upgrader {
             include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
         }
 
-        // Need to add wp_redirecgt function in case activation causes a redirect
+        // Need to add wp_redirect function in case activation causes a redirect
         if ( ! function_exists( 'wp_redirect' ) ) {
             include_once( ABSPATH . 'wp-includes/pluggable.php' );
         }
