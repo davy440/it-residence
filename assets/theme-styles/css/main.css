@@ -164,7 +164,13 @@ select,
 textarea {
   color: #666;
   border-radius: 0px;
-  padding: 0.7em;
+  padding: 0.6875rem;
+  outline: none;
+  transition: all 100ms ease;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
 }
 
 input[type=text]:focus,
@@ -183,7 +189,7 @@ input[type=datetime]:focus,
 input[type=datetime-local]:focus,
 input[type=color]:focus,
 textarea:focus {
-  color: #111;
+  border: solid 1px var(--accent);
 }
 
 textarea {

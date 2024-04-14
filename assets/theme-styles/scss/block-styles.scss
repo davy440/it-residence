@@ -1,4 +1,6 @@
 //Block Styles
+@import 'variables';
+@import 'functions';
 
 .is-style-widget-title {
     position: relative;
@@ -30,7 +32,7 @@
 .is-style-section-title {
     position: relative;
     padding-bottom: 0.5rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 0.75rem;
 
     &:after {
         content: "";
@@ -103,6 +105,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+    }
+}
+
+//Reach Out - Contact Form styling
+.is-style-reach-out {
+
+    input
+    :not([type="radio"])
+    :not([type="checkbox"])
+    :not([type="submit"]),
+    textarea {
+        padding: 0.5rem;
+    }
+}
+
+// Sticky Column
+.is-style-sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    height: fit-content;
+    top: 1rem;
+
+    body.admin-bar & {
+        top: 3.875rem;
+
+        @media (min-width: 48.875rem) {
+            top: 3rem;
         }
     }
 }

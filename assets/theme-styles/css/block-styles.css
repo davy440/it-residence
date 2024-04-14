@@ -1,3 +1,23 @@
+:root {
+  --title-font: "League Spartan", sans-serif;
+  --body-font: "League Spartan", sans-serif;
+  --title-weight: 700;
+  --body-weight: 400;
+  --border-radius: 10px;
+  --body-text: black;
+  --excerpt: #999999;
+  --accent: #2e6d87;
+  --dark: #08445d;
+  --masthead-bg: white;
+  --link: #999999;
+  --link-hvr: #555555;
+  --nav-bg: #2e6d87;
+  --subnav-link: white;
+  --footer-bg: #08445d;
+  --footer-link: white;
+  --footer-text: white;
+}
+
 .is-style-widget-title {
   position: relative;
   margin-top: 0;
@@ -26,7 +46,7 @@
 .is-style-section-title {
   position: relative;
   padding-bottom: 0.5rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.75rem;
 }
 .is-style-section-title:after {
   content: "";
@@ -82,6 +102,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.is-style-reach-out input :not([type=radio]) :not([type=checkbox]) :not([type=submit]),
+.is-style-reach-out textarea {
+  padding: 0.5rem;
+}
+
+.is-style-sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  height: fit-content;
+  top: 1rem;
+}
+body.admin-bar .is-style-sticky {
+  top: 3.875rem;
+}
+@media (min-width: 48.875rem) {
+  body.admin-bar .is-style-sticky {
+    top: 3rem;
+  }
 }
 
 /*# sourceMappingURL=block-styles.css.map */

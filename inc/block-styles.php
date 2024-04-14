@@ -66,6 +66,28 @@ if ( !function_exists('itre_block_style') ) {
                 'style-handle'  =>  'itre-block-style'
             )
         );
+
+        // Sticky Column Style
+        register_block_style(
+            'core/column',
+            array(
+                'name'			=>	'sticky',
+                'label'			=>	__('Sticky', 'it-residence'),
+                'style-handle'  =>  'itre-block-style'
+            )
+        );
+
+        if (class_exists('WPCF7')) {
+             // Property Images
+            register_block_style(
+                'contact-form-7/contact-form-selector',
+                array(
+                    'name'			=>	'reach-out',
+                    'label'			=>	__('Reach Out', 'it-residence'),
+                    'style-handle'  =>  'itre-block-style'
+                )
+            );
+        }
     }
 }
 add_action( 'init', 'itre_block_style' );
