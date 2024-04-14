@@ -32,7 +32,7 @@ if ( !function_exists('itre_block_style') ) {
             'core/table',
             array(
                 'name'			=>	'prop-table',
-                'label'			=>	__('Property Table', 'it-residence'),
+                'label'			=>	__('Address', 'it-residence'),
                 'style-handle'  =>  'itre-block-style'
             )
         );
