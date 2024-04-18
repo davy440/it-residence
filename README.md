@@ -135,5 +135,8 @@ Just Install the Theme from the WordPress Repository.
 * v2.4.8
 	Added Styles and Fixed Bugs
 
+* v2.5
+	Added Properties Metabox
+
 
 Good luck!

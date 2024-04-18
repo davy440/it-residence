@@ -6,7 +6,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 6.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 2.4.6.1
+Stable tag: 2.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -141,6 +141,9 @@ Create a Real Estate website and showcase your business magnificently with our f
 
 = 2.4.8 April 14, 2024 =
 * Added Styles and fixed bugs
+
+= 2.5 April 18, 2024 =
+* Added Properties Metabox
 
 
 == Credits ==
