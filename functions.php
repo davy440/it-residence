@@ -149,9 +149,16 @@ require get_template_directory() . '/framework/theme-setup/admin_scripts.php';
 require get_template_directory() . '/framework/metabox/display-options.php';
 
 /**
+ * Include Metabox for properties
+ */
+if (class_exists('IT_Listings')) {
+	require get_template_directory() . '/framework/metabox/property-metabox.php';
+}
+
+/**
  *	Including Properties
  */
-if (class_exists('IT_Listings') || class_exists('IT_Listings_Pro')) {
+if ( class_exists('IT_Listings') ) {
 	require get_template_directory() . '/inc/property-functions.php';
 }
 
