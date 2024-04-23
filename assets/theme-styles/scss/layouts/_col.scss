@@ -10,13 +10,13 @@ article.type-post, article.type-page {
         }
 
         h2 {
-            font-size: 1.5rem;
             margin: 0.3125rem auto;
             @extend %regular;
             a {
                 color: black;
             }
         }
+
         .itre-col-wrapper {
             display: flex;
             flex-direction: column;
@@ -24,10 +24,12 @@ article.type-post, article.type-page {
             border-radius: var(--border-radius);
             overflow: hidden;
             height: 100%;
-            > *:not(.itre-col-thumb) {
-                padding: 0 0.625rem;
-            }
         }
+
+        .itre-content-wrapper {
+            padding: 1rem;
+        }
+
         .entry-content {
             margin-top: 0;
             margin-bottom: 1.75rem;
@@ -45,16 +47,19 @@ article.type-post, article.type-page {
 
         .itre-read-more {
             margin-top: auto;
-            margin-bottom: 1em;
             a {
                 text-transform: uppercase;
-                margin: 0.5rem auto 1rem;
                 @extend %bold;
+            }
+        }
+        &.col-md-4 {
+            h2 {
+                font-size: 1.5rem;
             }
         }
         &.col-md-6 {
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.75rem;
             }
         }
     }

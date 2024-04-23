@@ -7,7 +7,7 @@
 **/
 if ( !function_exists('itlst_custom_meta') ) {
     function itlst_custom_meta() {
-        add_meta_box( 'itre_prop_meta', __( 'Property Details', 'it-listings' ), 'itlst_meta_callback', 'property','normal','high' );
+        add_meta_box( 'itre_prop_meta', __( 'Property Details', 'it-residence' ), 'itlst_meta_callback', 'property','normal','high' );
     }
     add_action( 'add_meta_boxes', 'itlst_custom_meta' );
 }
@@ -37,7 +37,7 @@ if ( !function_exists('itlst_meta_callback') ) {
     	    <div class="row">
 
                 <div class="half-width">
-                    <h4> <?php _e('Sale / Rent', 'itre'); ?></h4>
+                    <h4> <?php _e('Sale / Rent', 'it-residence'); ?></h4>
 
                     <input type="radio" id="sale" name="for" value="sale" <?php if ( isset( $itlst_stored_meta['for'][0] ) ) checked( $itlst_stored_meta['for'][0], "sale" ); ?>>
                     <label for="for" class="color-label"><?php _e("Sale", "it-listings"); ?></label>
@@ -49,85 +49,85 @@ if ( !function_exists('itlst_meta_callback') ) {
 
                 <div class="half-width">
     		    <label for="price">
-    		    	<h4><?php _e('Price', 'it-listings'); ?></h4>
+    		    	<h4><?php _e('Price', 'it-residence'); ?></h4>
     		    	<input type="number" name="price" id="price" autocomplete="on" value="<?php echo esc_attr($price) ?>" placeholder="500000">
     		    </label><br/>
                 </div>
 
                 <div class="half-width">
     		     <label for="area">
-    		    	<h4><?php _e('Area', 'it-listings'); ?></h4>
+    		    	<h4><?php _e('Area', 'it-residence'); ?></h4>
     		    	<input type="number" name="area" id="area" autocomplete="on" value="<?php echo esc_attr($area) ?>" placeholder="3000">
     		    </label><br/>
                 </div>
 
                 <div class="half-width">
     		    <label for="bedrooms">
-    		    	<h4><?php _e('Bedrooms', 'it-listings'); ?></h4>
+    		    	<h4><?php _e('Bedrooms', 'it-residence'); ?></h4>
     		    	<input type="number" name="bedrooms" id="bedrooms" autocomplete="on" value="<?php echo esc_attr($bedrooms) ?>" placeholder="3">
     		    </label><br/>
                 </div>
 
                 <div class="half-width">
     		    <label for="bathrooms">
-    		    	<h4><?php _e('Bathrooms', 'it-listings'); ?></h4>
+    		    	<h4><?php _e('Bathrooms', 'it-residence'); ?></h4>
     		    	<input type="number" name="bathrooms" id="bathrooms" autocomplete="on" value="<?php echo esc_attr($bathrooms) ?>" placeholder="2">
     		    </label><br/>
                 </div>
 
                 <div class="full-width">
         		    <label for="address">
-        		    	<h4><?php _e('Address', 'it-listings'); ?></h4>
+        		    	<h4><?php _e('Address', 'it-residence'); ?></h4>
         		    	<textarea name="address" id="address" rows="4"><?php echo esc_attr($address) ?></textarea>
         		    </label><br/>
                     </div>
 
                     <div class="full-width">
         		    <label for="maps">
-        		    	<h4><?php _e('Show Map', 'it-listings'); ?></h4>
+        		    	<h4><?php _e('Show Map', 'it-residence'); ?></h4>
         		    	<input type="checkbox" name="maps" id="maps" value="yes" <?php if ( isset( $maps ) ) checked( $maps, "yes" ); ?> />
         		    </label><br/>
                     </div>
 
                     <div id="map-controls">
-                    <h3 class="full-width"><?php _e('Map Details', 'it-listings'); ?></h3>
+                    <h3 class="full-width"><?php _e('Map Details', 'it-residence'); ?></h3>
 
                     <div class="half-width">
         		    <label for="lat">
-        		    	<h4><?php _e('Location Latitude', 'it-listings'); ?></h4>
+        		    	<h4><?php _e('Location Latitude', 'it-residence'); ?></h4>
         		    	<input type="number" name="lat" id="lat" step="0.001" value="<?php echo esc_attr($lat) ?>">
         		    </label><br/>
                     </div>
 
                     <div class="half-width">
         		    <label for="long">
-        		    	<h4><?php _e('Location Longitude', 'it-listings'); ?></h4>
+        		    	<h4><?php _e('Location Longitude', 'it-residence'); ?></h4>
         		    	<input type="number" name="long" id="long" step="0.001" value="<?php echo esc_attr($long) ?>">
         		    </label><br/>
                     </div>
 
                     <p class="full-width">
-                        <?php _e('You can find longitude and latitude values of a location from Google Maps by just right clicking the location', 'it-listings') ?>
+                        <?php _e('You can find longitude and latitude values of a location from Google Maps by just right clicking the location', 'it-residence') ?>
                     </p>
 
                     <div class="half-width">
         		    <label for="zoom">
-        		    	<h4><?php _e('Zoom', 'it-listings'); ?></h4>
-        		    	<input type="number" name="zoom" id="zoom" min="4" max="16" step="1" placeholder="<?php esc_attr_e('Any number between 4-16', 'it-listings') ?>" value="<?php echo esc_attr($zoom) ?>">
+        		    	<h4><?php _e('Zoom', 'it-residence'); ?></h4>
+        		    	<input type="number" name="zoom" id="zoom" min="4" max="16" step="1" placeholder="<?php esc_attr_e('Any number between 4-16', 'it-residence') ?>" value="<?php echo esc_attr($zoom) ?>">
         		    </label>
-                    <p><?php _e('Any integer between 4-16.<br></bt>More the value, more the zoom.', 'it-listings'); ?></p><br/>
+                    <p><?php _e('Any integer between 4-16.<br></bt>More the value, more the zoom.', 'it-residence'); ?></p><br/>
                     </div>
 
                     <div class="quarter-width">
         		    <label for="labels">
-        		    	<h4><?php _e('Hide all Places except Marker', 'it-listings'); ?></h4>
+        		    	<h4><?php _e('Hide all Places except Marker', 'it-residence'); ?></h4>
         		    	<input type="checkbox" name="labels" id="labels" value="yes" <?php if ( isset( $labels ) ) checked( $labels, "yes" ); ?> />
         		    </label><br/>
                     </div>
 
                     <div class="quarter-width">
         		    <label for="controls">
-        		    	<h4><?php _e('Show Controls', 'it-listings'); ?></h4>
+        		    	<h4><?php _e('Show Controls', 'it-residence'); ?></h4>
         		    	<input type="checkbox" name="controls" id="controls" value="yes" <?php if ( isset( $controls ) ) checked( $controls, "yes" ); ?> />
         		    </label><br/>
                     </div>

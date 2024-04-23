@@ -138,5 +138,8 @@ Just Install the Theme from the WordPress Repository.
 * v2.5
 	Added Properties Metabox
 
+* v2.5.1
+	Improved Blog Layout
+
 
 Good luck!

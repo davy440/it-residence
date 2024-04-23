@@ -1083,7 +1083,6 @@ article.type-post[class^=col-] .listing-wrapper, article.type-page[class^=col-] 
   margin-bottom: 1.5rem;
 }
 article.type-post[class^=col-] h2, article.type-page[class^=col-] h2 {
-  font-size: 1.5rem;
   margin: 0.3125rem auto;
 }
 article.type-post[class^=col-] h2 a, article.type-page[class^=col-] h2 a {
@@ -1097,8 +1096,8 @@ article.type-post[class^=col-] .itre-col-wrapper, article.type-page[class^=col-]
   overflow: hidden;
   height: 100%;
 }
-article.type-post[class^=col-] .itre-col-wrapper > *:not(.itre-col-thumb), article.type-page[class^=col-] .itre-col-wrapper > *:not(.itre-col-thumb) {
-  padding: 0 0.625rem;
+article.type-post[class^=col-] .itre-content-wrapper, article.type-page[class^=col-] .itre-content-wrapper {
+  padding: 1rem;
 }
 article.type-post[class^=col-] .entry-content, article.type-page[class^=col-] .entry-content {
   margin-top: 0;
@@ -1113,14 +1112,15 @@ article.type-post[class^=col-] .entry-meta > *:first-child, article.type-page[cl
 }
 article.type-post[class^=col-] .itre-read-more, article.type-page[class^=col-] .itre-read-more {
   margin-top: auto;
-  margin-bottom: 1em;
 }
 article.type-post[class^=col-] .itre-read-more a, article.type-page[class^=col-] .itre-read-more a {
   text-transform: uppercase;
-  margin: 0.5rem auto 1rem;
+}
+article.type-post[class^=col-].col-md-4 h2, article.type-page[class^=col-].col-md-4 h2 {
+  font-size: 1.5rem;
 }
 article.type-post[class^=col-].col-md-6 h2, article.type-page[class^=col-].col-md-6 h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 article.classic {
