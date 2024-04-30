@@ -141,5 +141,8 @@ Just Install the Theme from the WordPress Repository.
 * v2.5.1
 	Improved Blog Layout
 
+* v2.5.2
+	Code Sorting and Bug Fixes
+
 
 Good luck!
