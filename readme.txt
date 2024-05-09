@@ -151,6 +151,9 @@ Create a Real Estate website and showcase your business magnificently with our f
 = 2.5.2 April 30, 2024 =
 * Code Sorting and Bug Fixes
 
+= 2.5.3 May 9, 2024 =
+* Fixed Page Sidebar Issue
+
 
 == Credits ==
 

@@ -144,5 +144,7 @@ Just Install the Theme from the WordPress Repository.
 * v2.5.2
 	Code Sorting and Bug Fixes
 
+* v2.5.3
+	Fixed Page Sidebar issue
 
 Good luck!

@@ -57,7 +57,8 @@
                 $css .= 'body.post-type-archive-property #secondary, body.tax-location  #secondary, body.tax-property-type #secondary {width: ' . $secondary_width . ';}';
             }
 
-            if (!is_front_page() && is_page() && is_active_sidebar('sidebar-page') && get_post_meta(get_the_ID(), 'enable-sidebar', true) !== '' ) {
+            
+            if (!is_front_page() && is_page() && is_active_sidebar('sidebar-blog') && get_post_meta(get_the_ID(), 'enable-sidebar', true) !== '' ) {
                 $css .= 'body.page-template-default #primary {width: ' . $primary_width . ';}';
                 $css .= 'body.page-template-default #secondary {width: ' . $secondary_width . ';}';
             }

@@ -19,7 +19,8 @@ if ( ! function_exists( 'itre_body_classes' ) ) {
 		}
 
 		// Adds a class of no-sidebar when there is no sidebar present.
-		if ( is_home() && is_active_sidebar( 'sidebar-blog' ) && !empty(get_theme_mod('itre_blog_sidebar_enable', '') ) ) {
+		if ( ( is_home() && is_active_sidebar( 'sidebar-blog' ) && !empty(get_theme_mod('itre_blog_sidebar_enable', '') ) ) ||
+			!is_front_page() && is_page() && is_active_sidebar( 'sidebar-blog' ) && get_post_meta( get_the_ID(), 'enable-sidebar', true ) ) {
 			$classes[] = 'has-sidebar';
 		}
 
@@ -52,7 +53,7 @@ if ( !function_exists('itre_get_top_bar') ) {
 	function itre_get_top_bar() {
 		?>
 		<div class="container-lg">
-			<div class="d-flex align-items-center">
+			<div class="d-flex align-items-center gap-3">
 
 				<div class="branding-wrapper col-7 col-sm-5 col-lg-3">
 					<?php get_template_part('framework/sections/header/modules/site', 'branding'); ?>
@@ -236,8 +237,7 @@ if ( !function_exists('itre_get_sidebar') ) {
 				if	( is_page() &&
 				!is_front_page() &&
 				'' !== get_post_meta($post->ID, 'enable-sidebar', true) ) {
-
-					get_sidebar('null', ['page'	=>	'page']);
+					get_sidebar('null', ['page'	=>	'']);
 				}
 			break;
 		    default:

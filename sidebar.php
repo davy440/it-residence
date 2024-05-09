@@ -6,11 +6,12 @@
  *
  * @package IT Residence
  */
-if ( ! is_active_sidebar( 'sidebar-' . $args['page'] ) ) {
+$sidebar = isset($args['page']) && !empty($args['page']) ?  'sidebar-' . $args['page'] : 'sidebar-blog';
+if ( ! is_active_sidebar( $sidebar ) ) {
 	return;
 }
 ?>
 
 <aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-' . $args['page'] ); ?>
+	<?php dynamic_sidebar( $sidebar ); ?>
 </aside><!-- #secondary -->
