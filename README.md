@@ -147,4 +147,7 @@ Just Install the Theme from the WordPress Repository.
 * v2.5.3
 	Fixed Page Sidebar issue
 
+*v2.5.4
+	Fixed Filter
+
 Good luck!
