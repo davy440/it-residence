@@ -71,7 +71,7 @@ if ( !function_exists( 'itre_scripts' ) ) {
 			wp_enqueue_script( 'itre-property-map-js', esc_url(get_template_directory_uri() . '/assets/js/min/property-map.min.js'), array(), ITRE_VERSION, true );
 		}
 		
-		if ( class_exists('IT_Lisings') ) {
+		if ( class_exists('IT_Listings') ) {
 			wp_enqueue_script( 'itre-property-js', esc_url(get_template_directory_uri() . '/assets/js/min/property.min.js'), array(), ITRE_VERSION, true );
 		}
 

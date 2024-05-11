@@ -151,7 +151,7 @@ if ( !function_exists('itre_get_filtered_properties') ) {
 		);
 
 		if (!empty($_POST['bedrooms'])) {
-			$args['meta_query'][][] = array(
+			$args['meta_query'][] = array(
 				'key'	=>	'bedrooms',
 				'value'	=>	intval($_POST['bedrooms']),
 				'type'	=>	'NUMERIC',
@@ -159,15 +159,15 @@ if ( !function_exists('itre_get_filtered_properties') ) {
 		}
 
 		if (!empty($_POST['type'])) {
-			$args['meta_query'][][] = array(
-				'key'	=>	'type',
-				'value'	=>	$_POST['type'],
-				'type'	=>	'CHAR',
+			$args['tax_query'][] = array(
+				'taxonomy'	=>	'property-type',
+				'field'	=>	'slug',
+				'terms'	=>	$_POST['type']
 			);
 		}
 
 		if (!empty($_POST['min-price']) && !empty($_POST['max-price'])) {
-			$args['meta_query'][][] = array(
+			$args['meta_query'][] = array(
 				'key'		=>	'price',
 				'value'		=>	[intval($_POST['min-price']), intval($_POST['max-price'])],
 				'compare'	=>	'BETWEEN'
@@ -175,7 +175,7 @@ if ( !function_exists('itre_get_filtered_properties') ) {
 		}
 
 		if (!empty($_POST['min-price']) && empty($_POST['max-price'])) {
-			$args['meta_query'][][] = array(
+			$args['meta_query'][] = array(
 				'key'		=>	'price',
 				'value'		=>	intval($_POST['min-price']),
 				'compare'	=>	'>='
@@ -183,7 +183,7 @@ if ( !function_exists('itre_get_filtered_properties') ) {
 		}
 		
 		if (empty($_POST['min-price']) && !empty($_POST['max-price'])) {
-			$args['meta_query'][][] = array(
+			$args['meta_query'][] = array(
 				'key'		=>	'price',
 				'value'		=>	intval($_POST['max-price']),
 				'compare'	=>	'<='
@@ -191,7 +191,7 @@ if ( !function_exists('itre_get_filtered_properties') ) {
 		}
 
 		if (!empty($_POST['min-area']) && !empty($_POST['max-area'])) {
-			$args['meta_query'][][] = array(
+			$args['meta_query'][] = array(
 				'key'		=>	'area',
 				'value'		=>	[intval($_POST['min-area']), intval($_POST['max-area'])],
 				'compare'	=>	'BETWEEN'
@@ -199,7 +199,7 @@ if ( !function_exists('itre_get_filtered_properties') ) {
 		}
 
 		if (!empty($_POST['min-area']) && empty($_POST['max-area'])) {
-			$args['meta_query'][][] = array(
+			$args['meta_query'][] = array(
 				'key'		=>	'area',
 				'value'		=>	intval($_POST['min-area']),
 				'type'		=>	'NUMERIC',
@@ -208,19 +208,19 @@ if ( !function_exists('itre_get_filtered_properties') ) {
 		}
 		
 		if (empty($_POST['min-area']) && !empty($_POST['max-area'])) {
-			$args['meta_query'][][] = array(
+			$args['meta_query'][] = array(
 				'key'		=>	'area',
 				'value'		=>	intval($_POST['max-area']),
 				'compare'	=>	'<='
 			);
 		}
-
+		
 		$filter_query = new WP_Query( $args );
-
+		
 		// The Loop
 		if ( $filter_query->have_posts() ) :
-		while ( $filter_query->have_posts() ) : $filter_query->the_post();
-		global $post;
+			while ( $filter_query->have_posts() ) : $filter_query->the_post();
+			global $post;
 			get_template_part('template-parts/content', 'property');
 		endwhile;
 		endif;

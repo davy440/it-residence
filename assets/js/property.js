@@ -40,6 +40,7 @@
 		propertyContainer.innerHTML = "";
         const body = `action=${action_filter}&nonce=${nonce_filter}${requestBody}`;
     	const filteredProperties = await filterProperties(body);
+        console.log(filteredProperties);
 		propertyContainer.innerHTML = filteredProperties;
     });
 })();
