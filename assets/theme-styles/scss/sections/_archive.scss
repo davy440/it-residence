@@ -5,6 +5,10 @@ body.archive {
     &.post-type-archive-property,
     &.tax-location,
     &.tax-property-type {
+
+        .page-title {
+            margin-bottom: 1rem;
+        }
         
         .itre-property-archive-wrapper {
             display: grid;

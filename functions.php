@@ -9,7 +9,15 @@
 
 if ( ! defined( 'ITRE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ITRE_VERSION', '2.5.4' );
+	define( 'ITRE_VERSION', '2.5.5' );
+}
+
+if ( ! defined( 'ITRE_URL' ) ) {
+	define( 'ITRE_URL', trailingslashit( get_template_directory_uri() ) );
+}
+
+if ( ! defined( 'ITRE_PATH' ) ) {
+	define( 'ITRE_PATH', trailingslashit( get_template_directory() ) );
 }
 
 /**
@@ -135,101 +143,101 @@ add_action( 'after_setup_theme', 'itre_content_width', 0 );
 /**
  *	Enqueue Scripts and Styles
  */
-require get_template_directory() . '/framework/theme-setup/enqueue_scripts.php';
-require get_template_directory() . '/framework/theme-setup/admin_scripts.php';
+require ITRE_PATH . 'framework/theme-setup/enqueue_scripts.php';
+require ITRE_PATH . 'framework/theme-setup/admin_scripts.php';
 
 /**
  *	Register Sidebars
  */
- require get_template_directory() . '/framework/theme-setup/register_sidebars.php';
+ require ITRE_PATH . 'framework/theme-setup/register_sidebars.php';
 
 /**
  * Include Metabox for Pages
  */
-require get_template_directory() . '/framework/metabox/display-options.php';
+require ITRE_PATH . 'framework/metabox/display-options.php';
 
 /**
  * Include Metabox for properties
  */
 if (class_exists('IT_Listings')) {
-	require get_template_directory() . '/framework/metabox/property-metabox.php';
+	require ITRE_PATH . 'framework/metabox/property-metabox.php';
 }
 
 /**
  *	Including Properties
  */
 if ( class_exists('IT_Listings') ) {
-	require get_template_directory() . '/inc/property-functions.php';
+	require ITRE_PATH . 'inc/property-functions.php';
 }
 
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+require ITRE_PATH . 'inc/custom-header.php';
 
 /**
  *	Menu Walker for Mobiles
  */
-require get_template_directory() . '/inc/walker.php';
+require ITRE_PATH . 'inc/walker.php';
 
 /**
  *	Custom Colors
  */
-require get_template_directory() . '/inc/colors.php';
+require ITRE_PATH . 'inc/colors.php';
 
 /**
  *	Custom CSS generated through PHP
  */
-require get_template_directory() . '/inc/css-mods.php';
+require ITRE_PATH . 'inc/css-mods.php';
 
 /**
  *	Theme Starter Content
  */
-require get_template_directory() . '/inc/starter-content.php';
+require ITRE_PATH . 'inc/starter-content.php';
 
-require get_template_directory() . '/inc/notice.php';
+require ITRE_PATH . 'inc/notice.php';
 
 /**
  * Require Library to hide notice permanently
  * https://github.com/w3guy/persist-admin-notices-dismissal/tree/master
  */
-require get_template_directory() . '/inc/persist-admin-notices-dismissal.php';
+require ITRE_PATH . 'inc/persist-admin-notices-dismissal.php';
 
 /**
  *	Theme Page
  */
-require get_template_directory() . '/inc/theme-page.php';
+require ITRE_PATH . 'inc/theme-page.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require ITRE_PATH . 'inc/template-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
+require ITRE_PATH . 'inc/template-functions.php';
 
 /**
  *	Google Fonts Functionality
  */
-require get_template_directory() . '/inc/google-fonts.php';
+require ITRE_PATH . 'inc/google-fonts.php';
 
 /**
  *	Block Styles for the theme
  */
-require get_template_directory() . '/inc/block-styles.php';
+require ITRE_PATH . 'inc/block-styles.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/framework/customizer/customizer.php';
+require ITRE_PATH . 'framework/customizer/customizer.php';
 
-require get_template_directory() . '/inc/class-plugins-install.php';
+require ITRE_PATH . 'inc/class-plugins-install.php';
 
 /**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+	require ITRE_PATH . 'inc/jetpack.php';
 }

@@ -222,9 +222,11 @@ header.page-header {
     border-radius: var(--border-radius);
     cursor: pointer;
     opacity: 0;
+
     i {
         padding: 1em 1.25em 1.2em;
     }
+    
     &.show {
 		display: flex;
 		animation: backToTop 300ms forwards;

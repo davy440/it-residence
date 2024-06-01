@@ -286,6 +286,9 @@ header.page-header {
   display: block !important;
 }
 
+body.archive.post-type-archive-property .page-title, body.archive.tax-location .page-title, body.archive.tax-property-type .page-title {
+  margin-bottom: 1rem;
+}
 body.archive.post-type-archive-property .itre-property-archive-wrapper, body.archive.tax-location .itre-property-archive-wrapper, body.archive.tax-property-type .itre-property-archive-wrapper {
   display: grid;
   column-gap: 1.5rem;
