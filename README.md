@@ -154,4 +154,8 @@ Just Install the Theme from the WordPress Repository.
 	Added Global Variables
 	Minor bug fixes
 
+* v2.5.6
+	Mobile Menu sub-menu accessibility fix
+	Mobile Menu walker bug fix
+
 Good luck!
