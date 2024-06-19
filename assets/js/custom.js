@@ -29,6 +29,9 @@ jQuery(document).ready(function() {
     testSlider();
 
     const toggleNavMenu = (item) => {
+        const btn = this.activeElement;
+        const expanded = btn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
+        btn.setAttribute('aria-expanded', expanded);
         item.classList.toggle('is-visible');
     }
 
@@ -78,8 +81,8 @@ jQuery(document).ready(function() {
         // Accessing sub-menus
         dropdowns.forEach(dropdown => {
             const subMenu = dropdown.nextElementSibling;
-            dropdown.addEventListener('click', () => toggleNavMenu(subMenu));
-            dropdown.addEventListener('keydown', (e) => {
+            dropdown.addEventListener('click', function(e) { toggleNavMenu(subMenu) });
+            dropdown.addEventListener('keydown', function (e) {
                 if (['Space', 'Enter'].includes(e.code)) {
                     toggleNavMenu(subMenu);
                 }

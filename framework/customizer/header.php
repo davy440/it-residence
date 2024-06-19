@@ -86,7 +86,7 @@ function itre_header_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting(
         'itre_cta_id', array(
-            'default'   =>  '#',
+            'default'   =>  '',
             'sanitize_callback' =>  'esc_url_raw'
         )
     );

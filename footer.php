@@ -35,16 +35,15 @@
 	<?php if ( !empty( get_theme_mod('itre_cta_enable', '') ) ) : ?>
 		<div class="itre-cta-wrapper">
 			<?php
-				printf("<a class='itre-cta cta-nav' href='%s'>%s</a>", esc_url( get_theme_mod( 'itre_cta_id' ) ), esc_html( get_theme_mod( 'itre_cta_text', 'Add Listing' ) ) );
+				printf("<a class='itre-cta cta-nav' href='%s'>%s</a>", esc_url( get_theme_mod( 'itre_cta_id', '#' ) ), esc_html( get_theme_mod( 'itre_cta_text', 'Add Listing' ) ) );
 			?>
 		</div>
 	<?php endif; ?>
-
 	<?php wp_nav_menu( apply_filters( 'itre_mobile_nav_args', array(
 			'menu_id'	=> 'mobile-menu',
 			'container'		=> 'ul',
 			'theme_location' => 'menu-2',
-			'walker'         => has_nav_menu('menu-2') ? new itre_Mobile_Menu : '',
+			'walker'         => has_nav_menu('menu-2') ? new itre_Mobile_Menu() : '',
 	 ) ) ); ?>
 
 	<button class="go-to-top"></button>

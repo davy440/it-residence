@@ -17,7 +17,7 @@ if ( class_exists('Walker_Nav_Menu') ) {
             $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
 
             if ( $args->walker->has_children ) {
-                $dropDown = '<span class="dropdown-arrow" tabindex="0"><i class="fa fa-angle-down"></i></span>';
+                $dropDown = '<span class="dropdown-arrow" tabindex="0" aria-expanded="false"><i class="fa fa-angle-down"></i></span>';
             } else {
                 $dropDown = '';
             }
