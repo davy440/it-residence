@@ -1007,6 +1007,35 @@ body:not(.single-property) article.type-property.grid.property-tab h2 {
   color: white;
 }
 
+.spinner {
+  width: 100%;
+  min-height: 12.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner svg {
+  width: 5rem;
+  height: 5rem;
+  animation: svgRotate 1000ms linear infinite;
+}
+
+@keyframes svgRotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
 body.single-property .post-thumbnail img {
   border-radius: var(--border-radius);
 }

@@ -205,3 +205,27 @@ body:not(.single-property) article.type-property {
 		}
 	}
 }
+
+.spinner {
+	width: 100%;
+	min-height: 12.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		width: 5rem;
+		height: 5rem;
+		animation: svgRotate 1000ms linear infinite;
+	}
+}
+
+@keyframes svgRotate {
+    0% {
+        @include transform(rotate(0deg));
+    }
+
+    100% {
+        @include transform(rotate(360deg));
+    }
+}
