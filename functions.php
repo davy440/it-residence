@@ -9,7 +9,7 @@
 
 if ( ! defined( 'ITRE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ITRE_VERSION', '2.5.6' );
+	define( 'ITRE_VERSION', '2.5.7' );
 }
 
 if ( ! defined( 'ITRE_URL' ) ) {

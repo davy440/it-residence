@@ -158,4 +158,7 @@ Just Install the Theme from the WordPress Repository.
 	Mobile Menu sub-menu accessibility fix
 	Mobile Menu walker bug fix
 
+* v2.5.7
+	Added Loading Icon for Filter
+
 Good luck!

@@ -165,6 +165,9 @@ Create a Real Estate website and showcase your business magnificently with our f
 * Mobile Menu sub-menu accessibility fix
 * Mobile Menu walker bug fix
 
+= 2.5.7 July 1, 2024 =
+* Added Loading Icon for Filter
+
 
 == Credits ==
 
