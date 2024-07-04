@@ -3,13 +3,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '**/*.php'
-      - '**/*.js'
-      - '**/*.scss'
-      - '**/*.css'
-      - theme.json
-      - '!prepros.config'
 jobs:
   build:
     runs-on: ubuntu-latest
