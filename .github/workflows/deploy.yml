@@ -4,11 +4,18 @@ on:
     branches:
       - main
     paths:
-      - '**/*.php'
-      - '**/*.js'
-      - '**/*.scss'
-      - '**/*.css'
-      - theme.json
+      include:
+        - '**/*.php'
+        - '**/*.js'
+        - '**/*.scss'
+        - '**/*.css'
+        - theme.json
+      exclude:
+        - .*
+        - prepros.config
+        - Gruntfile.js
+        - package.json
+        - package-lock.json
 jobs:
   build:
     runs-on: ubuntu-latest
