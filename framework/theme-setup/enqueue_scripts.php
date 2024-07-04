@@ -48,7 +48,9 @@ if ( !function_exists( 'itre_enqueue_fonts' ) ) {
 }
 add_action( 'wp_enqueue_scripts', 'itre_enqueue_fonts' );
 
-
+/**
+ * Enqueuing required scripts and files
+ */
 if ( !function_exists( 'itre_scripts' ) ) {
 	function itre_scripts() {
 
