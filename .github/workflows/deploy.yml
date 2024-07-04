@@ -9,7 +9,6 @@ on:
       - '**/*.scss'
       - '**/*.css'
       - theme.json
-      - '!.*'
       - '!prepros.config'
       - '!Gruntfile.js'
       - '!package.json'
