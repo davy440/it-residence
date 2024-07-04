@@ -3,6 +3,12 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '**/*.php'
+      - '**/*.js'
+      - '**/*.scss'
+      - '**/*.css'
+      - theme.json
 jobs:
   build:
     runs-on: ubuntu-latest
