@@ -9,6 +9,7 @@ on:
       - '**/*.scss'
       - '**/*.css'
       - theme.json
+      - '!prepros.config'
 jobs:
   build:
     runs-on: ubuntu-latest
