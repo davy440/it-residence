@@ -161,4 +161,7 @@ Just Install the Theme from the WordPress Repository.
 * v2.5.7
 	Added Loading Icon for Filter
 
+* v2.5.8
+	Optimized file structure
+
 Good luck!

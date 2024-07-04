@@ -46,7 +46,7 @@
         {
             return $google_fonts;
         } else {
-            return array_slice($google_fonts, 0, absint( $amount ) );
+            return array_slice($google_fonts, 0, (int)$amount );
         }
     }
 

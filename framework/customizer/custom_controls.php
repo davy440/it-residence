@@ -299,7 +299,7 @@ if ( class_exists('WP_Customize_Color_Control') ) {
 
     		wp_enqueue_script(
     			'itre-control-color-picker-alpha',
-    			$control_root_url . '/assets/js/color-alpha.js',
+    			$control_root_url . '/assets/js/resources/color-alpha.min.js',
     			// We're including wp-color-picker for localized strings, nothing more.
     			[ 'customize-controls', 'wp-element', 'jquery', 'customize-base', 'wp-color-picker' ], // phpcs:ignore Generic.Arrays.DisallowShortArraySyntax
     			ITRE_VERSION,

@@ -6,9 +6,9 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 6.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 2.5.6
+Stable tag: 2.5.8
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: https://spdx.org/licenses/GPL-2.0-or-later.html
 
 IT Residence WordPress Theme, Copyright 2024 IndiThemes
 IT Residence is distributed under the terms of the GNU GPL
@@ -168,6 +168,9 @@ Create a Real Estate website and showcase your business magnificently with our f
 = 2.5.7 July 1, 2024 =
 * Added Loading Icon for Filter
 
+= 2.5.8 July 4, 2024 =
+* Optimized File Structure
+
 
 == Credits ==
 
@@ -195,15 +198,10 @@ Source: https://pxhere.com/en/photo/599831
 
 * Magnific Popup https://dimsemenov.com/plugins/magnific-popup/, Dmitry Semenov, [MIT](https://dimsemenov.com/plugins/magnific-popup/)
 
-* jquery.youtube-background.js v1.0.14, Nikola Stamatovic <@stamat>, [MIT](https://github.com/stamat/youtube-background)
-
-*
-
 * Font Awesome v5.1.3 https://www.fontawesome.com, Fonticons Inc., [MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE)
 
 * Owl Carousel v2.3.4 https://owlcarousel2.github.io/OwlCarousel2/index.html, David Deutsch, [MIT](https://github.com/OwlCarousel2/OwlCarousel2/blob/develop/LICENSE)
 
-* TGMPA Plugin http://tgmpluginactivation.com/, Thomas Griffin, GPLv2.0 or later(http://www.opensource.org/licenses/GPL-2.0)
-
 * Based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2018 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)

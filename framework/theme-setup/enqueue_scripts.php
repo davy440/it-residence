@@ -55,31 +55,21 @@ if ( !function_exists( 'itre_scripts' ) ) {
 		wp_enqueue_style( 'itre-style', get_stylesheet_uri(), array(), ITRE_VERSION );
 		wp_style_add_data( 'itre-style', 'rtl', 'replace' );
 
-		wp_enqueue_style( 'bootstrap', esc_url(get_template_directory_uri() . '/assets/bootstrap.css'), array(), ITRE_VERSION );
-
-		wp_enqueue_style( 'font-awesome', esc_url(get_template_directory_uri() . '/assets/fonts/font-awesome.css'), array(), ITRE_VERSION );
-
-		wp_enqueue_style( 'owl-css', esc_url(get_template_directory_uri() . '/assets/owl.carousel.css'), array(), ITRE_VERSION );
-
-		wp_enqueue_style( 'glightbox-css', esc_url(get_template_directory_uri() . '/assets/theme-styles/css/glightbox.min.css'), array(), ITRE_VERSION );
-
-		wp_enqueue_style( 'itre-main', esc_url(get_template_directory_uri() . '/assets/theme-styles/css/main.min.css'), array(), ITRE_VERSION );
-
-		wp_enqueue_script( 'itre-navigation', esc_url(get_template_directory_uri() . '/assets/js/min/navigation.min.js'), array(), ITRE_VERSION );
-
+		wp_enqueue_style( 'bootstrap', esc_url(ITRE_URL . 'assets/bootstrap.css'), array(), ITRE_VERSION );
+		wp_enqueue_style( 'font-awesome', esc_url(ITRE_URL . 'assets/fonts/font-awesome.css'), array(), ITRE_VERSION );
+		wp_enqueue_style( 'owl-css', esc_url(ITRE_URL . 'assets/owl.carousel.css'), array(), ITRE_VERSION );
+		wp_enqueue_style( 'glightbox-css', esc_url(ITRE_URL . 'assets/theme-styles/css/glightbox.min.css'), array(), ITRE_VERSION );
+		wp_enqueue_style( 'itre-main', esc_url(ITRE_URL . 'assets/theme-styles/css/main.min.css'), array(), ITRE_VERSION );
+		wp_enqueue_script( 'itre-navigation', esc_url(ITRE_URL . 'assets/js/min/navigation.min.js'), array(), ITRE_VERSION );
 		if (class_exists('IT_Listings') && is_singular('property') ) {
-			wp_enqueue_script( 'itre-property-map-js', esc_url(get_template_directory_uri() . '/assets/js/min/property-map.min.js'), array(), ITRE_VERSION, true );
+			wp_enqueue_script( 'itre-property-map-js', esc_url(ITRE_URL . 'assets/js/min/property-map.min.js'), array(), ITRE_VERSION, true );
 		}
-		
 		if ( class_exists('IT_Listings') ) {
-			wp_enqueue_script( 'itre-property-js', esc_url(get_template_directory_uri() . '/assets/js/min/property.min.js'), array(), ITRE_VERSION, true );
+			wp_enqueue_script( 'itre-property-js', esc_url(ITRE_URL . 'assets/js/min/property.min.js'), array(), ITRE_VERSION, true );
 		}
-
-		wp_enqueue_script( 'owl-js', esc_url(get_template_directory_uri() . '/assets/js/min/owl.min.js'), array('jquery'), ITRE_VERSION, true );
-
-		wp_enqueue_script( 'glightbox-js', esc_url(get_template_directory_uri() . '/assets/js/min/glightbox.min.js'), array(), ITRE_VERSION, true );
-
-		wp_enqueue_script( 'itre-custom-js', esc_url( get_template_directory_uri() . '/assets/js/min/custom.min.js'), array('jquery', 'owl-js', 'glightbox-js'), ITRE_VERSION, true );
+		wp_enqueue_script( 'owl-js', esc_url(ITRE_URL . 'assets/js/resources/owl.min.js'), array('jquery'), ITRE_VERSION, true );
+		wp_enqueue_script( 'glightbox-js', esc_url(ITRE_URL . 'assets/js/resources/glightbox.min.js'), array(), ITRE_VERSION, true );
+		wp_enqueue_script( 'itre-custom-js', esc_url(ITRE_URL . 'assets/js/min/custom.min.js'), array('jquery', 'owl-js', 'glightbox-js'), ITRE_VERSION, true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
