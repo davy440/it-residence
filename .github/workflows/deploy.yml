@@ -4,18 +4,16 @@ on:
     branches:
       - main
     paths:
-      include:
-        - '**/*.php'
-        - '**/*.js'
-        - '**/*.scss'
-        - '**/*.css'
-        - theme.json
-      exclude:
-        - '.*'
-        - 'prepros.config'
-        - 'Gruntfile.js'
-        - 'package.json'
-        - 'package-lock.json'
+      - '**/*.php'
+      - '**/*.js'
+      - '**/*.scss'
+      - '**/*.css'
+      - theme.json
+      - '!.*'
+      - '!prepros.config'
+      - '!Gruntfile.js'
+      - '!package.json'
+      - '!package-lock.json'
 
 jobs:
   build:
