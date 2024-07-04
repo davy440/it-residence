@@ -11,11 +11,12 @@ on:
         - '**/*.css'
         - theme.json
       exclude:
-        - .*
-        - prepros.config
-        - Gruntfile.js
-        - package.json
-        - package-lock.json
+        - '.*'
+        - 'prepros.config'
+        - 'Gruntfile.js'
+        - 'package.json'
+        - 'package-lock.json'
+
 jobs:
   build:
     runs-on: ubuntu-latest
