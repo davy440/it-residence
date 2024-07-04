@@ -8,7 +8,6 @@ on:
       - '**/*.js'
       - '**/*.scss'
       - '**/*.css'
-      - theme.json
 jobs:
   build:
     runs-on: ubuntu-latest
