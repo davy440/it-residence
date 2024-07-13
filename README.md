@@ -164,4 +164,7 @@ Just Install the Theme from the WordPress Repository.
 * v2.5.8
 	Optimized file structure
 
+* v2.5.9
+	Used Global Variables
+
 Good luck!
