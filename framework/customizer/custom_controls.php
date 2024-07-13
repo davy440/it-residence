@@ -189,7 +189,7 @@ if ( class_exists('WP_Customize_Control') ) {
 				$selectedFont = str_replace(' ', '+', $selectedFont);
 				$url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyA9-9K8wV9KWKWY84Sp5TLSS7p9GguLRh4&family={$selectedFont}&capability=WOFF2";
 				$content = wp_remote_get( $url, array( 'sslverify' => false ) );
-				$fileDir = get_template_directory() . '/assets/cache/fontFiles/';
+				$fileDir = ITRE_PATH . 'assets/cache/fontFiles/';
 				$contentBody = json_decode($content['body'])->items;
 			}
 
@@ -285,7 +285,7 @@ if ( class_exists('WP_Customize_Color_Control') ) {
     		$control_root_url = str_replace(
     			wp_normalize_path( untrailingslashit( WP_CONTENT_DIR ) ),
     			untrailingslashit( content_url() ),
-    			get_template_directory()
+    			ITRE_PATH
     		);
 
     		/**

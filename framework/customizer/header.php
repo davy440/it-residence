@@ -163,39 +163,39 @@ function itre_header_customize_register( $wp_customize ) {
 	            'choices'	=>	array(
 		            'topleft'	=>	array(
 			            'name'	=>	esc_html__('Top Right', 'it-residence'),
-			            'image'	=>  esc_url(get_template_directory_uri() . '/assets/images/arrows/top-left.png'),
+			            'image'	=>  esc_url(ITRE_URL . 'assets/images/arrows/top-left.png'),
 		            ),
 		            'centertop'	=>	array(
 			            'name'	=>	esc_html__('Center Top', 'it-residence'),
-			            'image'	=>  esc_url(get_template_directory_uri() . '/assets/images/arrows/center-top.png'),
+			            'image'	=>  esc_url(ITRE_URL . 'assets/images/arrows/center-top.png'),
 		            ),
 		            'topright'	=>	array(
 			            'name'	=>	esc_html__('Top Right', 'it-residence'),
-			            'image'	=>  esc_url(get_template_directory_uri() . '/assets/images/arrows/top-right.png'),
+			            'image'	=>  esc_url(ITRE_URL . 'assets/images/arrows/top-right.png'),
 		            ),
                     'centerleft'	=>	array(
 			            'name'	=>	esc_html__('Center Left', 'it-residence'),
-			            'image'	=> esc_url(get_template_directory_uri() . '/assets/images/arrows/center-left.png'),
+			            'image'	=> esc_url(ITRE_URL . 'assets/images/arrows/center-left.png'),
 		            ),
                     'center'	=>	array(
 			            'name'	=>	esc_html__('Center', 'it-residence'),
-			            'image'	=> esc_url(get_template_directory_uri() . '/assets/images/arrows/center.png'),
+			            'image'	=> esc_url(ITRE_URL . 'assets/images/arrows/center.png'),
 		            ),
 		            'centerright'	=>	array(
 			            'name'	=>	esc_html__('Center Right', 'it-residence'),
-			            'image'	=> esc_url(get_template_directory_uri() . '/assets/images/arrows/center-right.png'),
+			            'image'	=> esc_url(ITRE_URL . 'assets/images/arrows/center-right.png'),
 		            ),
                     'bottomleft'	=>	array(
 			            'name'	=>	esc_html__('Bottom Left', 'it-residence'),
-			            'image'	=>  esc_url(get_template_directory_uri() . '/assets/images/arrows/bottom-left.png'),
+			            'image'	=>  esc_url(ITRE_URL . 'assets/images/arrows/bottom-left.png'),
 		            ),
 		            'centerbottom'	=>	array(
 			            'name'	=>	esc_html__('Center Bottom', 'it-residence'),
-			            'image'	=>  esc_url(get_template_directory_uri() . '/assets/images/arrows/center-bottom.png'),
+			            'image'	=>  esc_url(ITRE_URL . 'assets/images/arrows/center-bottom.png'),
 		            ),
                     'bottomright'	=>	array(
 			            'name'	=>	esc_html__('Bottom Right', 'it-residence'),
-			            'image'	=>  esc_url(get_template_directory_uri() . '/assets/images/arrows/bottom-right.png'),
+			            'image'	=>  esc_url(ITRE_URL . 'assets/images/arrows/bottom-right.png'),
 		            )
 	            )
 	        )

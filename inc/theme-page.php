@@ -14,7 +14,7 @@ function itre_theme_info() {
         <h1 class="itre-theme-page-title"><?php _e('IT Residence Options', 'it-residence'); ?></h1>
         <div class="itre-support">
             <?php
-                $img = get_template_directory_uri() . '/assets/images/technical-support.png';
+                $img = ITRE_URL . 'assets/images/technical-support.png';
                 printf('<figure class="itre-support__image"><img src="%s" alt="Customer Support"/></figure>', esc_url($img));
                 printf('<p class="itre-support__content">For Support, Suggestions and Queries, please use %s or mail us at support@indithemes.com.<br><b>We are looking forward to hearing from you!</b></p>', '<a href="https://indithemes.com/contact-us/" target="_blank" rel="help">this form</a>');
             ?>
@@ -117,7 +117,7 @@ function itre_theme_info() {
             <div class="theme-pro__content">
                 <figure class="pro-thumb">
                     <a href="http://demo.indithemes.com/it-residence-pro" target="_blank" rel="external">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/pro.png'); ?>" alt="<?php echo __('IT Residence Demo', 'it-residence') ?>">
+                        <img src="<?php echo esc_url( ITRE_URL . 'assets/images/pro.png'); ?>" alt="<?php echo __('IT Residence Demo', 'it-residence') ?>">
                     </a>
                 </figure>
                 <div class="upsell-links">

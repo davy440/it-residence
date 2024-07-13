@@ -23,7 +23,7 @@ if ( !function_exists( 'itre_custom_header_setup' ) ) {
 			apply_filters(
 				'itre_custom_header_args',
 				array(
-					'default-image'      => get_template_directory_uri() . '/assets/images/header.jpg',
+					'default-image'      => ITRE_URL . 'assets/images/header.jpg',
 					'default-text-color' => '000000',
 					'width'              => 1920,
 					'height'             => 600,

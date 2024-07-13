@@ -50,7 +50,7 @@ if ( !function_exists('itre_add_starter_content') ) {
                         'text',
                         array(
                             'text'  => '<!-- wp:image {"id":1208,"sizeSlug":"full","linkDestination":"none"} -->
-                            <figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() . '/assets/images/logo-white.png') . '" alt="Logo - White" class="wp-image-1208" style="max-width: 75%;"/></figure>
+                            <figure class="wp-block-image size-full"><img src="' . esc_url( ITRE_URL . 'assets/images/logo-white.png') . '" alt="Logo - White" class="wp-image-1208" style="max-width: 75%;"/></figure>
                             <!-- /wp:image -->'
                         )
                     ),

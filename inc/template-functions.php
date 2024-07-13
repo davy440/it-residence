@@ -44,7 +44,7 @@ add_action( 'wp_head', 'itre_pingback_header' );
 
 if ( !function_exists('itre_get_header') ) {
 	function itre_get_header() {
-		require_once get_template_directory() . '/framework/sections/header/header-default.php';
+		require_once ITRE_PATH . 'framework/sections/header/header-default.php';
 	}
 }
 

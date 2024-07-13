@@ -71,7 +71,7 @@ if ( ! class_exists( 'PAnD' ) ) {
 				return;
 			}
 
-			$js_url        = get_template_directory_uri() . '/assets/js/resources/dismiss-notice.min.js';
+			$js_url        = ITRE_URL . 'assets/js/resources/dismiss-notice.min.js';
 			$composer_path = '/vendor/collizo4sky/persist-admin-notices-dismissal/dismiss-notice.js';
 			
 			/**

@@ -7,8 +7,8 @@
 if ( !function_exists( 'itre_enqueue_fonts' ) ) {
 	function itre_enqueue_fonts() {
 		$fonts = ITRE_Google_Fonts::itre_get_font_settings();
-		$filePaths = glob(get_template_directory() . '/assets/cache/fontFiles/*.woff2');
-		$fileURI = get_template_directory_uri() . '/assets/cache/fontFiles/';
+		$filePaths = glob(ITRE_PATH . 'assets/cache/fontFiles/*.woff2');
+		$fileURI = ITRE_URL . 'assets/cache/fontFiles/';
 		$fontFace = '';
 
 		foreach($filePaths as $path) {
@@ -35,13 +35,13 @@ if ( !function_exists( 'itre_enqueue_fonts' ) ) {
 			$fontFace .= "font-stretch: normal;";
 			$fontFace .= "}";
 		}
-		$filePath = get_template_directory() . '/assets/cache/fontFiles/fonts.css';
+		$filePath = ITRE_PATH . 'assets/cache/fontFiles/fonts.css';
 
 		$c = fopen( $filePath, 'w+' );
 		fwrite( $c, $fontFace );
 		fclose( $c );
 
-		$fileURI = get_template_directory_uri() . '/assets/cache/fontFiles/fonts.css';
+		$fileURI = ITRE_URL . 'assets/cache/fontFiles/fonts.css';
 
 		wp_enqueue_style('itre-fonts', esc_url( $fileURI ), ITRE_VERSION );
 	}

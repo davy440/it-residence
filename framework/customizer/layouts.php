@@ -117,11 +117,11 @@ function itre_sidebr_customize_register( $wp_customize ) {
 			   "choices"	=>	array(
 					"left"		=>	array(
 						"name"	=>	esc_html__("Left Sidebar", 'it-residence'),
-						"image"	=>	esc_url(get_template_directory_uri() . "/assets/images/left-sidebar.png")
+						"image"	=>	esc_url(ITRE_URL . "assets/images/left-sidebar.png")
 					),
 					"right"		=>	array(
 						"name"	=>	esc_html__("Right Sidebar", 'it-residence'),
-						"image"	=>	esc_url(get_template_directory_uri() . "/assets/images/right-sidebar.png")
+						"image"	=>	esc_url(ITRE_URL . "assets/images/right-sidebar.png")
 					)
 			   )
 		   )

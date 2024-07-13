@@ -12,7 +12,7 @@
 
     public static function itre_get_fonts( $amount = 50 ) {
 
-        $fontFile = get_template_directory() . '/assets/cache/google-web-fonts.txt';
+        $fontFile = ITRE_PATH . 'assets/cache/google-web-fonts.txt';
     
         //Total time the file will be cached in seconds, set to a week
         $cachetime = 86400 * 7;
@@ -104,7 +104,7 @@
     
         $fonts = self::itre_get_font_settings();
 
-        $fileDir = get_template_directory() . '/assets/cache/fontFiles/';
+        $fileDir = ITRE_PATH . 'assets/cache/fontFiles/';
         $cache_files = glob($fileDir . '*.woff2');
      
         $cache_array = [];
@@ -126,7 +126,7 @@
             // If the setting has changed, get the new file
             if ( !file_exists( $file ) ) {
     
-                $fontFile = get_template_directory() . '/assets/cache/google-web-fonts.txt';
+                $fontFile = ITRE_PATH . 'assets/cache/google-web-fonts.txt';
                 $fonts_json = json_decode( file_get_contents( $fontFile ) );
                 $items = $fonts_json->items;
                 foreach ($items as $item ) {

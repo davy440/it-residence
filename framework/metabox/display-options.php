@@ -44,11 +44,11 @@ function itre_meta_callback( $post ) {
 	            <h4> <?php _e('Sidebar Alignment', 'it-residence'); ?></h4>
 	            <label class="align-sidebar-label">
 					<input type="radio" name="align-sidebar" value="left" <?php if ( isset( $itre_stored_meta['align-sidebar'] ) ) checked( $itre_stored_meta['align-sidebar'][0], 'left' ); ?>>
-					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/left-sidebar.png'); ?>" title="<?php _e('Left Sidebar', 'it-residence'); ?>">
+					<img src="<?php echo esc_url(ITRE_URL . 'assets/images/left-sidebar.png'); ?>" title="<?php _e('Left Sidebar', 'it-residence'); ?>">
 				</label>
 				<label class="align-sidebar-label">
 					<input type="radio" name="align-sidebar" value="right" <?php if ( isset( $itre_stored_meta['align-sidebar'] ) ) checked( $itre_stored_meta['align-sidebar'][0], 'right' ); ?>>
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/right-sidebar.png'); ?>" title="<?php _e('Right Sidebar', 'it-residence'); ?>">
+					<img src="<?php echo esc_url( ITRE_URL . 'assets/images/right-sidebar.png'); ?>" title="<?php _e('Right Sidebar', 'it-residence'); ?>">
 				</label>
 			</div>
 	    </div>

@@ -29,19 +29,19 @@
 	            'choices'	=>	array(
 		            '1'	=>	array(
 			            'name'	=>	esc_html__('1 Column', 'it-residence'),
-			            'image'	=>  esc_url(get_template_directory_uri() . '/assets/images/1-column.png'),
+			            'image'	=>  esc_url(ITRE_URL . 'assets/images/1-column.png'),
 		            ),
 		            '2'	=>	array(
 			            'name'	=>	esc_html__('2 Columns', 'it-residence'),
-			            'image'	=>  esc_url(get_template_directory_uri() . '/assets/images/2-columns.png'),
+			            'image'	=>  esc_url(ITRE_URL . 'assets/images/2-columns.png'),
 		            ),
 		            '3'	=>	array(
 			            'name'	=>	esc_html__('3 Columns', 'it-residence'),
-			            'image'	=>  esc_url(get_template_directory_uri() . '/assets/images/3-columns.png'),
+			            'image'	=>  esc_url(ITRE_URL . 'assets/images/3-columns.png'),
 		            ),
 		            '4'	=>	array(
 			            'name'	=>	esc_html__('4 Columns', 'it-residence'),
-			            'image'	=> esc_url(get_template_directory_uri() . '/assets/images/4-columns.png'),
+			            'image'	=> esc_url(ITRE_URL . 'assets/images/4-columns.png'),
 		            ),
 	            )
 	        )

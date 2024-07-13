@@ -35,16 +35,16 @@ function itre_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'itre_customize_register' );
 
-require get_template_directory() . '/framework/customizer/custom_controls.php';
-require get_template_directory() . '/framework/customizer/header.php';
-require get_template_directory() . '/framework/customizer/general.php';
-require get_template_directory() . '/framework/customizer/colors.php';
-require get_template_directory() . '/framework/customizer/typography.php';
-require get_template_directory() . '/framework/customizer/layouts.php';
-require get_template_directory() . '/framework/customizer/footer.php';
-require get_template_directory() . '/framework/customizer/sanitization.php';
-require get_template_directory() . '/framework/customizer/misc.php';
-require get_template_directory() . '/framework/customizer/button-section.php';
+require ITRE_PATH . 'framework/customizer/custom_controls.php';
+require ITRE_PATH . 'framework/customizer/header.php';
+require ITRE_PATH . 'framework/customizer/general.php';
+require ITRE_PATH . 'framework/customizer/colors.php';
+require ITRE_PATH . 'framework/customizer/typography.php';
+require ITRE_PATH . 'framework/customizer/layouts.php';
+require ITRE_PATH . 'framework/customizer/footer.php';
+require ITRE_PATH . 'framework/customizer/sanitization.php';
+require ITRE_PATH . 'framework/customizer/misc.php';
+require ITRE_PATH . 'framework/customizer/button-section.php';
 
 /**
  * Render the site title for the selective refresh partial.
@@ -68,6 +68,6 @@ function itre_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function itre_customize_preview_js() {
-	wp_enqueue_script( 'it-residence-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), ITRE_VERSION, true );
+	wp_enqueue_script( 'it-residence-customizer', ITRE_URL . 'assets/js/customizer.js', array( 'customize-preview' ), ITRE_VERSION, true );
 }
 add_action( 'customize_preview_init', 'itre_customize_preview_js' );
