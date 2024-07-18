@@ -50,7 +50,7 @@ function itre_admin_notice() {
                 printf('<div class="itre-demo-import">');
                 echo '<p>Plugins Installed! You are ready to start with your website! Create something awesome!</p>';
                 echo '<p>You can also import content from our pre-made demos.</p>';
-                printf( '<div class="itre-support-plugins__links"><a href="%s" class="itre-support-plugins__links--demos">Import Demo</a><button class="itre-support-plugins__links--nothanks">No Thanks!</button></div>', esc_url( $url ) );
+                printf( '<div class="itre-support-plugins__links"><a href="%s" class="itre-support-plugins__links--demos button button-primary">Demo Templates</a><button class="itre-support-plugins__links--nothanks button button-secondary">No Thanks!</button></div>', esc_url( $url ) );
                 printf('</div>');
                 
             }

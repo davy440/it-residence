@@ -357,8 +357,7 @@ li#menu-appearance {
 
     tr {
         display: block;
-        padding: 1.25rem;
-        border: solid 1px #eeeeee;
+        padding: 0.5rem 0;
         margin: -1px 0;
     }
 
@@ -371,42 +370,9 @@ li#menu-appearance {
 .itre-support-plugins {
 
     &__links {
-
-        button,
-        a {
-            padding: 0.75rem 1.5rem;
-            border: 0;
-            border-radius: 0.125rem;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-weight: 700;
-            text-decoration: none;
-
-            &:not(:last-child) {
-                margin-right: 0.75rem;
-            }
-        }
-
-        &--demos {
-            background-color: var(--accent);
-            color: white;
-
-            &:hover,
-            &:focus {
-                color: white;
-                background-color: var(--dark);
-            }
-        }
-        
-        &--nothanks {
-            background-color: #dddddd;
-            color: #666666;
-
-            &:hover,
-            &:focus {
-                background-color: #cccccc;
-            }
-        }
+        display: flex;
+        justify-content: flex-start;
+        column-gap: 0.75rem;
     }
 }
 
@@ -443,22 +409,13 @@ li#menu-appearance {
 
 // Notice
 .itre-notice {
-    font-family: var(--body-font);
-    font-size: 1.25rem;
     padding-bottom: 1.25rem;
-
-    p, button {
-        font-size: 1.25rem !important;
-    }
     
     h2 {
         font-size: 2rem;
-        font-family: var(--title-font);
     }
     
     h3 {
-        font-size: 1.5rem;
-        font-family: var(--title-font);
         font-weight: 400;
     }
 }
