@@ -506,6 +506,11 @@ summary {
   flex: 1 0 0%;
 }
 
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
 .col-1 {
   flex: 0 0 auto;
   width: 8.33333333%;
