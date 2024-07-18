@@ -6,7 +6,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 6.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 2.5.9
+Stable tag: 2.6
 License: GNU General Public License v2 or later
 License URI: https://spdx.org/licenses/GPL-2.0-or-later.html
 
@@ -173,6 +173,9 @@ Create a Real Estate website and showcase your business magnificently with our f
 
 = 2.5.9 July 13, 2024 =
 * Used Global Variables
+
+= 2.6 July 18, 2024 =
+* Optimized Code and Resources
 
 
 == Credits ==
