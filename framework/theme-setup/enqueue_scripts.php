@@ -70,8 +70,17 @@ if ( !function_exists( 'itre_scripts' ) ) {
 			wp_enqueue_script( 'itre-property-js', esc_url(ITRE_URL . 'assets/js/min/property.min.js'), array(), ITRE_VERSION, ['strategy' => 'defer', 'in_footer' => true] );
 		}
 		wp_enqueue_script( 'owl-js', esc_url(ITRE_URL . 'assets/js/resources/owl.min.js'), array('jquery'), ITRE_VERSION, ['strategy' => 'defer', 'in_footer' => true] );
-		wp_enqueue_script( 'glightbox-js', esc_url(ITRE_URL . 'assets/js/resources/glightbox.min.js'), array(), ITRE_VERSION, ['strategy' => 'defer', 'in_footer' => true] );
-		wp_enqueue_script( 'itre-custom-js', esc_url(ITRE_URL . 'assets/js/min/custom.min.js'), array('jquery', 'owl-js', 'glightbox-js'), ITRE_VERSION, ['strategy' => 'defer', 'in_footer' => true] );
+		
+		if (!empty(has_block('core/gallery'))) {
+			wp_enqueue_script( 'glightbox-js', esc_url(ITRE_URL . 'assets/js/resources/glightbox.min.js'), array(), ITRE_VERSION, ['strategy' => 'defer', 'in_footer' => true] );
+		}
+
+		$js_deps = ['jquery', 'owl-js'];
+		if (has_block('core/gallery')) {
+			$js_deps[] = 'glightbox-js';
+		}
+		
+		wp_enqueue_script( 'itre-custom-js', esc_url(ITRE_URL . 'assets/js/min/custom.min.js'), $js_deps, ITRE_VERSION, ['strategy' => 'defer', 'in_footer' => true] );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
