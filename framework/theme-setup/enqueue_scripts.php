@@ -60,7 +60,6 @@ if ( !function_exists( 'itre_scripts' ) ) {
 		wp_enqueue_style( 'bootstrap', esc_url(ITRE_URL . 'assets/bootstrap.css'), array(), ITRE_VERSION );
 		wp_enqueue_style( 'font-awesome', esc_url(ITRE_URL . 'assets/fonts/font-awesome.css'), array(), ITRE_VERSION );
 		wp_enqueue_style( 'owl-css', esc_url(ITRE_URL . 'assets/owl.carousel.css'), array(), ITRE_VERSION );
-		wp_enqueue_style( 'glightbox-css', esc_url(ITRE_URL . 'assets/theme-styles/css/glightbox.min.css'), array(), ITRE_VERSION );
 		wp_enqueue_style( 'itre-main', esc_url(ITRE_URL . 'assets/theme-styles/css/main.min.css'), array(), ITRE_VERSION );
 		wp_enqueue_script( 'itre-navigation', esc_url(ITRE_URL . 'assets/js/min/navigation.min.js'), array(), ITRE_VERSION, ['strategy' => 'defer', 'in_footer' => true] );
 		if (class_exists('IT_Listings') && is_singular('property') ) {
@@ -72,6 +71,7 @@ if ( !function_exists( 'itre_scripts' ) ) {
 		wp_enqueue_script( 'owl-js', esc_url(ITRE_URL . 'assets/js/resources/owl.min.js'), array('jquery'), ITRE_VERSION, ['strategy' => 'defer', 'in_footer' => true] );
 		
 		if (!empty(has_block('core/gallery'))) {
+			wp_enqueue_style( 'glightbox-css', esc_url(ITRE_URL . 'assets/theme-styles/css/glightbox.min.css'), array(), ITRE_VERSION );
 			wp_enqueue_script( 'glightbox-js', esc_url(ITRE_URL . 'assets/js/resources/glightbox.min.js'), array(), ITRE_VERSION, ['strategy' => 'defer', 'in_footer' => true] );
 		}
 
