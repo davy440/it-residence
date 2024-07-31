@@ -170,4 +170,7 @@ Just Install the Theme from the WordPress Repository.
 * v2.6
 	Optimized Code and Resources
 
+* 2.6.1
+	Optimized CSS
+
 Good luck!

@@ -281,7 +281,6 @@ if ( !function_exists('itre_get_blog_excerpt') ) {
 	$output	=	'';
 
 	if ( isset( $post->ID ) && has_excerpt( $post->ID ) ) {
-
 		$output = $post->post_excerpt;
 	}
 
@@ -290,10 +289,10 @@ if ( !function_exists('itre_get_blog_excerpt') ) {
 		if ( strpos($post->post_content, '<!--more-->') ) {
 			$output	=	get_the_content('', $post );
 		}
-			else {
-			$output	=	wp_trim_words( strip_shortcodes( $post->post_content ), $length );
+		else {
+			$output	= wp_trim_words( strip_shortcodes( $post->post_content ), $length );
 		}
-		}
+	}
 
 		$output	=	apply_filters('itre_excerpt', $output);
 		echo esc_html($output);
@@ -448,9 +447,7 @@ if ( !function_exists('itre_get_related_posts') ) {
 				<div class="itre-related-posts row">
 					<?php
 						while ( $related_query->have_posts() ) : $related_query->the_post();
-
 							get_template_part( 'template-parts/layouts/content', 'related' );
-
 						endwhile;
 					?>
 				</div>

@@ -319,7 +319,7 @@ body:not(.home) #masthead .site-title a {
 
 #header-image {
   position: relative;
-  height: 250px;
+  height: 15.625rem;
 }
 #header-image:before {
   content: "";
@@ -341,15 +341,15 @@ body:not(.home) #masthead .site-title a {
   color: white;
 }
 .itre-hero-area h1 {
-  font-size: 2.4em;
+  font-size: 2.5rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .itre-hero-area h1 {
-    font-size: 4em;
+    font-size: 5rem;
   }
 }
 .itre-hero-area p {
-  font-size: 1.2em;
+  font-size: 1.25rem;
 }
 
 .nav-wrapper {
@@ -377,7 +377,7 @@ body:not(.home) #masthead .site-title a {
     position: relative;
     content: "\f107";
     font-family: "FontAwesome";
-    padding-left: 10px;
+    padding-left: 0.625rem;
     line-height: 1;
   }
   .main-navigation ul#primary-menu > li:hover {
@@ -601,7 +601,7 @@ button#close-menu:hover, button#close-menu:focus {
  *	Styling for the widget section of the theme
  */
 .widget-area .widget {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 .widget a {
   text-decoration: underline;
@@ -609,8 +609,8 @@ button#close-menu:hover, button#close-menu:focus {
 .widget .widget-title {
   position: relative;
   margin-top: 0;
-  margin-bottom: 0.6em;
-  padding-bottom: 0.4em;
+  margin-bottom: 0.625rem;
+  padding-bottom: 0.4375rem;
   font-size: 1.5rem;
 }
 #itng-before-content .widget .widget-title {
@@ -654,7 +654,7 @@ button#close-menu:hover, button#close-menu:focus {
 .widget.widget_search input[type=search] {
   border: rgba(0, 0, 0, 0.1);
   width: 100%;
-  padding: 0.3em 0.5em;
+  padding: 0.3125rem 0.5rem;
 }
 .widget.widget_search input[type=submit] {
   display: none;
@@ -858,10 +858,10 @@ body.page-template-template-property-listings .itre-property-filter {
 .itre-for-tag {
   color: white;
   line-height: 1;
-  padding: 0.4em 0.4em 0.2em;
+  padding: 0.5rem 0.5rem 0.25rem;
   text-transform: uppercase;
   border-radius: 3px;
-  font-size: 0.85em;
+  font-size: 0.875rem;
 }
 .itre-for-tag.sale {
   background-color: rgba(121, 217, 18, 0.8);
@@ -930,7 +930,7 @@ body:not(.single-property) article.type-property .itre-for-tag {
   top: 0.625rem;
 }
 body:not(.single-property) article.type-property.grid {
-  margin-bottom: 1.6em;
+  margin-bottom: 1.5rem;
 }
 body:not(.single-property) article.type-property.grid .listing-wrapper {
   display: flex;
@@ -951,8 +951,8 @@ body:not(.single-property) article.type-property.grid .listing-wrapper .itre-pro
   color: white;
   background-color: var(--accent);
   font-weight: var(--bold);
-  font-size: 1.2em;
-  padding: 0.4em 0.75em 0.3em;
+  font-size: 1.25rem;
+  padding: 0.4375rem 0.75rem 0.375rem;
   opacity: 0.85;
 }
 body:not(.single-property) article.type-property.grid .listing-wrapper > *:not(.itre-prop-thumb) {
@@ -979,17 +979,17 @@ body:not(.single-property) article.type-property.grid .listing-wrapper .itre_fea
   color: var(--accent);
 }
 body:not(.single-property) article.type-property.grid .listing-wrapper .itre_features > span {
-  margin-right: 0.6em;
+  margin-right: 0.625rem;
 }
 body:not(.single-property) article.type-property.grid .listing-wrapper .itre_features > span span {
-  margin: auto 0.25em;
+  margin: auto 0.25rem;
 }
 body:not(.single-property) article.type-property.grid.property-tab .entry-header {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding-top: 2em;
-  padding-bottom: 0.8em;
+  padding-top: 25rem;
+  padding-bottom: 0.75rem;
 }
 body:not(.single-property) article.type-property.grid.property-tab .listing-wrapper {
   position: relative;
@@ -997,7 +997,7 @@ body:not(.single-property) article.type-property.grid.property-tab .listing-wrap
 }
 body:not(.single-property) article.type-property.grid.property-tab .itre-for-tag {
   left: unset;
-  right: 0.6em;
+  right: 0.625rem;
 }
 body:not(.single-property) article.type-property.grid.property-tab .prop-price {
   bottom: unset !important;
@@ -1042,7 +1042,7 @@ body.single-property .post-thumbnail img {
 body.single-property .itre-for-tag {
   color: white;
   line-height: 1;
-  padding: 0.6em 0.8em 0.4em;
+  padding: 0.6em 0.875rem 0.4375rem;
   text-transform: uppercase;
   font-size: 0.85em;
 }
@@ -1063,7 +1063,7 @@ body.single-property .entry-meta a {
   text-decoration-thickness: 2px;
 }
 body.single-property #property-map {
-  height: 500px;
+  height: 31.25rem;
   width: 100%;
   margin-bottom: -2rem;
 }

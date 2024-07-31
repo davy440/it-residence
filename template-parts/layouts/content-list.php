@@ -6,7 +6,6 @@
  *
  * @package IT_Residence
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('list'); ?>>
@@ -55,5 +54,4 @@
             </div>
         </div>
     </div>
-
 </article><!-- #post-<?php the_ID(); ?> -->

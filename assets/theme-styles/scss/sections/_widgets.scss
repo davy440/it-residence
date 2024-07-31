@@ -6,7 +6,7 @@
 
 .widget {
 	.widget-area & {
-		margin-bottom: 2em;
+		margin-bottom: 2rem;
 	}
 	a {
 		text-decoration: underline;
@@ -14,8 +14,8 @@
 	.widget-title {
 		position: relative;
 		margin-top: 0;
-		margin-bottom: .6em;
-		padding-bottom: 0.4em;
+		margin-bottom: .625rem;
+		padding-bottom: 0.4375rem;
 		font-size: 1.5rem;
 		#itng-before-content & {
 			text-align: center;
@@ -54,7 +54,7 @@
 		input[type="search"] {
 			border: rgba(0,0,0,0.1);
 			width: 100%;
-			padding: .3em .5em;
+			padding: .3125rem .5rem;
 		}
 		input[type="submit"] {
 			display: none;

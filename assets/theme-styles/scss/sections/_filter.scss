@@ -38,10 +38,10 @@
 .itre-for-tag {
 	color: white;
 	line-height: 1;
-	padding: 0.4em 0.4em 0.2em;
+	padding: 0.5rem 0.5rem 0.25rem;
 	text-transform: uppercase;
 	border-radius: 3px;
-	font-size: 0.85em;
+	font-size: 0.875rem;
 
 	&.sale {
 		background-color: rgba(121,217,18,0.8);
@@ -122,7 +122,7 @@ body:not(.single-property) article.type-property {
 	}
 
 	&.grid {
-		margin-bottom: 1.6em;
+		margin-bottom: 1.5rem;
 
 		.listing-wrapper {
 			display: flex;
@@ -141,8 +141,8 @@ body:not(.single-property) article.type-property {
 					color: white;
 					background-color: var(--accent);
 					font-weight: var(--bold);
-					font-size: 1.2em;
-					padding: 0.4em 0.75em 0.3em;
+					font-size: 1.25rem;
+					padding: 0.4375rem 0.75rem 0.375rem;
 					opacity: 0.85;
 				}
 			}
@@ -172,9 +172,9 @@ body:not(.single-property) article.type-property {
 					color: var(--accent);
 				}
 				> span {
-					margin-right: 0.6em;
+					margin-right: 0.625rem;
 					span {
-						margin: auto 0.25em;
+						margin: auto 0.25rem;
 					}
 				}
 			}
@@ -184,8 +184,8 @@ body:not(.single-property) article.type-property {
 				position: absolute;
 				bottom: 0;
 				width: 100%;
-				padding-top: 2em;
-				padding-bottom: 0.8em;
+				padding-top: 25rem;
+				padding-bottom: 0.75rem;
 			}
 			.listing-wrapper {
 				position: relative;
@@ -193,7 +193,7 @@ body:not(.single-property) article.type-property {
 			}
 			.itre-for-tag {
 				left: unset;
-				right: 0.6em;
+				right: 0.625rem;
 			}
 			.prop-price {
 				bottom: unset !important;

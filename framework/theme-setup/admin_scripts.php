@@ -17,7 +17,7 @@ add_action('admin_enqueue_scripts', 'itre_enqueue_admin_scripts');
 
 if ( !function_exists('itre_customize_controls_enqueue_scripts') ) {
     function itre_customize_controls_enqueue_scripts() {
-        wp_enqueue_script('itre-customize-controls-js', esc_url( ITRE_URL . 'assets/js/customize_controls.js' ), array('jquery'), ITRE_VERSION, true );
+        wp_enqueue_script('itre-customize-controls-js', esc_url( ITRE_URL . 'assets/js/customize_controls.js' ), array('jquery'), ITRE_VERSION, ['strategy' => 'defer', 'footer' => true] );
     }
 }
 add_action('customize_controls_enqueue_scripts', 'itre_customize_controls_enqueue_scripts');
