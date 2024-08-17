@@ -540,3 +540,17 @@ if ( !function_exists('itre_hero_area') ) {
 		echo '</div>';
 	}
 }
+
+/**
+ * Preload Header images
+ *
+ * @return void
+ */
+function itre_preload_header_images() {
+	$header_image = is_singular(['post', 'page', 'property']) && !is_front_page() && has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : get_header_image();
+	if (empty($header_image)) {
+		return;
+	}
+	echo "<link rel='preload' as='image' href={$header_image}>";
+}
+add_action('wp_head', 'itre_preload_header_images');

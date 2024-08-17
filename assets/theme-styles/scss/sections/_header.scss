@@ -12,8 +12,13 @@
         padding-top: 0.625rem;
         padding-bottom: 0.625rem;
     }
+
     .site-title, .site-description {
         margin-bottom: 0;
+    }
+
+    .custom-logo {
+        max-width: 18.75rem;
     }
     body:not(.home) & {
         .site-title {
@@ -39,6 +44,7 @@
         z-index: 1;
     }
 }
+
 .itre-hero-area {
     position: relative;
     max-width: 80%;

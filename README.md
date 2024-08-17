@@ -173,4 +173,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.6.1
 	Optimized CSS
 
+* 2.6.2
+	Preloaded Header Images
+
 Good luck!
