@@ -176,4 +176,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.6.2
 	Preloaded Header Images
 
+* 2.6.3
+	Blog Classic Layout Fix
+
 Good luck!
