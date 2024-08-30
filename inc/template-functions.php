@@ -348,7 +348,7 @@ add_action('itre_footer', 'itre_get_footer', 20);
 
 // Function for Blog Layouts
 if ( !function_exists('itre_get_layout') ) {
-	function itre_get_layout( $layout = 'col3' ) {
+	function itre_get_layout( $layout = 'classic' ) {
 
 		$path	=	'template-parts/layouts/content';
 

@@ -16,15 +16,14 @@ $itre_stored_meta = get_post_meta( get_the_ID() );
              if (!empty($itre_stored_meta["for"][0])) {
                  itre_get_for( $itre_stored_meta["for"][0] );
              }
-             ?>
-
-			 <a href="<?php the_permalink(); ?>">
-			 <?php
+             
+			 printf('<a href="%s">', esc_url(get_the_permalink()));
+			 
 			 if ( has_post_thumbnail() ) {
 				 the_post_thumbnail('itre_prop_thumb');
 			 }
 			 else {
-				 printf('<img src="%s" alt="%s">', esc_url(ITRE_URL . 'images/ph_thumb.png'), esc_attr( get_the_title() ) );
+				 printf('<img src="%s" alt="%s">', esc_url(ITRE_URL . 'images/ph_thumb.png'), esc_attr( get_the_title() ));
 			 }
 
              if (!empty( $itre_stored_meta['price'][0] ) ) {

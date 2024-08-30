@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ *  Customizer Controls
  */
 
 function itre_header_customize_register( $wp_customize ) {
