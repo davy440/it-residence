@@ -27,7 +27,7 @@
                 $for = "rent";
             break;
             default:
-            $for = "";
+            	$for = "";
         endswitch;
 
         printf('<span class="itre-for-tag %s">%s</span>', esc_attr( $value ),  esc_html( $for ) );

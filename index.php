@@ -40,7 +40,6 @@ if ( $sidebar_align == 'left' ) {
 				 */
 
 				 itre_get_layout( get_theme_mod('itre_blog_layout', 'classic') );
-				//get_template_part( 'template-parts/content', 'blog' );
 
 			endwhile;
 			?>

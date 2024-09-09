@@ -61,5 +61,29 @@
             "contentSize": "1320px",
             "wideSize": "1920px"
         }
+    },
+    "styles": {
+        "elements": {
+            "button": {
+                "spacing": {
+                    "padding": {
+                        "top": "0.625rem",
+                        "bottom": "0.625rem",
+                        "left": "1rem",
+                        "right": "1rem"
+                    }
+                },
+                "color": {
+                    "background": "var(--wp--preset--color--accent)"
+                },
+                "border": {
+                    "radius": "0.3125rem"
+                },
+                "typography": {
+                    "lineHeight": "1.25rem",
+                    "textDecoration": "none"
+                }
+            }
+        }
     }
 }

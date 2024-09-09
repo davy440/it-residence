@@ -12,27 +12,24 @@ $itre_stored_meta = get_post_meta( get_the_ID() );
 	 <div class="listing-wrapper">
 		 <div class="itre-prop-thumb">
 
-             <?php
-             if (!empty($itre_stored_meta["for"][0])) {
-                 itre_get_for( $itre_stored_meta["for"][0] );
-             }
-             
-			 printf('<a href="%s">', esc_url(get_the_permalink()));
-			 
-			 if ( has_post_thumbnail() ) {
-				 the_post_thumbnail('itre_prop_thumb');
-			 }
-			 else {
-				 printf('<img src="%s" alt="%s">', esc_url(ITRE_URL . 'images/ph_thumb.png'), esc_attr( get_the_title() ));
-			 }
+			<?php
+			if (!empty($itre_stored_meta["for"][0])) {
+				itre_get_for( $itre_stored_meta["for"][0] );
+			}
+			
+			printf('<a href="%s">', esc_url(get_the_permalink()));
+			
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail('itre_prop_thumb');
+			}
+			else {
+				printf('<img src="%s" alt="%s">', esc_url(ITRE_URL . 'images/ph_thumb.png'), esc_attr( get_the_title() ));
+			}
 
-             if (!empty( $itre_stored_meta['price'][0] ) ) {
-
-                    itre_get_property_price( $itre_stored_meta['price'][0] );
-
-             } ?>
-		 </a>
-
+			if (!empty($itre_stored_meta['price'][0])) {
+				itre_get_property_price( $itre_stored_meta['price'][0] );
+			} ?>
+		 	</a>
 		 </div>
 
 	 	<header class="entry-header">

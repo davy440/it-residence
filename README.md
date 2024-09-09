@@ -179,4 +179,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.6.3
 	Blog Classic Layout Fix
 
+*2.6.4
+	Added Button Styling in content
+
 Good luck!

@@ -185,7 +185,7 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 endif;
 
 
-if ( ! function_exists( 'itre_get_property_price' ) ) {
+if ( ! function_exists('itre_get_property_price')) {
 	function itre_get_property_price( $data ) {
 		$currency['locale'] =	'en_US';
 		$currency['code']	=	'USD';
