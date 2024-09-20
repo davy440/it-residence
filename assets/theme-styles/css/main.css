@@ -1095,6 +1095,9 @@ body.single-property #property-map {
 .wp-block-query-pagination-numbers > *:not(:last-child), .itre-pagination .nav-links > *:not(:last-child) {
   margin-right: 1.25rem;
 }
+.wp-block-query-pagination-numbers a, .itre-pagination .nav-links a {
+  text-decoration: none;
+}
 .wp-block-query-pagination-numbers a.page-numbers:not(.next):not(.prev), .itre-pagination .nav-links a.page-numbers:not(.next):not(.prev) {
   background-color: var(--transparent);
   border: solid 1px var(--accent);

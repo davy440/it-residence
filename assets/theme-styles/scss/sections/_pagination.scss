@@ -17,6 +17,10 @@
         }
     }
 
+    a {
+        text-decoration: none;
+    }
+
     a.page-numbers:not(.next):not(.prev) {
         background-color: var(--transparent);
         border: solid 1px var(--accent);

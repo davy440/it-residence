@@ -182,4 +182,7 @@ Just Install the Theme from the WordPress Repository.
 *2.6.4
 	Added Button Styling in content
 
+*2.6.5
+	Pagination and other layout fixes
+
 Good luck!
