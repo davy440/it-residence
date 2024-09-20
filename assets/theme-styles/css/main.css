@@ -647,6 +647,9 @@ button#close-menu:hover, button#close-menu:focus {
     left: 50%;
   }
 }
+.widget.wp-block footer {
+  line-height: 1.5rem;
+}
 .widget.widget_search {
   position: relative;
 }
@@ -1077,7 +1080,7 @@ body.single-property #property-map {
 .wpcf7 label > input:not([type=checkbox]):not([type=radio]), .wpcf7 label > select, .wpcf7 span:not(.wpcf7-list-item):not(.wpcf7-list-item-label) > input:not([type=checkbox]):not([type=radio]), .wpcf7 span:not(.wpcf7-list-item):not(.wpcf7-list-item-label) > select {
   width: 100%;
 }
-.itre-pagination .nav-links {
+.wp-block-query-pagination-numbers, .itre-pagination .nav-links {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -1085,27 +1088,28 @@ body.single-property #property-map {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.itre-pagination .nav-links > * {
+.wp-block-query-pagination-numbers > *, .itre-pagination .nav-links > * {
   display: flex;
   align-items: center;
 }
-.itre-pagination .nav-links > *:not(:last-child) {
+.wp-block-query-pagination-numbers > *:not(:last-child), .itre-pagination .nav-links > *:not(:last-child) {
   margin-right: 1.25rem;
 }
-.itre-pagination .nav-links a.page-numbers:not(.next):not(.prev) {
-  background-color: var(--accent);
+.wp-block-query-pagination-numbers a.page-numbers:not(.next):not(.prev), .itre-pagination .nav-links a.page-numbers:not(.next):not(.prev) {
+  background-color: var(--transparent);
+  border: solid 1px var(--accent);
   overflow: hidden;
   border-radius: 0.25rem;
-}
-.itre-pagination .nav-links a.page-numbers:not(.next):not(.prev) span {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--accent);
   width: 2.75rem;
   height: 2.75rem;
 }
-.itre-pagination .nav-links a.page-numbers:not(.next):not(.prev):hover {
+.wp-block-query-pagination-numbers a.page-numbers:not(.next):not(.prev):hover, .itre-pagination .nav-links a.page-numbers:not(.next):not(.prev):hover {
+  background-color: var(--accent);
+  color: var(--wp--preset--color--white);
   filter: brightness(110%);
 }
 

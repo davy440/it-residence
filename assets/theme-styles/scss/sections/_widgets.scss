@@ -8,9 +8,11 @@
 	.widget-area & {
 		margin-bottom: 2rem;
 	}
+
 	a {
 		text-decoration: underline;
 	}
+
 	.widget-title {
 		position: relative;
 		margin-top: 0;
@@ -45,20 +47,32 @@
 			}
 		}
 	}
+
+	&.wp-block {
+
+		footer {
+			line-height: 1.5rem;
+		}
+	}
+
 	&.widget_search {
 		position: relative;
+
 		label {
 			margin: 0;
 			width: 100%;
 		}
+
 		input[type="search"] {
 			border: rgba(0,0,0,0.1);
 			width: 100%;
 			padding: .3125rem .5rem;
 		}
+
 		input[type="submit"] {
 			display: none;
 		}
+
 		.wp-block-search__inside-wrapper {
 			
 			input[type="search"] {
@@ -66,6 +80,7 @@
 			}
 		}
 	}
+
 	ul, ol {
 		margin-left: 0;
 		padding-left: 0;

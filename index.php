@@ -49,8 +49,6 @@ if ( $sidebar_align == 'left' ) {
 			<?php
             the_posts_pagination(  array(
 				'class'					=>	'itre-pagination',
-				'before_page_number'	=>	'<span>',
-				'after_page_number'		=>	'</span>',
 				'prev_text'				=> '<span class="arrow-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></span>',
 				'next_text'				=> '<span class="arrow-next"><i class="fa fa-angle-right" aria-hidden="true"></i></span></i>'
 			) );

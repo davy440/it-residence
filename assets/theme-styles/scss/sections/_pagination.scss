@@ -1,6 +1,6 @@
 // Styling for Pagination
 
-.itre-pagination .nav-links {
+.wp-block-query-pagination-numbers, .itre-pagination .nav-links {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -18,20 +18,20 @@
     }
 
     a.page-numbers:not(.next):not(.prev) {
-        background-color: var(--accent);
+        background-color: var(--transparent);
+        border: solid 1px var(--accent);
         overflow: hidden;
         border-radius: 0.25rem;
-
-        span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            width: 2.75rem;
-            height: 2.75rem;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        width: 2.75rem;
+        height: 2.75rem;
 
         &:hover {
+            background-color: var(--accent);
+            color: var(--wp--preset--color--white);
             filter: brightness(110%);
         }
     }

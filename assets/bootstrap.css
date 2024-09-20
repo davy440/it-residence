@@ -567,9 +567,8 @@ summary {
     flex: 0 0 auto;
     width: 75%;
   }
-  }
-
 }
+
 @media (min-width: 62rem) {
 
   .col-lg-3 {
