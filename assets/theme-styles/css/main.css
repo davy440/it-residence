@@ -978,8 +978,8 @@ body:not(.single-property) article.type-property.grid .listing-wrapper a {
 }
 body:not(.single-property) article.type-property.grid .listing-wrapper .itre_features {
   border-top: solid 1px rgba(0, 0, 0, 0.1);
-  padding-top: 0.6em;
-  padding-bottom: 0.8em;
+  padding-top: 0.625rem;
+  padding-bottom: 0.75rem;
 }
 body:not(.single-property) article.type-property.grid .listing-wrapper .itre_features i {
   color: var(--accent);
@@ -1245,5 +1245,3 @@ article.list .itre-list-content-wrapper {
   display: flex;
   flex-direction: column;
 }
-
-/*# sourceMappingURL=main.css.map */

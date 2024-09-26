@@ -185,4 +185,7 @@ Just Install the Theme from the WordPress Repository.
 *2.6.5
 	Pagination and other layout fixes
 
+*2.6.6
+	Minor code fixes
+
 Good luck!

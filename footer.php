@@ -10,12 +10,11 @@
  */
 
  printf('</div>');
+do_action('itre_footer');
 ?>
 
-<?php do_action('itre_footer'); ?>
-
 <footer id="colophon" class="site-footer">
-<!-- 		.footer -->
+<!-- .footer -->
 	<div class="container">
 		<div class="site-info">
 			<?php printf(esc_html__('Theme Designed by %s', 'it-residence'), '<a href="https://indithemes.com">IndiThemes</a>'); ?>
@@ -49,11 +48,11 @@
 	<button class="go-to-top"></button>
 </nav>
 
-<?php if ( !empty( get_theme_mod( 'itre_back_to_top', 1 ) ) ) { ?>
-	<div id="itre-back-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
-<?php } ?>
-
-<?php wp_footer(); ?>
-
+<?php
+if ( !empty( get_theme_mod('itre_back_to_top', 1))) {
+	echo '<div id="itre-back-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>';
+} 
+wp_footer();
+?>
 </body>
 </html>
