@@ -1,8 +1,8 @@
 <?php
 /**
- *
  *  Functions for Property Custom Post Type
  *
+ * @package IT Residence
  */
 
  if ( !function_exists('itre_get_for') ) {
@@ -30,7 +30,7 @@
             	$for = "";
         endswitch;
 
-        printf('<span class="itre-for-tag %s">%s</span>', esc_attr( $value ),  esc_html( $for ) );
+        printf('<span class="itre-for-tag %s">%s</span>', esc_attr($value), esc_html($for));
     }
 }
 
@@ -111,7 +111,7 @@ if ( !function_exists('itre_property_listing') ) {
 		<div class="itre-property-listing section container">
 			<?php
 			$args = array(
-				'post_type'	=>	'property',
+				'post_type'			=>	'property',
 				'posts_per_page'	=>	9
 			);
 
@@ -137,8 +137,14 @@ if ( !function_exists('itre_property_listing') ) {
 }
  add_action('itre_property_filter', 'itre_property_listing', 20);
 
-// AJAX Query for filtered properties
+
 if ( !function_exists('itre_get_filtered_properties') ) {
+	
+	/**
+	 * AJAX Query for filtered properties
+	 *
+	 * @return  void
+	 */
 	function itre_get_filtered_properties() {
 		if (!wp_create_nonce($_POST['nonce'], 'filter_properties')) {
 			exit;

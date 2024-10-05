@@ -66,7 +66,7 @@ if ( !function_exists('itre_get_top_bar') ) {
 					<?php get_template_part('framework/sections/header/modules/navigation'); ?>
 				</div>
 
-				<?php if ( !empty( get_theme_mod('itre_cta_enable', '') ) ) : ?>
+				<?php if ( !empty( get_theme_mod('itre_cta_enable') ) ) : ?>
 					<div class="itre-cta-wrapper col-auto ms-auto">
 						<?php
 							printf("<a class='itre-cta' href='%s'>%s</a>", esc_url( get_theme_mod( 'itre_cta_id', '#' ) ), esc_html( get_theme_mod( 'itre_cta_text', 'Add Listing' ) ) );

@@ -13,6 +13,7 @@
  */
 
  $sidebar_align = get_theme_mod( 'itre_blog_sidebar_layout', 'right' );
+ $layout = get_theme_mod('itre_blog_layout', 'classic');
 
 get_header();
 
@@ -26,13 +27,13 @@ if ( $sidebar_align == 'left' ) {
 		<?php
 		if ( have_posts() ) :
 			?>
-			<div class="row">
+			<div class="itre-blog-wrapper <?php echo $layout; ?>">
 			<?php
 
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				 itre_get_layout( get_theme_mod('itre_blog_layout', 'classic') );
+				 itre_get_layout($layout);
 			endwhile;
 			?>
 

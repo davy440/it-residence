@@ -7,30 +7,16 @@
  * @package IT_Residence
  */
 
- $layout = "col-md-4";
-if ( $args == 'col2') {
-    $layout = 'col-md-6';
-}
-
-if ( $args == 'col3') {
-    $layout = 'col-md-4';
-}
-
-if ( $args == 'col4') {
-    $layout = 'col-md-3';
-}
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class($layout); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class($args); ?>>
     <div class="itre-col-wrapper">
-        <div class="itre-col-thumb">
         <?php
             if ( has_post_thumbnail()) {
-                printf('<a href="%s">%s</a>', get_the_permalink(), get_the_post_thumbnail(get_the_ID(), 'itre_prop_thumb'));
+                printf('<a href="%s"><figure>%s</figure></a>', get_the_permalink(), get_the_post_thumbnail(get_the_ID(), 'itre_prop_thumb'));
             } else {
-                printf('<a href="%s"><img src="%s" alt="%s" /></a>', get_the_permalink(), esc_url(ITRE_URL . 'assets/images/ph_thumb.png'), esc_attr( the_title_attribute(['echo' => false]) ) );
+                printf('<a href="%s"><figure><img src="%s" alt="%s" /></figure></a>', get_the_permalink(), esc_url(ITRE_URL . 'assets/images/ph_thumb.png'), esc_attr( the_title_attribute(['echo' => false]) ) );
             }
         ?>
-        </div>
         
         <div class="itre-content-wrapper">
             <header class="entry-header">

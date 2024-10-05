@@ -132,8 +132,24 @@ body:not(.single-property) article.type-property {
 			box-shadow: $shadow1;
 			background-color: rgba(255,255,255,0.1);
 			overflow: hidden;
+
 			.itre-prop-thumb {
 				position: relative;
+
+				figure {
+					position: relative;
+					width: 100%;
+					padding-bottom: 65%;
+					margin-bottom: 0;
+				}
+
+				img {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
 				.prop-price {
 					position: absolute;
 					bottom: 0;

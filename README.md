@@ -188,4 +188,7 @@ Just Install the Theme from the WordPress Repository.
 *2.6.6
 	Minor code fixes
 
+* 2.6.7
+	Refactored Blog page layout and minor code fixes
+
 Good luck!
