@@ -5,7 +5,7 @@
 if ( !function_exists('itre_block_style') ) {
     function itre_block_style() {
 
-        wp_enqueue_style( 'itre-block-style', esc_url( ITRE_URL . 'assets/theme-styles/css/block-styles.css'), array(), ITRE_VERSION );
+        wp_enqueue_style( 'itre-block-style', esc_url( ITRE_URL . 'assets/theme-styles/css/block-styles.min.css'), array(), ITRE_VERSION );
 
         // Widget Title
         register_block_style(

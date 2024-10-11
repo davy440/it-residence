@@ -99,7 +99,7 @@
 .is-style-two-col-list li,
 .is-style-three-col-list li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 0.625rem;
 }
 .is-style-two-col-list li:before,
@@ -109,6 +109,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 0.125rem;
 }
 
 .is-style-reach-out input :not([type=radio]) :not([type=checkbox]) :not([type=submit]),
@@ -130,3 +131,5 @@ body.admin-bar .is-style-sticky {
     top: 3rem;
   }
 }
+
+/*# sourceMappingURL=block-styles.css.map */

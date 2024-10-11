@@ -191,4 +191,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.6.7
 	Refactored Blog page layout and minor code fixes
 
+* 2.6.8
+	List Block, Footer, logo and other layout fixes
+
 Good luck!

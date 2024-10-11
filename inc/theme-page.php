@@ -87,6 +87,11 @@ function itre_theme_info() {
             <td>Yes</td>
             </tr>
             <tr>
+            <th>Walk Score</th>
+            <td>No</td>
+            <td>Yes</td>
+            </tr>
+            <tr>
             <th>Agents Section</th>
             <td>No</td>
             <td>Yes</td>

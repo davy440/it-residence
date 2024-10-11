@@ -313,7 +313,7 @@ body.archive.post-type-archive-property .itre-property-archive-wrapper, body.arc
   margin-bottom: 0;
 }
 #masthead .custom-logo {
-  max-width: 18.75rem;
+  max-width: 12.5rem;
 }
 body:not(.home) #masthead .site-title a {
   font-size: 2.5rem;
@@ -796,11 +796,25 @@ body.single #author_box img {
   margin-right: 0.75rem;
 }
 #footer-sidebar {
+  position: relative;
   background-color: var(--accent);
-  filter: brightness(85%) contrast(150%);
   padding-top: 3em;
   margin-top: 2rem;
   color: white;
+}
+#footer-sidebar:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.24);
+  z-index: 0;
+}
+#footer-sidebar > * {
+  position: relative;
+  z-index: 1;
 }
 #footer-sidebar a {
   color: white;
@@ -816,10 +830,24 @@ body.single #author_box img {
 }
 
 #colophon {
+  position: relative;
   background-color: var(--accent);
-  filter: brightness(85%) contrast(150%);
   color: white;
   text-align: center;
+}
+#colophon:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.24);
+  z-index: 0;
+}
+#colophon > * {
+  position: relative;
+  z-index: 1;
 }
 #colophon a {
   color: white;
