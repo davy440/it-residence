@@ -40,10 +40,10 @@ if ( !function_exists('itlst_meta_callback') ) {
                     <h4> <?php _e('Sale / Rent', 'it-residence'); ?></h4>
 
                     <input type="radio" id="sale" name="for" value="sale" <?php if ( isset( $itlst_stored_meta['for'][0] ) ) checked( $itlst_stored_meta['for'][0], "sale" ); ?>>
-                    <label for="for" class="color-label"><?php _e("Sale", "it-listings"); ?></label>
+                    <label for="for" class="color-label"><?php _e("Sale", "it-residence"); ?></label>
 
                     <input type="radio" id="rent" name="for" value="rent" <?php if ( isset( $itlst_stored_meta['for'][0] ) ) checked( $itlst_stored_meta['for'][0], "rent" ); ?>>
-                    <label for="rent" class="color-label"><?php _e("Rent", "it-listings"); ?></label>
+                    <label for="rent" class="color-label"><?php _e("Rent", "it-residence"); ?></label>
 
                 </div>
 

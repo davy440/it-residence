@@ -35,7 +35,7 @@ function itre_admin_notice() {
                 </tr>
                 <tr>
                     <th>IT Listings</th>
-                    <td><?php echo ITRE_Plugin_Upgrader::itre_button_label('it-residence'); ?></td>
+                    <td><?php echo ITRE_Plugin_Upgrader::itre_button_label('it-listings'); ?></td>
                 </tr>
                 <input class="process" type="hidden" name="process" value="" />
                 <input class="plugin" type="hidden" name="plugin" value="" />
