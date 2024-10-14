@@ -62,4 +62,9 @@ function itre_sanitize_coloralpha( $value ) {
  	}
  	// If no match was found, return an empty string.
  	return '';
- }
+}
+
+function itre_sanitize_allow_link($input ) {
+	$allowed_html = ["a" => ["href" => true]];
+	return wp_kses($input, $allowed_html);
+}

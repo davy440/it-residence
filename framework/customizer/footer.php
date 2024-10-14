@@ -47,5 +47,22 @@
 	        )
 	    )
     );
+
+	$wp_customize->add_setting(
+		'itre_footer_text', array(
+			'default'  => '',
+			'sanitize_callback'    =>  'itre_sanitize_allow_link'
+		)
+	);
+
+	$wp_customize->add_control(
+		'itre_footer_text', array(
+			'label'    =>  esc_html__('Custom Footer Text', 'it-residence'),
+			'description'  =>  esc_html__('Will show Default Text if empty', 'it-residence'),
+			'priority' =>  10,
+			'type'     =>  'text',
+			'section'  => 'itre_footer_section'
+		)
+	);
  }
  add_action('customize_register', 'itre_customize_register_footer');

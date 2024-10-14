@@ -194,4 +194,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.6.8
 	List Block, Footer, logo and other layout fixes
 
+* 2.6.9
+	Added option to modify footer and add link to colophon text
+
 Good luck!
