@@ -197,4 +197,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.6.9
 	Added option to modify footer and add link to colophon text
 
+* 2.7
+	Fixed notice error
+
 Good luck!
