@@ -19,7 +19,7 @@ do_action('itre_footer');
 		<div class="site-info">
 			<?php printf(esc_html__('Theme Designed by %s', 'it-residence'), '<a href="https://indithemes.com">IndiThemes</a>'); ?>
 			<span class="sep"> | </span>
-			<?php echo ( get_theme_mod('itre_footer_text') == '' ) ? ('Copyright &copy; '.date_i18n( esc_html__( 'Y', 'it-residence' ) ).' ' . esc_html( get_bloginfo('name') ) . esc_html__('. All Rights Reserved.','it-residence')) : wp_kses(get_theme_mod('itre_footer_text'), ["a" => ["href" => true, "target" => true]]); ?>
+			<?php echo ( get_theme_mod('itre_footer_text') === '' ) ? ('Copyright &copy; '.date_i18n( esc_html__( 'Y', 'it-residence' ) ).' ' . esc_html( get_bloginfo('name') ) . esc_html__('. All Rights Reserved.','it-residence')) : wp_kses(get_theme_mod('itre_footer_text'), ["a" => ["href" => true, "target" => true]]); ?>
 		</div><!-- .site-info -->
 	</div>
 </footer><!-- #colophon -->

@@ -19,10 +19,6 @@ if ( !function_exists('itre_custom_colors') ) {
 
         $css .= "#itre-featured-property .itre-feat-prop-info {background-color: #{$body_bg};}";
 
-
-
-
-
         if ($accent !== '#2e6d87') {
             $css .= ":root {--accent: {$accent};}";
         }

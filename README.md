@@ -200,4 +200,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.7
 	Fixed notice error
 
+* 2.7.1
+	Optimized code
+
 Good luck!

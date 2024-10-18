@@ -9,7 +9,7 @@
 
 if ( ! defined( 'ITRE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ITRE_VERSION', '2.6.9' );
+	define( 'ITRE_VERSION', '2.7.1' );
 }
 
 if ( ! defined( 'ITRE_URL' ) ) {
@@ -195,6 +195,9 @@ require ITRE_PATH . 'inc/css-mods.php';
  */
 require ITRE_PATH . 'inc/starter-content.php';
 
+/**
+ * The notice in the dashboard
+ */
 require ITRE_PATH . 'inc/notice.php';
 
 /**
@@ -233,6 +236,9 @@ require ITRE_PATH . 'inc/block-styles.php';
  */
 require ITRE_PATH . 'framework/customizer/customizer.php';
 
+/**
+ * Add the Plugin Install class
+ */
 require ITRE_PATH . 'inc/class-plugins-install.php';
 
 /**
