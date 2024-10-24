@@ -15,9 +15,9 @@
             <div class="itre-col-thumb">
             <?php
                 if ( has_post_thumbnail()) {
-                    printf('<a href="%s">%s</a>', get_the_permalink(), get_the_post_thumbnail(get_the_ID(), 'itre_prop_thumb'));
+                    printf('<a href="%s"><figure>%s</figure></a>', get_the_permalink(), get_the_post_thumbnail(get_the_ID(), 'itre_prop_thumb'));
                 } else {
-                    printf('<a href="%s"><img src="%s" alt="%s" /></a>', get_the_permalink(), esc_url(ITRE_URL . 'assets/images/ph_thumb.png'), esc_attr( the_title_attribute(['echo' => false]) ) );
+                    printf('<a href="%s"><figure><img src="%s" alt="%s" /></figure></a>', get_the_permalink(), esc_url(ITRE_URL . 'assets/images/ph_thumb.png'), esc_attr( the_title_attribute(['echo' => false]) ) );
                 }
             ?>
             </div>

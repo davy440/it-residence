@@ -716,6 +716,10 @@ body.single #itre_related_posts_wrapper .entry-meta > * {
   display: inline-block;
   width: auto;
 }
+body.single #itre_related_posts_wrapper .itre-col-content {
+  height: 100%;
+  margin: 0.5rem 1rem 1rem;
+}
 body.single #author_box {
   border: solid 1px #eeeeee;
   padding: 1rem;
