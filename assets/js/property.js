@@ -1,5 +1,5 @@
 // JS for Property Filter
-(function() {
+const propertyFilter = () => {
     const filterDiv = document.querySelector('.itre-property-filter');
     if (!filterDiv) {
         return;
@@ -11,16 +11,22 @@
     const { ajaxurl, action_filter, nonce_filter } = filter;
 
     const filterProperties = async (body) => {
-        const response = await fetch(ajaxurl, {
-            method: 'POST',
-            credrentials: 'same-origin',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body
-        });
-        const results = await response.text();
-        return results;
+        try {
+            const response = await fetch(ajaxurl, {
+                method: 'POST',
+                credrentials: 'same-origin',
+                headers: {
+                    'Accept': 'text/html',
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body
+            });
+            const results = await response.text();
+            return results;
+        } catch(err) {
+            console.log(err);
+            return 'Oops! Some Error Occured.';
+        }
     };
 
     form.addEventListener('submit', async (e) => {
@@ -41,7 +47,8 @@
 		propertyContainer.innerHTML = "";
         const body = `action=${action_filter}&nonce=${nonce_filter}${requestBody}`;
     	const filteredProperties = await filterProperties(body);
-		propertyContainer.innerHTML = filteredProperties;
         propertyContainer.previousElementSibling.remove();
+		propertyContainer.innerHTML = filteredProperties;
     });
-})();
+}
+propertyFilter();

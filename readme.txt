@@ -216,6 +216,9 @@ Optimized CSS
 = 2.7.3 October 24, 2024 =
 * Related Posts section fix
 
+= 2.7.4 October 28, 2024 =
+* Optimized the Property filter query
+
 == Credits ==
 
 Image for theme screenshot, Credit pxHere

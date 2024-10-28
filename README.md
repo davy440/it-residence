@@ -206,4 +206,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.7.2
 	Error fix
 
+* 2.7.4
+	Optimized the Property filter query
+
 Good luck!

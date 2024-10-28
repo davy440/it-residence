@@ -9,7 +9,7 @@
 
 if ( ! defined( 'ITRE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ITRE_VERSION', '2.7.3' );
+	define( 'ITRE_VERSION', wp_get_theme()->get('Version') );
 }
 
 if ( ! defined( 'ITRE_URL' ) ) {
