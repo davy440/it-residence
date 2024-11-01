@@ -47,7 +47,7 @@ if ( !function_exists('itre_property_filter_form') ) {
 							<div class="itre-type form-control-wrapper col-md-4">
 								<?php
 								$types_list = [];
-								$types = get_terms('property-type');
+								$types = get_terms(['taxonomy' => 'property-type', ]);
 								foreach($types as $type) {
 									$types_list[$type->slug] = $type->name;
 								}
@@ -55,7 +55,7 @@ if ( !function_exists('itre_property_filter_form') ) {
 								<select id="property-type" name="type">
 									<option value="0"><?php _e('Type', 'it-residence'); ?>
 									<?php foreach($types_list as $key => $value) { ?>
-										<option value="<?php echo $key ?>"><?php echo $value ?></option>
+										<option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($value); ?></option>
 									<?php
 									}
 									?>
@@ -226,9 +226,9 @@ if ( !function_exists('itre_get_filtered_properties') ) {
 		// The Loop
 		if ( $filter_query->have_posts() ) :
 			while ( $filter_query->have_posts() ) : $filter_query->the_post();
-			global $post;
-			get_template_part('template-parts/content', 'property');
-		endwhile;
+				global $post;
+				get_template_part('template-parts/content', 'property');
+			endwhile;
 		endif;
 
 		// Reset Post Data

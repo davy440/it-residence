@@ -262,7 +262,7 @@ function itre_sidebr_customize_register( $wp_customize ) {
    $wp_customize->add_section(
 		"itre_archive", array(
 			"title"			=>	esc_html__("Archives", 'it-residence'),
-			"description"	=>	esc_html__("Layout Settings for the Archives", 'it-residence'),
+			"description"	=>	esc_html__("Layout Settings for the post archive pages", 'it-residence'),
 			"priority"		=>	40,
 			"panel"			=>	"itre_layouts_panel"
 		)

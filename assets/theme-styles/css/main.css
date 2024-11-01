@@ -322,7 +322,9 @@ body:not(.home) #masthead .site-title a {
 
 #header-image {
   position: relative;
-  height: 15.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #header-image:before {
   content: "";
@@ -339,7 +341,6 @@ body:not(.home) #masthead .site-title a {
   max-width: 80%;
   margin: auto;
   text-align: center;
-  top: 40%;
   z-index: 2;
   color: white;
 }

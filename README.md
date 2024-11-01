@@ -209,4 +209,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.7.4
 	Optimized the Property filter query
 
+* 2.7.5
+	Optimized code and removed bugs
+
 Good luck!

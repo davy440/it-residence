@@ -33,7 +33,10 @@
 
 #header-image {
     position: relative;
-    height: 15.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     &:before {
         content: "";
         position: absolute;
@@ -50,7 +53,6 @@
     max-width: 80%;
     margin: auto;
     text-align: center;
-    top: 40%;
     z-index: 2;
     color: white;
     h1 {

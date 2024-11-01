@@ -81,7 +81,7 @@ jQuery(document).ready(function() {
         // Accessing sub-menus
         dropdowns.forEach(dropdown => {
             const subMenu = dropdown.nextElementSibling;
-            dropdown.addEventListener('click', function(e) { toggleNavMenu(subMenu) });
+            dropdown.addEventListener('click', function() { toggleNavMenu(subMenu) });
             dropdown.addEventListener('keydown', function (e) {
                 if (['Space', 'Enter'].includes(e.code)) {
                     toggleNavMenu(subMenu);
