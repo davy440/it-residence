@@ -219,8 +219,11 @@ Optimized CSS
 = 2.7.4 October 28, 2024 =
 * Optimized the Property filter query
 
-= 2.7.5 1 November, 2024 =
+= 2.7.5 November 1, 2024 =
 * Optimized code and removed bugs
+
+= 1.7.6 November 3, 2024 =
+* Optimized Code
 
 == Credits ==
 

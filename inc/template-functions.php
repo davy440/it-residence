@@ -90,54 +90,25 @@ if ( !function_exists('itre_get_content_wrapper_start') ) {
 	function itre_get_content_wrapper_start( $layout = 'box' ) {
 
 		if ( is_page_template('template-property-front.php') ) {
-		?>
-			<div id="content" class="container-fluid">
-				<div class="row">
-
-		<?php
+			echo '<div id="content" class="container-fluid"><div class="row">';
 		}
 		else if ( is_page_template('template-agent.php') ) {
-		?>
-			<div id="content">
-
-		<?php
+			echo '<div id="content">';
 		}
 		else {
-			switch ( $layout ) :
+			switch ( $layout ) {
 				case 'box' :
-				?>
-
-				<div id="content" class="container box">
-					<div class="row">
-
-				<?php
+					echo '<div id="content" class="container box"><div class="row">';
 				break;
 				case 'full' :
-				?>
-
-				<div id="content" class="full">
-					<div class="container">
-						<div class="row">
-
-				<?php
+					echo '<div id="content" class="full"><div class="container"><div class="row">';
 				break;
 				case 'full_s' :
-				?>
-
-				<div id="content" class="container-fluid full_s">
-					<div class="row">
-
-				<?php
+					echo '<div id="content" class="container-fluid full_s"><div class="row">';
 				break;
 				default:
-				?>
-
-				<div id="content" class="container box default">
-					<div class="row">
-
-				<?php
-			endswitch;
-
+				echo '<div id="content" class="container box default"><div class="row">';
+			}
 		}
 	}
 }
@@ -146,47 +117,25 @@ add_action('itre_content_wrapper_start', 'itre_get_content_wrapper_start', 10, 1
 if ( !function_exists('itre_get_content_wrapper_end') ) {
 	function itre_get_content_wrapper_end( $layout ) {
 		if ( is_page_template('template-property-front.php') ) {
-		?>
-			</div></div>
-
-		<?php
+			echo '</div></div>';
 		}
 		else if ( is_page_template('template-agent.php') ) {
-		?>
-			</div>
-
-		<?php
+			echo '</div>';
 		}
 		else {
-			switch ( $layout ) :
+			switch ( $layout ) {
 				case 'box' :
-				?>
-
-				</div></div>
-
-				<?php
+					echo '</div></div>';
 				break;
 				case 'full' :
-				?>
-
-				</div></div></div>
-
-				<?php
+					echo '</div></div></div>';
 				break;
 				case 'full_s' :
-				?>
-
-				</div></div>
-
-				<?php
+					echo '</div></div>';
 				break;
 				default:
-				?>
-
-				</div></div>
-
-				<?php
-			endswitch;
+					echo '</div></div>';
+			}
 
 		}
 	}
