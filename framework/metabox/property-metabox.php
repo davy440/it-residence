@@ -25,6 +25,11 @@ if ( !function_exists('itlst_meta_callback') ) {
         $area	    =	isset( $itlst_stored_meta['area']) ? $itlst_stored_meta['area'][0] : 0;
         $bedrooms	=	isset( $itlst_stored_meta['bedrooms']) ? $itlst_stored_meta['bedrooms'][0] : 0;
         $bathrooms	=	isset( $itlst_stored_meta['bathrooms']) ? $itlst_stored_meta['bathrooms'][0] : 0;
+        $streetName =   isset( $itlst_stored_meta['streetName']) ? $itlst_stored_meta['streetName'][0] : "";
+        $city       =   isset( $itlst_stored_meta['city']) ? $itlst_stored_meta['city'][0] : "";
+        $province   =   isset( $itlst_stored_meta['province']) ? $itlst_stored_meta['province'][0] : "";
+        $country    =   isset( $itlst_stored_meta['country']) ? $itlst_stored_meta['country'][0] : "";
+        $zip        =   isset( $itlst_stored_meta['zip']) ? $itlst_stored_meta['zip'][0] : "";
         $address	=	isset( $itlst_stored_meta['address']) ? $itlst_stored_meta['address'][0] : "";
         $maps       =   isset( $itlst_stored_meta['maps']) ? $itlst_stored_meta['maps'][0] : "";
         $long		=	isset( $itlst_stored_meta['long']) ? $itlst_stored_meta['long'][0] : 0;
@@ -76,10 +81,39 @@ if ( !function_exists('itlst_meta_callback') ) {
                 </div>
 
                 <div class="full-width">
-        		    <label for="address">
         		    	<h4><?php _e('Address', 'it-residence'); ?></h4>
-        		    	<textarea name="address" id="address" rows="4"><?php echo esc_attr($address) ?></textarea>
-        		    </label><br/>
+                        <div class="address">
+                            <label for="streetName">
+                            <input type="text" name="streetName" id="streetName" autocomplete="on" value="<?php echo esc_attr($streetName); ?>" placeholder="123 Street Name">
+                            </label>
+
+                            <label for="city">
+                            <input type="text" name="city" id="city" autocomplete="on" value="<?php echo esc_attr($city); ?>" placeholder="City">
+                            </label>
+
+                            <label for="province">
+                                <select name="province" id="province" disabled>
+                                    <option value ="–" data-province="">Province</option>
+                                </select>
+                            </label>
+
+                            <label for="country">
+                            <?php
+                                $countries = json_decode(file_get_contents( ITRE_PATH . 'assets/countries.json'));
+
+                                $options = '';
+                                foreach($countries as $item) {
+                                    $options .= "<option value={$item->code} data-country='{$item->name}' " . selected($country, $item->code, false) . ">{$item->name}</option>";
+                                }
+                                printf('<select for="country" name="country" id="country"><option value="" data-country="" %s>%s</option>%s</select>', selected($country, $item->code), __('Select Country', 'it-residence'), $options);
+                            ?>
+                            </label>
+
+                            <label for="zip">
+                            <input type="text" name="zip" id="zip" autocomplete="on" value="<?php echo esc_attr($zip); ?>" placeholder="ZIP Code">
+                            </label>
+                        </div>
+        		    
                     </div>
 
                     <div class="full-width">
@@ -209,13 +243,20 @@ if ( !function_exists('itlst_meta_save') ) {
     	}
     	update_post_meta( $post_id, 'bathrooms', $bathrooms);
 
+        $streetName = isset($_POST['streetName']) ? sanitize_text_field($_POST['streetName']) : '';
+    	update_post_meta( $post_id, 'streetName', $streetName);
+        
+        $city = isset($_POST['city']) ? sanitize_text_field($_POST['city']) : '';
+    	update_post_meta( $post_id, 'city', $city);
+    	
+        $province = isset($_POST['province']) ? $_POST['province'] : '';
+    	update_post_meta( $post_id, 'province', $province);
 
-    	if ( isset($_POST['address'])) {
-    	    $address	=	sanitize_textarea_field($_POST['address']);
-        } else {
-    	    $address	=	"";
-    	}
-    	update_post_meta( $post_id, 'address', $address);
+        $country = isset($_POST['country']) ? $_POST['country'] : '';
+    	update_post_meta( $post_id, 'country', $country);
+
+        $zip = $_POST['zip'] ?? '';
+    	update_post_meta( $post_id, 'zip', $zip);
 
         if ( isset($_POST['long'])) {
     	    $long	=	sanitize_text_field($_POST['long']);

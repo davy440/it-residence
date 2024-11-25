@@ -23,9 +23,7 @@ itre_localize_map_data( get_the_ID() );
 			$for = $itre_stored_meta["for"][0] == "sale" ? "Sale" : "Rent";
 			printf('<span class="itre-for-tag %s">%s</span>', esc_attr($itre_stored_meta["for"][0]),  esc_html($for));
 		}
-		?>
 
-        <?php
         //Price of Property
         itre_get_property_price($itre_stored_meta['price'][0]);
 

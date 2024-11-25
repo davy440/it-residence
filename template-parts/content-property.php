@@ -39,8 +39,22 @@ $itre_stored_meta = get_post_meta( get_the_ID() );
 	 	</header><!-- .entry-header -->
 
 		<?php
-			if ( !empty( $itre_stored_meta[ 'address' ][0] ) ) {
-				printf('<div class="itre_address">%s</div>', $itre_stored_meta[ 'address' ][0] );
+			$address = $itre_stored_meta[ 'address' ][0] ?? '';
+			$street = $itre_stored_meta[ 'streetName' ][0] ?? '';
+			$city = $itre_stored_meta[ 'city' ][0] ?? '';
+			$province = $itre_stored_meta[ 'province' ][0] ?? '';
+			$country = $itre_stored_meta[ 'country' ][0] ?? '';
+			$zip = $itre_stored_meta[ 'zip' ][0] ?? '';
+			var_dump($address);
+			if (!empty($province)) {
+				$province = ', ' . $province;
+			}
+			
+			$address = sprintf('<div class="itre_address">%s<br>%s%s<br>%s %s</div>', $street, $city, $province, Locale::getDisplayRegion('-' . $country, 'en'), $zip);
+			if (!empty( wp_strip_all_tags( $address ))) {
+				echo $address;
+			} else if (!empty($address)){
+				printf('<div class="itre_address">%s</div>', $address);
 			}
 		?>
 

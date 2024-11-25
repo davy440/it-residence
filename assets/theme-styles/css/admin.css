@@ -130,7 +130,8 @@ button.def-btn {
 }
 #itre_prop_meta .row > * {
   box-sizing: border-box;
-  display: inline-block;
+  padding-left: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 #itre_prop_meta .full-width {
   width: 100%;
@@ -150,6 +151,18 @@ button.def-btn {
   #itre_prop_meta .quarter-width {
     width: 25%;
   }
+}
+#itre_prop_meta .address {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 48rem) {
+  #itre_prop_meta .address {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+#itre_prop_meta .address select {
+  width: 100%;
 }
 
 #itre-admin-theme-info {

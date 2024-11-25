@@ -6,7 +6,7 @@ module.exports = function (grunt) {
       options: {
         livereload: true
       },
-      files: ['**/*.js', '**/*.scss'],
+      files: ['**/*.js', '**/*.scss', '!**/*.min.js'],
       tasks: ['default']
     },
     sass: {
@@ -30,14 +30,15 @@ module.exports = function (grunt) {
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
-        sourceMap: false
+        sourceMap: false,
+        mangle: false
       },
       min: {
         files: [
           {
             expand: true,
             cwd: 'assets/js/',
-            src: [ '*.js' ],
+            src: '*.js',
             dest: 'assets/js/min/',
             ext: '.min.js'
           }
