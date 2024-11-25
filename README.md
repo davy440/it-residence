@@ -218,4 +218,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.7.7
 	Minor bug fixes and code clean up
 
+* 2.8
+	Refactored the address in property metabox
+
 Good luck!
