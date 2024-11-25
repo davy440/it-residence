@@ -6,7 +6,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 6.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 2.7.5
+Stable tag: 2.7.7
 License: GNU General Public License v2 or later
 License URI: https://spdx.org/licenses/GPL-2.0-or-later.html
 
@@ -222,8 +222,11 @@ Optimized CSS
 = 2.7.5 November 1, 2024 =
 * Optimized code and removed bugs
 
-= 1.7.6 November 3, 2024 =
+= 2.7.6 November 3, 2024 =
 * Optimized Code
+
+= 2.7.7 November 24, 2024 =
+* Minor bug fixes and code clean up
 
 == Credits ==
 
