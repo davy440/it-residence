@@ -45,7 +45,7 @@ $itre_stored_meta = get_post_meta( get_the_ID() );
 			$province = $itre_stored_meta[ 'province' ][0] ?? '';
 			$country = $itre_stored_meta[ 'country' ][0] ?? '';
 			$zip = $itre_stored_meta[ 'zip' ][0] ?? '';
-			var_dump($address);
+			
 			if (!empty($province)) {
 				$province = ', ' . $province;
 			}
