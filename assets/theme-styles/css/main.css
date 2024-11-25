@@ -325,6 +325,7 @@ body:not(.home) #masthead .site-title a {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 18.75rem;
 }
 #header-image:before {
   content: "";

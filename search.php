@@ -10,7 +10,7 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main container">
-
+		<?php echo 'Hello'; ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">

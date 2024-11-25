@@ -212,4 +212,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.7.5
 	Optimized code and removed bugs
 
+* 2.7.6
+	Optimized Code
+
 Good luck!

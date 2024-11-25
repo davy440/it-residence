@@ -471,7 +471,7 @@ if ( !function_exists('itre_about_author') ) {
 
 if ( !function_exists('itre_hero_area') ) {
 	function itre_hero_area() {
-
+		
 		if ( empty( get_theme_mod('itre_hero_title') ) && empty( get_theme_mod('itre_hero_desc') ) ) {
 			return;
 		}
