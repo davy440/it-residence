@@ -243,12 +243,6 @@ body.has-sidebar #content {
   margin-left: auto;
   margin-right: auto;
 }
-body.has-sidebar #content > *:first-child {
-  margin-left: -0.9375rem;
-}
-body.has-sidebar #content > *:last-child {
-  margin-right: -0.9375rem;
-}
 
 header.page-header {
   text-align: center;
@@ -1165,13 +1159,13 @@ body.single-property #property-map {
 .itre-blog-wrapper {
   display: grid;
   justify-content: space-between;
-  row-gap: 1.5rem;
+  gap: 1.75rem 1.5rem;
 }
 .itre-blog-wrapper.col2 {
-  grid-template-columns: repeat(2, 31.5%);
+  grid-template-columns: repeat(2, 1fr);
 }
 .itre-blog-wrapper.col3 {
-  grid-template-columns: repeat(3, 31.5%);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 article.type-post[class^=col] .listing-wrapper, article.type-page[class^=col] .listing-wrapper {

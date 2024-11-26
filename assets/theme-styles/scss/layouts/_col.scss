@@ -2,14 +2,14 @@
 .itre-blog-wrapper {
     display: grid;
     justify-content: space-between;
-    row-gap: 1.5rem;
+    gap: 1.75rem 1.5rem;
 
     &.col2 {
-        grid-template-columns: repeat(2, 31.5%);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     &.col3 {
-        grid-template-columns: repeat(3, 31.5%);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
