@@ -1162,10 +1162,10 @@ body.single-property #property-map {
   gap: 1.75rem 1.5rem;
 }
 .itre-blog-wrapper.col2 {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 .itre-blog-wrapper.col3 {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
 }
 
 article.type-post[class^=col] .listing-wrapper, article.type-page[class^=col] .listing-wrapper {

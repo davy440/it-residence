@@ -5,11 +5,11 @@
     gap: 1.75rem 1.5rem;
 
     &.col2 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     }
 
     &.col3 {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     }
 }
 
