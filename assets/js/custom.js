@@ -1,33 +1,6 @@
 // Custom JS for Theme
 jQuery(document).ready(function() {
     
-    const testSlider = () => {
-
-        const testimonials = document.querySelector('.testimonials-wrapper');
-
-        if (testimonials === null) {
-            return;
-        }
-
-        jQuery('.testimonials-wrapper').owlCarousel({
-            items: 2,
-            autoplay: true,
-            dots: true,
-            loop: true,
-            responsive:
-            {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 2
-                }
-            }
-        });
-    }
-
-    testSlider();
-
     const toggleNavMenu = (item) => {
         const btn = this.activeElement;
         const expanded = btn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
@@ -108,7 +81,7 @@ jQuery(document).ready(function() {
         const fadeIn = element => {
 
             if ( count > 0 ) {
-                return
+                return;
             }
             var opacity = 0.1
             element.style.display = "flex"
@@ -123,17 +96,17 @@ jQuery(document).ready(function() {
                 element.style.filter = 'alpha(opacity=' + opacity * 100 + ")";
                 opacity += opacity * 0.1;
             })
-            count++
+            count++;
         }
 
 
         const fadeOut = element => {
 
             if ( count < 1 ) {
-                return
+                return;
             }
 
-            var opacity = 1
+            let opacity = 1
             setTimeout( () => { element.style.display = "none" }, 200)
             var timer = setInterval( function() {
 
@@ -145,7 +118,7 @@ jQuery(document).ready(function() {
                 element.style.filter = 'alpha(opacity=' - opacity * 100 + ")";
                 opacity -= opacity * 0.1;
             })
-            count--
+            count--;
         }
 
         topBtn.addEventListener('click', function(e) {

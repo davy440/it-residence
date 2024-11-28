@@ -224,4 +224,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.8.1
 	Fixed code bugs
 
+* 2.8.2
+	Fixed columns in blog page
+
 Good luck!
