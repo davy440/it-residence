@@ -227,4 +227,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.8.2
 	Fixed columns in blog page
 
+* 2.8.3
+	Fixed blog and archive layouts
+
 Good luck!
