@@ -1156,15 +1156,15 @@ body.single-property #property-map {
   filter: brightness(110%);
 }
 
-.itre-blog-wrapper {
+.itre-blog-wrapper, .itre-archive-wrapper {
   display: grid;
   justify-content: space-between;
   gap: 1.75rem 1.5rem;
 }
-.itre-blog-wrapper.col2 {
+.itre-blog-wrapper.col2, .itre-archive-wrapper.col2 {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
-.itre-blog-wrapper.col3 {
+.itre-blog-wrapper.col3, .itre-archive-wrapper.col3 {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
 }
 

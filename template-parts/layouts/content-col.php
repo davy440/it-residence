@@ -6,7 +6,7 @@
  *
  * @package IT_Residence
  */
-
+// var_dump($args);
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class($args); ?>>
     <div class="itre-col-wrapper">

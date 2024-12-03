@@ -6,6 +6,7 @@
  *
  * @package IT_Residence
  */
+$layout = get_theme_mod('itre_archive_layout', 'classic');
 get_header();
 ?>
 
@@ -20,7 +21,7 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-            <div class="row">
+            <div class="itre-archive-wrapper <?php echo esc_attr($layout); ?>">
 
 			<?php
 			/* Start the Loop */
