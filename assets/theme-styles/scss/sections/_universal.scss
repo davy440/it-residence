@@ -171,6 +171,8 @@ textarea {
 #content {
     position: relative;
     z-index: 1;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
 
     body:not(.page-template-template-property-listings) & {
         padding-top: 2em;

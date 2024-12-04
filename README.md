@@ -230,4 +230,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.8.3
 	Fixed blog and archive layouts
 
+* 2.8.4
+	Related Posts, blog and archive layouts fix
+
 Good luck!

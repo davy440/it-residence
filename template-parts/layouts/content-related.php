@@ -10,7 +10,7 @@
 ?>
 
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class( 'col-md-4' ); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('col-related'); ?>>
         <div class="itre-col-wrapper">
             <div class="itre-col-thumb">
             <?php

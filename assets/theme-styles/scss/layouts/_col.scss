@@ -1,15 +1,19 @@
 
 .itre-blog-wrapper, .itre-archive-wrapper {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     justify-content: space-between;
     gap: 1.75rem 1.5rem;
 
-    &.col2 {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    }
+    @media (min-width: 48rem) {
 
-    &.col3 {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        &.col2 {
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        }
+    
+        &.col3 {
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        }
     }
 }
 
@@ -18,6 +22,7 @@ article.type-post, article.type-page {
     &[class^="col"] {
         
         .listing-wrapper {
+            width: auto;
             flex-direction: column;
             background-color: transparent;
             margin-bottom: 1.5rem;

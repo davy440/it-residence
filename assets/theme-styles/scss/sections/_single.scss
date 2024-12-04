@@ -21,7 +21,8 @@ body.single {
             color: #999999;
         }
     }
-    #itre_related_posts_wrapper {
+    
+    .itre_related_posts_wrapper {
 
         h3 {
             margin-top: 0.625rem;
@@ -32,6 +33,7 @@ body.single {
                 @include line-clamp(2);
             }
         }
+        
         .entry-meta {
 
             > * {
@@ -44,12 +46,42 @@ body.single {
             height: 100%;
             margin: 0.5rem 1rem 1rem;
         }
+
+        .itre-related-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem 1.25rem ;
+            justify-content: space-between;
+
+            @media (min-width: 48rem) {
+                flex-direction: row;
+
+                > * {
+                    width: 33.33%;
+                }
+            }
+        }
     }
+
     #author_box {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
         border: solid 1px #eeeeee;
         padding: 1rem;
         margin-bottom: 1.5rem;
         border-radius: 1rem;
+
+        @media (min-width: 48rem) {
+            flex-direction: row;
+
+            .author {
+
+                &_info {
+                    flex-basis: 90%;
+                }
+            }
+        }
 
         .author_bio {
             line-height: 1.25rem;
@@ -58,6 +90,7 @@ body.single {
         img {
             display: inline-block;
             border-radius: 50%;
+            max-width: 6rem;
         }
 	}
 }

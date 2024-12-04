@@ -463,6 +463,10 @@ summary {
   .container {
     max-width: 540px;
   }
+
+  .d-sm-flex {
+    display: flex !important;
+  }
 }
 @media (min-width: 768px) {
   .container {
@@ -542,7 +546,6 @@ summary {
 }
 @media (min-width: 768px) {
 
-
   .col-md-3 {
     flex: 0 0 auto;
     width: 25%;
@@ -574,6 +577,11 @@ summary {
   .col-lg-3 {
     flex: 0 0 auto;
     width: 25%;
+  }
+
+  .col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
   }
 
   .col-lg-7 {

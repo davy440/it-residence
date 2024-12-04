@@ -52,7 +52,7 @@ if ( !function_exists('itre_get_header') ) {
 if ( !function_exists('itre_get_top_bar') ) {
 	function itre_get_top_bar() {
 		?>
-		<div class="container-lg">
+		<div class="container-fluid">
 			<div class="d-flex align-items-center gap-3">
 
 				<div class="branding-wrapper col-7 col-sm-5 col-lg-3">
@@ -60,7 +60,7 @@ if ( !function_exists('itre_get_top_bar') ) {
 				</div>
 
 				<?php
-					$nav_width = empty( get_theme_mod('itre_cta_enable', '') ) ? 'col-md-9' : 'col-lg-7';
+					$nav_width = empty( get_theme_mod('itre_cta_enable', '') ) ? 'col-md-9' : 'col-lg-6';
 				?>
 				<div class="nav-wrapper <?php echo esc_attr($nav_width) ?>">
 					<?php get_template_part('framework/sections/header/modules/navigation'); ?>
@@ -383,16 +383,16 @@ if ( !function_exists('itre_get_related_posts') ) {
 		$related_query	=	new WP_Query( $related_args );
 
 		if ( $related_query->have_posts() ) : ?>
-			<div id="itre_related_posts_wrapper">
+			<div class="itre_related_posts_wrapper">
 				<?php
 					$related_title = get_theme_mod('itre_single_related_title', 'Related Posts');
 
 					if ( !empty( $related_title ) ) {
-						printf('<h2 id="itre_related_posts_title">%s</h2>', esc_html($related_title) );
+						printf('<h2 class="itre_related_posts_title">%s</h2>', esc_html($related_title) );
 					}
 				?>
 
-				<div class="itre-related-posts row">
+				<div class="itre-related-posts">
 					<?php
 						while ( $related_query->have_posts() ) : $related_query->the_post();
 							get_template_part( 'template-parts/layouts/content', 'related' );
@@ -451,11 +451,11 @@ if ( !function_exists('itre_get_related_properties') ) {
 //Function for Author Box in Single Post
 if ( !function_exists('itre_about_author') ) {
 	function itre_about_author( $post ) { ?>
-		<div id="author_box" class="row">
-			<div class="author_avatar col-1">
+		<div id="author_box">
+			<div class="author_avatar">
 				<?php echo get_avatar( intval($post->post_author), 128 ); ?>
 			</div>
-			<div class="author_info col-11">
+			<div class="author_info">
 				<h4 class="author_name title-font">
 					<?php echo esc_html( get_the_author_meta( 'display_name', intval($post->post_author) ) ); ?>
 				</h4>
