@@ -99,6 +99,18 @@ function itre_header_customize_register( $wp_customize ) {
         )
     );
 
+    $controls = array_filter( array(
+        $wp_customize->get_control( 'itre_cta_text' ),
+        $wp_customize->get_control( 'itre_cta_id' ),
+    ) );
+    foreach ( $controls as $control ) {
+        $control->active_callback = function( $control ) {
+            $setting = $control->manager->get_setting( 'itre_cta_enable' );
+
+            return empty($setting->value()) ? false : true;
+        };
+    }
+
     $wp_customize->add_setting(
         'itre_hero_title', array(
             'default'           =>   '',
@@ -108,8 +120,9 @@ function itre_header_customize_register( $wp_customize ) {
 
     $wp_customize->add_control(
         'itre_hero_title', array(
-            'label'     =>  __('Hero Title', 'it-residence'),
-            'section'   =>  'itre_header_options'
+            'label'             =>  __('Hero Title', 'it-residence'),
+            'section'           =>  'itre_header_options',
+            'active_callback'   =>  'is_front_page'
         )
     );
 
@@ -122,8 +135,9 @@ function itre_header_customize_register( $wp_customize ) {
 
     $wp_customize->add_control(
         'itre_hero_desc', array(
-            'label'     =>  __('Hero Description', 'it-residence'),
-            'section'   =>  'itre_header_options'
+            'label'             =>  __('Hero Description', 'it-residence'),
+            'section'           =>  'itre_header_options',
+            'active_callback'   =>  'is_front_page'
         )
     );
 
