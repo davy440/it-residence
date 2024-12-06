@@ -233,4 +233,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.8.4
 	Related Posts, blog and archive layouts fix
 
+* 2.8.5
+	Added active_callback to header layout section
+
 Good luck!
