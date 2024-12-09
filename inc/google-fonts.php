@@ -3,11 +3,23 @@
  * The class dealing with Google Fonts functionality for the theme
  * Maintaining the cache, typography controls and updating font files
  */
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
  class ITRE_Google_Fonts {
 
-    public function __construct() {
+    private static $instance;
+
+    private function __construct() {
         add_action('customize_controls_enqueue_scripts', array( $this, 'itre_localize_google_fonts' ) );
         add_action('init', array( $this, 'itre_get_selected_fonts' ) );
+    }
+
+    static function getInstance() {
+        if (empty(self::$instance)) {
+            self::$instance = new ITRE_Google_Fonts();
+        }
+
+        return self::$instance;
     }
 
     public static function itre_get_fonts( $amount = 50 ) {
@@ -150,4 +162,4 @@
     }
 }
 
-$fonts = new ITRE_Google_Fonts();
+$instance = ITRE_Google_Fonts::getInstance();

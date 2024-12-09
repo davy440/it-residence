@@ -2,6 +2,9 @@
 /**
  *  Theme Page
  */
+if (!defined('ABSPATH')) {
+	exit;
+}
 
 function itre_admin_theme_page() {
     add_theme_page('IT Residence', 'IT Residence', 'edit_theme_options', 'itre_options', 'itre_theme_info');

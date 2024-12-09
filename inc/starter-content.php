@@ -2,6 +2,10 @@
 /**
  *   Starter Content
 **/
+if (!defined('ABSPATH')) {
+	exit;
+}
+
 if ( !function_exists('itre_add_starter_content') ) {
     function itre_add_starter_content() {
 

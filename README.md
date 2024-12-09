@@ -236,4 +236,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.8.5
 	Added active_callback to header layout section
 
+* 2.8.6
+	Added code to prevent unauthorized access of PHP files
+
 Good luck!

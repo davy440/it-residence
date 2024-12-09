@@ -6,8 +6,11 @@
  *
  * @package IT_Residence
  */
+if (!defined('ABSPATH')) {
+	exit;
+}
 
- if ( ! function_exists( 'itre_posted_on' ) ) :
+if ( ! function_exists( 'itre_posted_on' ) ) :
  	/**
  	 * Prints HTML with meta information for the current post-date/time.
  	 */
@@ -36,9 +39,9 @@
  		echo '<div class="posted-on" ' . $d_schema . '>' . $posted_on . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
  	}
- endif;
+endif;
 
- if ( ! function_exists( 'itre_posted_by' ) ) :
+if ( ! function_exists( 'itre_posted_by' ) ) :
  	/**
  	 * Prints HTML with meta information for the current author.
  	 */
@@ -56,9 +59,9 @@
  ' . $byline . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
  	}
- endif;
+endif;
 
- if ( ! function_exists( 'itre_cats_list' ) ) {
+if ( ! function_exists( 'itre_cats_list' ) ) {
 
      function itre_cats_list() {
          $categories_list = get_the_category_list( ' ' );
@@ -68,7 +71,7 @@
          }
 
      }
- }
+}
 
 if ( ! function_exists( 'itre_entry_footer' ) ) :
 	/**

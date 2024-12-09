@@ -1,6 +1,8 @@
 <?php
 /**
  * Adds a meta box to the post editing screen
+ *
+ * @return  void
  */
 function itre_custom_meta() {
     add_meta_box( 'itre_meta', esc_html__( 'Display Options', 'it-residence' ), 'itre_meta_callback', 'page','side','high' );
@@ -8,9 +10,12 @@ function itre_custom_meta() {
 add_action( 'add_meta_boxes', 'itre_custom_meta' );
 
 /**
- * Outputs the content of the meta box
+ * Renders the content of the meta box
+ *
+ * @param   WP_Post  $post  The post object
+ *
+ * @return  void
  */
-
 function itre_meta_callback( $post ) {
     wp_nonce_field( basename( __FILE__ ), 'itre_nonce' );
 
@@ -72,6 +77,10 @@ function itre_meta_callback( $post ) {
 
 /**
  * Saves the custom meta input
+ *
+ * @param   WP_Post  $post_id  The post object
+ *
+ * @return  void
  */
 function itre_meta_save( $post_id ) {
 
@@ -101,4 +110,4 @@ function itre_meta_save( $post_id ) {
 	    update_post_meta( $post_id, 'align-sidebar', 'right' );
 	}
 }
-add_action( 'save_post', 'itre_meta_save', 10, 2 );
+add_action('save_post', 'itre_meta_save', 10, 2);

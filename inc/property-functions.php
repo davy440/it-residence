@@ -4,8 +4,11 @@
  *
  * @package IT Residence
  */
+if (!defined('ABSPATH')) {
+	exit;
+}
 
- if ( !function_exists('itre_get_for') ) {
+if ( !function_exists('itre_get_for') ) {
     function itre_get_for( $value ) {
 
         $for = "";
@@ -147,7 +150,7 @@ if ( !function_exists('itre_get_filtered_properties') ) {
 	 */
 	function itre_get_filtered_properties() {
 		if (!wp_create_nonce($_POST['nonce'], 'filter_properties')) {
-			exit;
+			exit('Unauthorized Access');
 		}
 
 		$args = array(
@@ -238,8 +241,8 @@ if ( !function_exists('itre_get_filtered_properties') ) {
 		wp_die();
 	}
 }
- add_action('wp_ajax_filter_properties', 'itre_get_filtered_properties');
- add_action('wp_ajax_nopriv_filter_properties', 'itre_get_filtered_properties');
+add_action('wp_ajax_filter_properties', 'itre_get_filtered_properties');
+add_action('wp_ajax_nopriv_filter_properties', 'itre_get_filtered_properties');
 
  //Pass Variables to JS for use in AJAX
  if ( !function_exists('itre_localize_ajax_data') ) {
