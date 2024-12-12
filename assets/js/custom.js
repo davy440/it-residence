@@ -1,21 +1,23 @@
 // Custom JS for Theme
 jQuery(document).ready(function() {
+    const body  = document.querySelector('body');
     
-    const toggleNavMenu = (item) => {
-        const btn = this.activeElement;
-        const expanded = btn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
-        btn.setAttribute('aria-expanded', expanded);
-        item.classList.toggle('is-visible');
+    function toggleNavMenu() {
+        const subMenu = this.nextElementSibling;
+        const expanded = this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
+        this.setAttribute('aria-expanded', expanded);
+        subMenu.classList.toggle('is-visible');
     }
 
     const mobileNav = () => {
-        const body = document.querySelector('body');
-        const navBtn = document.querySelector('.mobile-nav-btn');
-        const mobileNav = document.querySelector('.panel');
-        const navClose = mobileNav.querySelector('#close-menu');
-        const goToBottom = mobileNav.querySelector('.go-to-bottom');
-        const goToTop = mobileNav.querySelector('.go-to-top');
-        const dropdowns = mobileNav.querySelectorAll('span');
+        const
+        navBtn      = body.querySelector('.mobile-nav-btn'),
+        mobileNav   = body.querySelector('.panel'),
+        navClose    = mobileNav.querySelector('#close-menu'),
+        goToBottom  = mobileNav.querySelector('.go-to-bottom'),
+        goToTop     = mobileNav.querySelector('.go-to-top'),
+        dropdowns   = mobileNav.querySelectorAll('span'),
+        links       = mobileNav.getElementsByTagName('a');
 
         navBtn.addEventListener('click', () => {
             mobileNav.classList.add('expanded');
@@ -44,20 +46,26 @@ jQuery(document).ready(function() {
         });
 
         goToBottom.addEventListener('focus', () => {
-            document.querySelector('ul#menu-mobile li:last-child > a').focus();
+            if (links.length === 0) {
+                return;
+            }
+            const lastLink = links[links.length - 1];
+            lastLink.focus();
         });
 
         goToTop.addEventListener('focus', () => {
+            if (links.length === 0) {
+                return;
+            }
             navClose.focus();
         });
 
         // Accessing sub-menus
-        dropdowns.forEach(dropdown => {
-            const subMenu = dropdown.nextElementSibling;
-            dropdown.addEventListener('click', function() { toggleNavMenu(subMenu) });
-            dropdown.addEventListener('keydown', function (e) {
+        dropdowns.forEach(arrow => {
+            arrow.addEventListener('click', toggleNavMenu);
+            arrow.addEventListener('keydown', function(e) {
                 if (['Space', 'Enter'].includes(e.code)) {
-                    toggleNavMenu(subMenu);
+                    toggleNavMenu.call(this);
                 }
             });
         });
@@ -65,7 +73,7 @@ jQuery(document).ready(function() {
     mobileNav();
 
     //Fade In/Out for Go to Top Button
-    const topBtn = document.querySelector( '#itre-back-to-top' );
+    const topBtn = document.getElementById( 'itre-back-to-top' );
 
     if ( topBtn !== null ) {
 
@@ -121,9 +129,9 @@ jQuery(document).ready(function() {
             count--;
         }
 
-        topBtn.addEventListener('click', function(e) {
+        topBtn.addEventListener('click', (e) => {
           e.preventDefault();
-          jQuery('html').animate({scrollTop:0}, 300, 'linear');
+          window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
         });
     }
 
