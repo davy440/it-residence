@@ -239,4 +239,7 @@ Just Install the Theme from the WordPress Repository.
 * 2.8.6
 	Added code to prevent unauthorized access of PHP files
 
+* 2.8.7
+	Refactored JS code and mobile nav fix
+
 Good luck!
