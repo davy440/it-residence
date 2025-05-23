@@ -6,7 +6,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 6.0
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 2.8.7
+Stable tag: 2.8.8
 License: GNU General Public License v2 or later
 License URI: https://spdx.org/licenses/GPL-2.0-or-later.html
 
@@ -251,6 +251,12 @@ Optimized CSS
 
 = 2.8.7 December 12, 2024 =
 * Refactored JS code and mobile nav fix
+
+= 2.8.8 December 20, 2024 =
+* Minor code fixes and added partial for hero title
+
+= 2.9 May 23, 2025 =
+* Added support for Ninja Forms
 
 == Credits ==
 

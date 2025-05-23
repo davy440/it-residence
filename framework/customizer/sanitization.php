@@ -65,6 +65,6 @@ function itre_sanitize_coloralpha( $value ) {
 }
 
 function itre_sanitize_allow_link($input ) {
-	$allowed_html = ["a" => ["href" => true]];
+	$allowed_html = ["a" => ["href" => true, "alt" => true]];
 	return wp_kses($input, $allowed_html);
 }

@@ -22,7 +22,7 @@ function itre_misc_customize_register( $wp_customize ) {
 				'settings'	=>	array(),
 				'priority'	=>	5,
 				'input_attrs'	=>	array(
-						'url'		=>	'mailto:support@indithemes.com'
+					'url'		=>	'mailto:support@indithemes.com'
 				)
 			)
 		)
@@ -38,7 +38,7 @@ function itre_misc_customize_register( $wp_customize ) {
 				'settings'	=>	array(),
 				'priority'	=>	5,
 				'input_attrs'	=>	array(
-						'url'		=>	'https://www.wordpress.org/themes/it-residence'
+					'url'		=>	'https://www.wordpress.org/themes/it-residence'
 				)
 			)
 		)
@@ -54,7 +54,7 @@ function itre_misc_customize_register( $wp_customize ) {
 				'settings'	=>	array(),
 				'priority'	=>	5,
 				'input_attrs'	=>	array(
-						'url'		=>	'https://indithemes.com'
+					'url'		=>	'https://indithemes.com'
 				)
 			)
 		)

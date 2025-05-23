@@ -506,3 +506,11 @@ function itre_preload_header_images() {
 	echo "<link rel='preload' as='image' href={$header_image}>";
 }
 add_action('wp_head', 'itre_preload_header_images');
+
+function itre_ninja_forms_i18n_front_end( $strings ) {
+	if (class_exists('Ninja_Forms') && get_theme_mod('itre-hide-marked-required-text', '')) {
+		$strings['fieldsMarkedRequired'] = '';
+	}
+    return $strings;
+}
+add_filter( 'ninja_forms_i18n_front_end', 'itre_ninja_forms_i18n_front_end' );

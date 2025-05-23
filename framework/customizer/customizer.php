@@ -46,6 +46,10 @@ require ITRE_PATH . 'framework/customizer/sanitization.php';
 require ITRE_PATH . 'framework/customizer/misc.php';
 require ITRE_PATH . 'framework/customizer/button-section.php';
 
+if (class_exists('Ninja_Forms')) {
+	require ITRE_PATH . 'framework/customizer/ninja-forms.php';
+}
+
 /**
  * Render the site title for the selective refresh partial.
  *
@@ -71,3 +75,8 @@ function itre_customize_preview_js() {
 	wp_enqueue_script( 'it-residence-customizer', ITRE_URL . 'assets/js/customizer.js', array( 'customize-preview' ), ITRE_VERSION, true );
 }
 add_action( 'customize_preview_init', 'itre_customize_preview_js' );
+
+function itre_hero_title() {
+	$cta_text = get_theme_mod('itre_hero_title', '');
+	echo $cta_text;
+}

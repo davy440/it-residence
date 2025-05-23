@@ -43,11 +43,7 @@ function itre_sidebr_customize_register( $wp_customize ) {
     foreach ( $excerpt_control as $control ) {
         $control->active_callback = function( $control ) {
             $setting = $control->manager->get_setting( 'itre_blog_layout' );
-            if (  $setting->value() == 'classic' ) {
-                return true;
-            } else {
-                return false;
-            }
+			return $setting->value() == 'classic' ? true : false;
         };
     }
 
@@ -157,11 +153,7 @@ function itre_sidebr_customize_register( $wp_customize ) {
     foreach ( $sidebar_controls as $control ) {
         $control->active_callback = function( $control ) {
             $setting = $control->manager->get_setting( 'itre_single_sidebar_enable' );
-            if (  $setting->value() ) {
-                return true;
-            } else {
-                return false;
-            }
+			return !empty($setting->value()) ? true : false;
         };
     }
 
@@ -296,11 +288,7 @@ function itre_sidebr_customize_register( $wp_customize ) {
     foreach ( $sidebar_controls as $control ) {
         $control->active_callback = function( $control ) {
             $setting = $control->manager->get_setting( 'itre_search_sidebar_enable' );
-            if (  $setting->value() ) {
-                return true;
-            } else {
-                return false;
-            }
+			return !empty($setting->value()) ? true : false;
         };
     }
 }

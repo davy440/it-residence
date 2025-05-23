@@ -1148,6 +1148,13 @@ body.single-property #property-map {
 .wpcf7 label > input:not([type=checkbox]):not([type=radio]), .wpcf7 label > select, .wpcf7 span:not(.wpcf7-list-item):not(.wpcf7-list-item-label) > input:not([type=checkbox]):not([type=radio]), .wpcf7 span:not(.wpcf7-list-item):not(.wpcf7-list-item-label) > select {
   width: 100%;
 }
+.nf-field [aria-invalid=true] {
+  background-color: rgba(232, 0, 0, 0.1);
+}
+.nf-after-field .nf-error-required-error {
+  display: none;
+}
+
 .wp-block-query-pagination-numbers, .itre-pagination .nav-links {
   display: flex;
   justify-content: center;

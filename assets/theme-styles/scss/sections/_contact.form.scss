@@ -11,3 +11,20 @@
         @extend %btn;
     }
 }
+
+.nf {
+
+    &-field {
+        
+        [aria-invalid="true"] {
+            background-color: rgba(232,0,0,0.1);
+        }
+    }
+    
+    &-after-field {
+        
+        .nf-error-required-error {
+            display: none;
+        }
+    }
+}

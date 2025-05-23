@@ -14,4 +14,4 @@ function itre_settings_customize_register( $wp_customize ) {
         )
     );
 }
-add_action('customize_register', 'itre_settings_customize_register');
+//add_action('customize_register', 'itre_settings_customize_register');

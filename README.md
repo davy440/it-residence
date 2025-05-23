@@ -242,4 +242,10 @@ Just Install the Theme from the WordPress Repository.
 * 2.8.7
 	Refactored JS code and mobile nav fix
 
+* 2.8.8
+	Minor code fixes and added partial for hero title
+
+* v2.9
+	Added support for Ninja Forms
+
 Good luck!

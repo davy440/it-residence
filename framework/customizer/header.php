@@ -126,6 +126,14 @@ function itre_header_customize_register( $wp_customize ) {
         )
     );
 
+    $wp_customize->selective_refresh->add_partial(
+        'itre_hero_title', array(
+            'selector'              =>  '.itre-hero-title',
+            'container_inclusive'   =>  true,
+            'render_callback'       =>  'itre_hero_title',
+        )
+    );
+
     $wp_customize->add_setting(
         'itre_hero_desc', array(
             'default'           =>   '',
