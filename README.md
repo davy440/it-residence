@@ -248,4 +248,7 @@ Just Install the Theme from the WordPress Repository.
 * v2.9
 	Added support for Ninja Forms
 
+* 3.0
+	Optimized functions
+
 Good luck!

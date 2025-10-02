@@ -10,7 +10,7 @@ Stable tag: 2.8.8
 License: GNU General Public License v2 or later
 License URI: https://spdx.org/licenses/GPL-2.0-or-later.html
 
-IT Residence WordPress Theme, Copyright 2024 IndiThemes
+IT Residence WordPress Theme, Copyright 2025 IndiThemes
 IT Residence is distributed under the terms of the GNU GPL
 
 == Description ==
@@ -257,6 +257,9 @@ Optimized CSS
 
 = 2.9 May 23, 2025 =
 * Added support for Ninja Forms
+
+= 3.0 October 2, 2025 =
+* Optimized functions
 
 == Credits ==
 

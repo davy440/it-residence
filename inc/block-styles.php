@@ -1,6 +1,6 @@
 <?php
 /**
- *	Block Styles for Block Editor
+ * Block Styles
  */
 if ( !function_exists('itre_block_style') ) {
     function itre_block_style() {

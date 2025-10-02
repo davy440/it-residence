@@ -9,32 +9,25 @@ if (!defined('ABSPATH')) {
 }
 
 if ( !function_exists('itre_get_for') ) {
-    function itre_get_for( $value ) {
+	function itre_get_for( $value ) {
+		$labels = [
+			'sold'        => 'sold',
+			'coming-soon' => 'coming soon',
+			'active'      => 'active',
+			'sale'        => 'sale',
+			'rent'        => 'rent',
+		];
 
-        $for = "";
+		$for = isset($labels[$value]) ? $labels[$value] : '';
 
-        switch ($value):
-            case "sold":
-                $for = "sold";
-            break;
-            case "coming-soon":
-                $for = "coming soon";
-            break;
-            case "active":
-                $for = "active";
-            break;
-            case "sale":
-                $for = "sale";
-            break;
-            case "rent":
-                $for = "rent";
-            break;
-            default:
-            	$for = "";
-        endswitch;
-
-        printf('<span class="itre-for-tag %s">%s</span>', esc_attr($value), esc_html($for));
-    }
+		if ($for !== '') {
+			printf(
+				'<span class="itre-for-tag %s">%s</span>',
+				esc_attr($value),
+				esc_html($for)
+			);
+		}
+	}
 }
 
 if ( !function_exists('itre_property_filter_form') ) {
@@ -142,7 +135,6 @@ if ( !function_exists('itre_property_listing') ) {
 
 
 if ( !function_exists('itre_get_filtered_properties') ) {
-	
 	/**
 	 * AJAX Query for filtered properties
 	 *

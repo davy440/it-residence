@@ -1,7 +1,9 @@
 <?php
+/**
+ *	Menu Walker for Mobiles
+ */
 if ( class_exists('Walker_Nav_Menu') ) {
     class itre_Mobile_Menu extends Walker_Nav_Menu {
-
 
         function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
             global $wp_query;
