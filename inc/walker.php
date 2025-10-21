@@ -1,6 +1,8 @@
 <?php
 /**
  *	Menu Walker for Mobiles
+ * 
+ * @package IT_Residence
  */
 if ( class_exists('Walker_Nav_Menu') ) {
     class itre_Mobile_Menu extends Walker_Nav_Menu {

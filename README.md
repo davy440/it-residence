@@ -251,4 +251,9 @@ Just Install the Theme from the WordPress Repository.
 * 3.0
 	Optimized functions
 
+* 3.1
+	- Gihub action changes
+	- Optimized code
+	- Bug fix
+
 Good luck!
