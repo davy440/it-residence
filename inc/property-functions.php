@@ -30,6 +30,9 @@ if ( !function_exists('itre_get_for') ) {
 	}
 }
 
+/**
+ * Display Property Filter Form
+ */
 if ( !function_exists('itre_property_filter_form') ) {
 	function itre_property_filter_form() {
 		?>
@@ -100,6 +103,9 @@ if ( !function_exists('itre_property_filter_form') ) {
 }
 add_action('itre_property_filter', 'itre_property_filter_form');
 
+/**
+ * Display Property Listings
+ */
 if ( !function_exists('itre_property_listing') ) {
 	function itre_property_listing() {
 		?>
@@ -236,7 +242,9 @@ if ( !function_exists('itre_get_filtered_properties') ) {
 add_action('wp_ajax_filter_properties', 'itre_get_filtered_properties');
 add_action('wp_ajax_nopriv_filter_properties', 'itre_get_filtered_properties');
 
- //Pass Variables to JS for use in AJAX
+ /**
+  * Localize AJAX data for use in JavaScript
+  */
  if ( !function_exists('itre_localize_ajax_data') ) {
 	function itre_localize_ajax_data() {
 		
