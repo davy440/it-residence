@@ -43,5 +43,6 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           port: ${{ secrets.FTP_PORT }}
+          password: ${{ secrets.FTP_PASS }}
           ssh_private_key: ${{ secrets.SSH_KEY }}
           remote_path: './wp-content/themes/it-residence/'
