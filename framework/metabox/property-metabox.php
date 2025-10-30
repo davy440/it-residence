@@ -23,8 +23,8 @@ if ( !function_exists('itlst_meta_callback') ) {
         $for	    =	isset( $itlst_stored_meta['for']) ? $itlst_stored_meta['for'][0] : "sale";
         $price	    =	isset( $itlst_stored_meta['price']) ? $itlst_stored_meta['price'][0] : 0;
         $area	    =	isset( $itlst_stored_meta['area']) ? $itlst_stored_meta['area'][0] : 0;
-        $bedrooms	=	isset( $itlst_stored_meta['bedrooms']) ? $itlst_stored_meta['bedrooms'][0] : 0;
-        $bathrooms	=	isset( $itlst_stored_meta['bathrooms']) ? $itlst_stored_meta['bathrooms'][0] : 0;
+        $bedrooms	=	isset( $itlst_stored_meta['bedrooms']) ? $itlst_stored_meta['bedrooms'][0] : "";
+        $bathrooms	=	isset( $itlst_stored_meta['bathrooms']) ? $itlst_stored_meta['bathrooms'][0] : "";
         $streetName =   isset( $itlst_stored_meta['streetName']) ? $itlst_stored_meta['streetName'][0] : "";
         $city       =   isset( $itlst_stored_meta['city']) ? $itlst_stored_meta['city'][0] : "";
         $province   =   isset( $itlst_stored_meta['province']) ? $itlst_stored_meta['province'][0] : "";
@@ -69,14 +69,14 @@ if ( !function_exists('itlst_meta_callback') ) {
                 <div class="half-width">
     		    <label for="bedrooms">
     		    	<h4><?php _e('Bedrooms', 'it-residence'); ?></h4>
-    		    	<input type="number" name="bedrooms" id="bedrooms" autocomplete="on" value="<?php echo esc_attr($bedrooms) ?>" placeholder="3">
+    		    	<input type="number" name="bedrooms" id="bedrooms" autocomplete="on" value="<?php echo esc_attr($bedrooms) ?>" placeholder="Bedrooms">
     		    </label><br/>
                 </div>
 
                 <div class="half-width">
     		    <label for="bathrooms">
     		    	<h4><?php _e('Bathrooms', 'it-residence'); ?></h4>
-    		    	<input type="number" name="bathrooms" id="bathrooms" autocomplete="on" value="<?php echo esc_attr($bathrooms) ?>" placeholder="2">
+    		    	<input type="number" name="bathrooms" id="bathrooms" autocomplete="on" value="<?php echo esc_attr($bathrooms) ?>" placeholder="Bathrooms">
     		    </label><br/>
                 </div>
 
@@ -206,103 +206,35 @@ if ( !function_exists('itlst_meta_save') ) {
             return;
         }
 
-        if ( isset($_POST['for'])) {
-    	    $for	=	sanitize_text_field($_POST['for']);
-        } else {
-    	    $for	=	"sale";
-    	}
-    	update_post_meta( $post_id, 'for', $for);
+        // Collect and sanitize input, then batch save
+        // Prepare meta values only when the corresponding POST field is present (not empty)
+        $meta = array(
+            'for'        => ( isset( $_POST['for'] ) && $_POST['for'] !== '' ) ? sanitize_key( $_POST['for'] ) : null,
+            'price'      => ( isset( $_POST['price'] ) && $_POST['price'] !== '' ) ? absint( $_POST['price'] ) : null,
+            'area'       => ( isset( $_POST['area'] ) && $_POST['area'] !== '' ) ? floatval( $_POST['area'] ) : null,
+            'bedrooms'   => ( isset( $_POST['bedrooms'] ) && $_POST['bedrooms'] !== '' ) ? absint( $_POST['bedrooms'] ) : null,
+            'bathrooms'  => ( isset( $_POST['bathrooms'] ) && $_POST['bathrooms'] !== '' ) ? absint( $_POST['bathrooms'] ) : null,
+            'streetName' => ( isset( $_POST['streetName'] ) && $_POST['streetName'] !== '' ) ? sanitize_text_field( $_POST['streetName'] ) : null,
+            'city'       => ( isset( $_POST['city'] ) && $_POST['city'] !== '' ) ? sanitize_text_field( $_POST['city'] ) : null,
+            'province'   => ( isset( $_POST['province'] ) && $_POST['province'] !== '' ) ? sanitize_text_field( $_POST['province'] ) : null,
+            'country'    => ( isset( $_POST['country'] ) && $_POST['country'] !== '' ) ? sanitize_text_field( $_POST['country'] ) : null,
+            'zip'        => ( isset( $_POST['zip'] ) && $_POST['zip'] !== '' ) ? sanitize_text_field( $_POST['zip'] ) : null,
+            'long'       => ( isset( $_POST['long'] ) && $_POST['long'] !== '' ) ? floatval( $_POST['long'] ) : null,
+            'lat'        => ( isset( $_POST['lat'] ) && $_POST['lat'] !== '' ) ? floatval( $_POST['lat'] ) : null,
+            'maps'       => isset( $_POST['maps'] ) ? 'yes' : null,
+            'zoom'       => ( isset( $_POST['zoom'] ) && $_POST['zoom'] !== '' ) ? absint( $_POST['zoom'] ) : null,
+            'labels'     => isset( $_POST['labels'] ) ? 'yes' : null,
+            'controls'   => isset( $_POST['controls'] ) ? 'yes' : null,
+        );
 
-        // Checks for input and saves
-        if ( isset($_POST['price'])) {
-    	    update_post_meta( $post_id, 'price', absint($_POST['price']));
-        } else {
-    	    update_post_meta( $post_id, 'price', 0);
+        // Update or delete post meta depending on presence of data
+        foreach ( $meta as $key => $value ) {
+            if ( $value === null || $value === '' ) {
+            delete_post_meta( $post_id, $key );
+            } else {
+            update_post_meta( $post_id, $key, $value );
+            }
         }
-
-
-        if ( isset($_POST['area'])) {
-    	    $area	=   $_POST['area'];
-        } else {
-    	   $area	=	0;
-        }
-        update_post_meta( $post_id, 'area', $area);
-
-
-        if ( isset($_POST['bedrooms'])) {
-    	    update_post_meta( $post_id, 'bedrooms', absint($_POST['bedrooms']));
-        } else {
-    	    update_post_meta( $post_id, 'bedrooms', 0);
-    	}
-
-
-        if ( isset($_POST['bathrooms'])) {
-    	    $bathrooms	=	absint($_POST['bathrooms']);
-        } else {
-    	    $bathrooms	=	0;
-    	}
-    	update_post_meta( $post_id, 'bathrooms', $bathrooms);
-
-        $streetName = isset($_POST['streetName']) ? sanitize_text_field($_POST['streetName']) : '';
-    	update_post_meta( $post_id, 'streetName', $streetName);
-        
-        $city = isset($_POST['city']) ? sanitize_text_field($_POST['city']) : '';
-    	update_post_meta( $post_id, 'city', $city);
-    	
-        $province = isset($_POST['province']) ? $_POST['province'] : '';
-    	update_post_meta( $post_id, 'province', $province);
-
-        $country = isset($_POST['country']) ? $_POST['country'] : '';
-    	update_post_meta( $post_id, 'country', $country);
-
-        $zip = $_POST['zip'] ?? '';
-    	update_post_meta( $post_id, 'zip', $zip);
-
-        if ( isset($_POST['long'])) {
-    	    $long	=	sanitize_text_field($_POST['long']);
-        } else {
-    	    $long	=	0;
-    	}
-    	update_post_meta( $post_id, 'long', $long);
-
-
-        if ( isset($_POST['maps'])) {
-    	    $maps	=	sanitize_text_field($_POST['maps']);
-        } else {
-    	    $maps	=	"";
-    	}
-    	update_post_meta( $post_id, 'maps', $maps);
-
-
-        if ( isset($_POST['lat'])) {
-    	    $lat	=	sanitize_text_field($_POST['lat']);
-        } else {
-    	    $lat	=	0;
-    	}
-    	update_post_meta( $post_id, 'lat', $lat);
-
-
-        if ( isset($_POST['zoom']) ) {
-    	    $zoom	=	sanitize_text_field($_POST['zoom']);
-        } else {
-    	    $zoom	=	12;
-    	}
-    	update_post_meta( $post_id, 'zoom', $zoom);
-
-
-        if ( isset($_POST['labels'])) {
-    	    $labels	=	sanitize_text_field($_POST['labels']);
-        } else {
-    	    $labels	=	"";
-    	}
-    	update_post_meta( $post_id, 'labels', $labels);
-
-        if ( isset($_POST['controls'])) {
-    	    $controls	=	sanitize_text_field($_POST['controls']);
-        } else {
-    	    $controls	=	"";
-    	}
-    	update_post_meta( $post_id, 'controls', $controls);
     }
     add_action( 'save_post', 'itlst_meta_save' );
 }
