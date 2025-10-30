@@ -256,4 +256,7 @@ Just Install the Theme from the WordPress Repository.
 	- Optimized code
 	- Bug fix
 
+* 3.1.1
+	- Added functionality for property meta data to show 0 count
+
 Good luck!

@@ -46,4 +46,4 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           ssh_private_key: ${{ secrets.SSH_KEY }}
           local_path: './'
-          remote_path: 'wp-content/themes/it-residence/'
+          remote_path: 'demo.indithemes.com/wp-content/themes/it-residence/'
