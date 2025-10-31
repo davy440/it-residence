@@ -259,4 +259,7 @@ Just Install the Theme from the WordPress Repository.
 * 3.1.1
 	- Added functionality for property meta data to show 0 count
 
+* 3.1.2
+	- Added filter for currencies
+
 Good luck!

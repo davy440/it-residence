@@ -192,6 +192,7 @@ if ( ! function_exists('itre_get_property_price')) {
 	function itre_get_property_price( $data ) {
 		$currency['locale'] =	'en_US';
 		$currency['code']	=	'USD';
+		$currency = apply_filters('itre_property_currency', $currency);
 		$price = new NumberFormatter( $locale = $currency['locale'], NumberFormatter::CURRENCY );
 		$price->setTextAttribute( NumberFormatter::CURRENCY_CODE, $currency['code']);
 		$price->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 0);
