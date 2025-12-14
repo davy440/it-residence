@@ -4,9 +4,9 @@ Contributors: indithemes
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, portfolio, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-colors, custom-header, theme-options, editor-style, footer-widgets, block-styles, full-width-template, full-site-editing
 
 Requires at least: 6.0
-Tested up to: 6.4
+Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 3.1.2
+Stable tag: 3.1.3
 License: GNU General Public License v2 or later
 License URI: https://spdx.org/licenses/GPL-2.0-or-later.html
 
@@ -271,6 +271,9 @@ Optimized CSS
 
 = 3.1.2 October 30, 2025 =
 * Added filter for currencies
+
+= 3.1.3 December 14, 2025 =
+* Improved Blog Layout alignment
 
 == Credits ==
 

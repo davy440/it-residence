@@ -22,7 +22,7 @@ if ( $sidebar_align == 'left' ) {
 }
 ?>
 
-	<main id="primary" class="site-main container">
+	<main id="primary" class="site-main">
 
 		<?php
 		if ( have_posts() ) :

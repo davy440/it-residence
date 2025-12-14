@@ -226,8 +226,6 @@ textarea {
 #content {
   position: relative;
   z-index: 1;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 body:not(.page-template-template-property-listings) #content {
   padding-top: 2em;
@@ -237,11 +235,11 @@ body:not(.page-template-template-property-listings) #content.box {
 }
 body.has-sidebar #content {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  column-gap: 2.5rem;
   justify-content: space-between;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  max-width: 82.5rem;
   margin-left: auto;
   margin-right: auto;
 }
