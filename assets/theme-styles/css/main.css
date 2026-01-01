@@ -283,11 +283,15 @@ header.page-header {
 body.archive.post-type-archive-property .page-title, body.archive.tax-location .page-title, body.archive.tax-property-type .page-title {
   margin-bottom: 1rem;
 }
+body.archive.post-type-archive-property.has-sidebar .itre-property-archive-wrapper, body.archive.tax-location.has-sidebar .itre-property-archive-wrapper, body.archive.tax-property-type.has-sidebar .itre-property-archive-wrapper {
+  max-width: none;
+  margin: 0;
+}
 body.archive.post-type-archive-property .itre-property-archive-wrapper, body.archive.tax-location .itre-property-archive-wrapper, body.archive.tax-property-type .itre-property-archive-wrapper {
   display: grid;
   column-gap: 1.5rem;
-  row-gap: 2rem;
   max-width: 48rem;
+  margin: 0 auto;
 }
 @media (min-width: 48rem) {
   body.archive.post-type-archive-property .itre-property-archive-wrapper, body.archive.tax-location .itre-property-archive-wrapper, body.archive.tax-property-type .itre-property-archive-wrapper {

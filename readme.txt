@@ -275,6 +275,9 @@ Optimized CSS
 = 3.1.3 December 14, 2025 =
 * Improved Blog Layout alignment
 
+= 3.1.4 December 31, 2025 =
+* Fixed Property Archive Sidebar issue
+
 == Credits ==
 
 Image for theme screenshot, Credit pxHere

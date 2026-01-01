@@ -52,4 +52,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
+itre_get_sidebar( 'property' );
 get_footer();

@@ -265,4 +265,7 @@ Just Install the Theme from the WordPress Repository.
 * 3.1.3
 	- Improved Blog Layout alignment
 
+* 3.1.4
+	- Fixed Property Archive Sidebar issue
+
 Good luck!

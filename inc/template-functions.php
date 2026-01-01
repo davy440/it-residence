@@ -28,6 +28,13 @@ if ( ! function_exists( 'itre_body_classes' ) ) {
 			$classes[] = 'has-sidebar';
 		}
 
+		if (class_exists('IT_Listings')) {
+			if ( ( is_post_type_archive( 'property' ) || is_tax( 'location' ) || is_tax( 'property-type' ) ) &&
+				is_active_sidebar( 'sidebar-property' ) ) {
+				$classes[] = 'has-sidebar';
+			}
+		}
+
 		return $classes;
 	}
 }
@@ -181,8 +188,7 @@ if ( !function_exists('itre_get_sidebar') ) {
 				}
 			break;
 			case "property":
-		   		if( (is_post_type_archive('property') || is_tax('location') || is_tax('property-type')) &&
-		   		get_theme_mod('itre_property_sidebar_enable', 1) !== "" ) {
+		   		if( (is_post_type_archive('property') || is_tax('location') || is_tax('property-type'))) {
 					get_sidebar(null, ['page' => 'property']);
 				}
 			break;

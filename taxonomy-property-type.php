@@ -21,7 +21,7 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-			<div class="itre-property-archive-wrapper container">
+			<div class="itre-property-archive-wrapper">
 			<?php
 				/* Start the Loop */
 				while ( have_posts() ) :
@@ -56,6 +56,6 @@ get_header();
 		?>
 
 	</main><!-- #main -->
-
-<?php
+	<?php
+	itre_get_sidebar( 'property' );
 get_footer();

@@ -9,12 +9,19 @@ body.archive {
         .page-title {
             margin-bottom: 1rem;
         }
+
+        &.has-sidebar {
+            .itre-property-archive-wrapper {
+                max-width: none;
+                margin: 0;
+            }
+        }
         
         .itre-property-archive-wrapper {
             display: grid;
             column-gap: 1.5rem;
-            row-gap: 2rem;
             max-width: 48rem;
+            margin: 0 auto;
 
             @media (min-width: 48rem) {
                 grid-template-columns: 1fr 1fr;
