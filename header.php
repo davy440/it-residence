@@ -28,4 +28,4 @@
 		itre_get_header();
 		do_action('itre_after_header');
 	?>
-	<div id="content" class="container site-content">
+	<div id="content" class="site-content">

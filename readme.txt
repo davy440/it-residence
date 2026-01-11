@@ -4,9 +4,9 @@ Contributors: indithemes
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, portfolio, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-colors, custom-header, theme-options, editor-style, footer-widgets, block-styles, full-width-template, full-site-editing
 
 Requires at least: 6.0
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 5.6
-Stable tag: 3.1.3
+Stable tag: 3.2
 License: GNU General Public License v2 or later
 License URI: https://spdx.org/licenses/GPL-2.0-or-later.html
 
@@ -277,6 +277,9 @@ Optimized CSS
 
 = 3.1.4 December 31, 2025 =
 * Fixed Property Archive Sidebar issue
+
+= 10 January, 2026 =
+* Fixed layout for blocks with full screen width option
 
 == Credits ==
 

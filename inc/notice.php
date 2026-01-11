@@ -32,8 +32,8 @@ function itre_admin_notice() {
         <form class="itre-support-plugins-form" method="post">
             <table class="itre-support-plugins-table">
                 <tr>
-                    <th>Contact Form 7</th>
-                    <td><?php echo ITRE_Plugin_Upgrader::itre_button_label('contact-form-7'); ?></td>
+                    <th>Ninja Forms</th>
+                    <td><?php echo ITRE_Plugin_Upgrader::itre_button_label('ninja-forms'); ?></td>
                 </tr>
                 <tr>
                     <th>IT Listings</th>
@@ -45,7 +45,7 @@ function itre_admin_notice() {
         </form>
 
         <?php
-            if (is_plugin_active('it-listings/it-listings.php') && is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
+            if (is_plugin_active('it-listings/it-listings.php') && is_plugin_active('ninja-forms/ninja-forms.php')) {
                 $url = admin_url('themes.php');
                 $url = add_query_arg('page', 'demo-importer', $url);
                 

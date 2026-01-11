@@ -19,7 +19,7 @@
 		}
 	?>
 
-	<div class="entry-content">
+	<div class="entry-content wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
 		<?php
 		the_content();
 
