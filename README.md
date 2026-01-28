@@ -268,4 +268,7 @@ Just Install the Theme from the WordPress Repository.
 * 3.2
 	- Fixed layout for blocks with full screen width option
 
+* 3.2.1
+	- Notice Translation fix and Google Fonts code optimization
+
 Good luck!

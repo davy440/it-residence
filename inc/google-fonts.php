@@ -40,9 +40,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     
             $fontContent = wp_remote_get( $googleApi, array( 'sslverify'   => false ) );
     
-            $fp = fopen($fontFile, 'w');
-            fwrite($fp, $fontContent['body']);
-            fclose($fp);
+            if ( ! function_exists( 'WP_Filesystem' ) ) {
+                require_once ABSPATH . 'wp-admin/includes/file.php';
+            }
+            WP_Filesystem();
+            global $wp_filesystem;
+            $wp_filesystem->put_contents( $fontFile, $fontContent['body'], FS_CHMOD_FILE );
     
             $google_fonts_json = json_decode($fontContent['body']);
         }
